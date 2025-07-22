@@ -1,0 +1,125 @@
+<div class="mt-6 md:mt-20" id="review-section">
+    <!-- Header Section -->
+    <div class="flex justify-between items-center mb-4 md:mb-8 md:mt-0 mt-6" data-section-load="animation">
+        <h1 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">Why Customers Trust Us</h1>
+        <div class="items-center gap-4 text-gray-500 custom-fadeInUp hidden md:flex" data-step-animate="2">
+            <button prev-arrow class="flex items-center gap-1 text-[16px] font-tight leading-[120%] font-semibold">
+                <svg class="w-6 h-6 rotate-180">
+                    <use href="#icon-arrow-right"></use>
+                </svg>
+                Previous
+            </button>
+            <button next-arrow class="flex items-center gap-1 text-[16px] font-tight leading-[120%] font-semibold text-gray-900">
+                Next
+                <svg class="w-6 h-6">
+                    <use href="#icon-arrow-right"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="flex items-center justify-center md:hidden"><span class="text-sm font-sans font-semibold text-[#C51414]">See all</span>
+        <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414] text-[#C51414]">
+            <use href="#svg-arrow-down"></use>
+        </svg></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8" data-section-load="animation">
+        <div class="space-y-0 md:space-y-6 whitespace-nowrap overflow-x-auto md:block flex gap-x-2 md:items-start items-baseline col-span-12 md:col-span-3 custom-fadeZoom" data-step-animate="2">
+            <!-- Years of Business -->
+            <div class="bg-[#F2F4F7] rounded-2xl md:py-5 md:px-5 py-2 px-4 shadow-sm border border-gray-100 max-md:basis-1/3 self-stretch">
+                <div class="flex items-start md:items-center gap-3 mb-3 flex-col md:flex-row">
+                    <div
+                        class="w-10 h-10 bg-coral bg-opacity-10 rounded-full flex items-center justify-start md:justify-center">
+                        <svg class="w-6 h-6 text-red-500">
+                            <use href="#svg-review-icon1"></use>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col gap-y-1 mt-2">
+                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">34</div>
+                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">Years of Business</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Square Foot Facility -->
+            <div class="bg-[#F2F4F7] rounded-2xl md:py-5 md:px-5 py-2 px-4 shadow-sm border border-gray-100 max-md:basis-1/3 self-stretch">
+                <div class="flex items-start md:items-center gap-3 mb-3 flex-col md:flex-row">
+                    <div
+                        class="w-10 h-10 bg-coral bg-opacity-10 rounded-full flex items-center tw md:justify-center">
+                        <svg class="w-6 h-6 text-red-500">
+                            <use href="#svg-review-icon2"></use>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col gap-y-1 mt-2">
+                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">10,000</div>
+                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">Operates square foot Facility</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 24/7 Customer Support -->
+            <div class="bg-[#F2F4F7] rounded-2xl md:py-5 md:px-5 py-2 px-4 shadow-sm border border-gray-100 max-md:basis-1/3 self-stretch">
+                <div class="flex items-start md:items-center gap-3 mb-3 flex-col md:flex-row">
+                    <div
+                        class="w-10 h-10 bg-coral bg-opacity-10 rounded-full flex items-center tw md:justify-center">
+                        <svg class="w-6 h-6 text-red-500">
+                            <use href="#svg-review-icon1"></use>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col gap-y-1 mt-2">
+                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">24/7</div>
+                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">Customer support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="col-span-12 md:col-span-9">
+            <div class="h-full" data-section-load="slick-slider" data-slick='{
+                "infinite": false,
+                "mobileFirst": true,
+                "arrows": true,
+                "dots": true,
+                "slidesToShow": 1,
+                "slidesToScroll": 1,
+                "prevArrow":"#review-section button[prev-arrow]",
+                "nextArrow":"#review-section button[next-arrow]",
+                "responsive": [
+                    {
+                        "breakpoint": 550,
+                        "settings": {
+                            "slidesToShow": 2,
+                            "slidesToScroll": 2,
+                            "arrows": false
+                        }
+                    },
+                    {
+                        "breakpoint": 1024,
+                        "settings": {
+                            "slidesToShow": 3,
+                            "slidesToScroll": 3,
+                            "arrows": true,
+                            "prevArrow":"#review-section button[prev-arrow]",
+                            "nextArrow":"#review-section button[next-arrow]"
+                        }
+                    }
+                ]
+            }'> 
+                <!-- Review Card 1 -->
+                {{> components/jas/home/card-review count=5 name="Jacob Jones" company="Treebo" review="I recently had the pleasure of staying at [HotelName], and it was an unforgettable experience. From the moment I
+                arrived, the staff went above and beyond to ensure" img="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/review-1.png?t=1748228029"}}
+                <!-- Review Card 2 -->
+                {{> components/jas/home/card-review count=5 name="Annette Black" company="Treebo" review="I ordered Skar Audio speakers, and they arrived in just 3 days! The prices were unbeatable, and the website was easy to
+                use." img="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/review-2.png?t=1748228030"}}
+                <!-- Review Card 3 -->
+                {{> components/jas/home/card-review count=5 name="Albert Flores" company="Treebo" review="Their exclusive deals on brands like Sundown Audio are amazing, and their support team is always quick to help." img="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"}}
+                {{> components/jas/home/card-review count=5 name="Albert Flores" company="Treebo" review="Their exclusive deals on
+                brands like Sundown Audio are amazing, and their support team is always quick to help."
+                img="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/review-2.png?t=1748228030"}}
+                {{> components/jas/home/card-review count=5 name="Albert Flores" company="Treebo" review="Their exclusive deals on
+                brands like Sundown Audio are amazing, and their support team is always quick to help."
+                img="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"}}
+            </div>
+        </div>
+    </div>
+</div>

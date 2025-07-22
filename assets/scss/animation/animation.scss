@@ -1,0 +1,254 @@
+@-webkit-keyframes scale-in-ver-top {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes scale-in-ver-top {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+@keyframes halo-fadeIn {
+    from {
+        opacity: 0.01;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+// New
+// Custom Animation
+.no-js {
+    .custom-animation {
+        transform: translatey(0);
+
+        [data-step-animate],
+        &[data-step-animate] {
+            transform: translatey(0);
+        }
+    }
+}
+
+.js {
+    .custom-fadeInUp,
+    .custom-fadeZoom,
+    .custom-animation {
+        opacity: 0;
+    }
+
+    .animated {
+        &.custom-animation,
+        .custom-animation,
+        .custom-animation [data-step-animate]:not([data-section-load]) {
+            animation-name: halo-fadeIn;
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+        }
+
+        &.custom-fadeZoom,
+        .custom-fadeZoom,
+        .custom-fadeZoom [data-step-animate]:not([data-section-load]) {
+            animation-name: custom-fadeZoom;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+
+        &.custom-fadeInUp,
+        .custom-fadeInUp,
+        .custom-fadeInUp [data-step-animate]:not([data-section-load]) {
+            animation-name: custom-fadeInUp;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+
+        @for $i from 0 through 100 {
+            &.animate-loaded[data-step-animate='#{$i}'],
+            [data-step-animate='#{$i}']:not([data-section-load]) {
+                animation-delay: 0.1s + $i * 0.05;
+                animation-duration: 0.3s + $i * 0.1 !important;
+            }
+        }
+    }
+
+    .animated--out {
+
+        &.custom-fadeLeft,
+        .custom-fadeLeft:not([data-section-load]),
+        .custom-fadeLeft [data-step-animate]:not([data-section-load]) {
+            animation-name: custom-fadeOutLeft;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+.hover-zoom {
+    img {
+        transform: scale3d(1, 1, 1);
+        transition: transform .5s cubic-bezier(.3, 1, .3, 1);
+        backface-visibility: hidden;
+    }
+
+    .title {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -3px;
+            height: 1px;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%);
+            box-shadow: 0 -1px 0 0 currentColor;
+            transition: width .4s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        &:hover {
+            img {
+                transform: scale3d(1.05, 1.05, 1);
+            }
+
+            .title {
+                &::after {
+                    width: 75%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+// Custom skeleston
+.skeletor-loading {
+    position: relative;
+    overflow: hidden;
+    background: #ededed;
+    border-radius: 3px;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        left: -75%;
+        top: 0;
+        transform: skewX(-25deg);
+        background: linear-gradient(to right,
+                    fade_out(#fff, 1) 0%,
+                    fade_out(#fff, 0.7) 100%);
+        background-size: 200% 100%;
+        animation: shine 2.5s infinite linear;
+    }
+
+    img,
+    a,
+    .button, *{
+        position: relative;
+        z-index: -1;
+    }
+
+    img.lazyload {
+        opacity: 0;
+    }
+}
+
+@keyframes shine {
+        from {
+            left: -100%;
+        }
+    
+        to {
+            left: 120%;
+        }
+}
+
+@keyframes custom-fadeZoom {
+    from {
+        transform: scale(1.2);
+        opacity: 0.01;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes custom-fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0.01;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}

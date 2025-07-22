@@ -1,0 +1,36 @@
+<h3 class="footer-info-heading text-white">{{lang 'newsletter.subscribe'}}</h3>
+<p class="mt-4 mb-5 text-white max-sm:text-left">{{lang 'newsletter.subscribe_intro'}}</p>
+
+<form class="form" action="{{urls.subscribe.action}}" method="post">
+    <fieldset class="form-fieldset">
+        <input type="hidden" name="action" value="subscribe">
+        <input type="hidden" name="nl_first_name" value="bc">
+        <input type="hidden" name="check" value="1">
+        <div class="form-field">
+            <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
+            <div class="form-prefixPostfix wrap">
+                <input class="form-input mb-2 bg-[#1B1B1B] text-white rounded-[32px] border-none"
+                       id="nl_email"
+                       name="nl_email"
+                       type="email"
+                       value="{{customer.email}}"
+                       placeholder="Enter your Email"
+                       aria-describedby="alertBox-message-text"
+                       aria-required="true"
+                       autocomplete="email"
+                       required
+                >
+                <!-- <input class="button button--primary form-prefixPostfix-button--postfix"
+                       type="submit"
+                       value="{{lang 'newsletter.subscribe_submit'}}"
+                > -->
+            </div>
+            <button class="button mb-0 md:py-[10px] md:px-6 py-[10px] px-5 button-style h-[40px] sm:h-[48px] leading-[120%] max-md:w-full" type="submit">
+                <span class="relative z-10 text-[14px] md:text-[16px] md:whitespace-normal whitespace-nowrap">{{lang 'newsletter.subscribe_submit'}}</span>
+            </button>
+            {{#if settings.show_newsletter_summary }}
+                <div class="footer-newsletter-summary">{{settings.newsletter_summary}}</div>
+            {{/if}}
+        </div>
+    </fieldset>
+</form>

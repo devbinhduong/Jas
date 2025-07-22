@@ -1,0 +1,249 @@
+{{#if banners.bottom}}
+    <div class="banners" data-banner-location="bottom">
+        {{#each (limit banners.bottom_metadata 1)}}
+        <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}"
+            data-position="{{this.location}}" data-name="{{this.banner-name}}">
+            <div data-event-type="promotion-click">
+                {{{this.content}}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+{{/if}}
+
+<footer class="footer bg-[#050000] py-4 md:py-10" role="contentinfo">
+    <div class="container-footer flex md:flex-row flex-col justify-between shrink-0" data-section-load="animation">
+        <div class="footer__left max-w-full md:max-w-[243px] flex flex-col flex-gap-8 shrink-0 justify-start">
+            {{#if theme_settings.footer_info_logo}}
+            <article class="footer-info-col footer-info-col--small custom-fadeInUp" data-step-animate="1"
+                data-section-type="storeInfo">
+                {{#if theme_settings.footer_info_logo}}
+                    <div class="footer-info__logo">
+                        <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/footer-logo.png?t=1749117682"
+                            alt="Logo">
+                    </div>
+                {{/if}}
+                <address>{{nl2br settings.address}}</address>
+            
+                {{#if theme_settings.halo_homepage_layout_1}}
+                {{#if settings.phone_number}}
+                <p class="footer-info__phone"><a href="tel:{{settings.phone_number}}"><svg>
+                            <use xlink:href="#icon-chat" />
+                        </svg> <span>{{lang 'footer.call_us' phone_number=settings.phone_number}}</span></a></p>
+                {{/if}}
+            
+                {{#if theme_settings.info_email_support}}
+                <p class="footer-info__phone"><a href="mailto:{{theme_settings.info_email_support}}"><svg>
+                            <use xlink:href="#icon-mail" />
+                        </svg> <span>{{theme_settings.info_email_support}}</span></a></p>
+                {{/if}}
+                {{else}}
+                {{#if settings.phone_number}}
+                <p class="footer-info__phone"><a href="tel:{{settings.phone_number}}"><span>{{lang 'footer.home2_call_us'
+                            phone_number=settings.phone_number}}</span></a></p>
+                {{/if}}
+            
+                {{#if theme_settings.info_email_support}}
+                <p class="footer-info__phone"><a href="mailto:{{theme_settings.info_email_support}}"><span>{{lang
+                            'footer.home2_email' email=theme_settings.info_email_support}}</span></a></p>
+                {{/if}}
+            
+                {{#if theme_settings.show_social-links}}
+                <div class="footer-info-col--social">
+                    {{> components/common/social-links}}
+                </div>
+                {{/if}}
+                {{/if}}
+            </article>
+            {{/if}}
+            <div class="flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative my-8 custom-fadeInUp" data-step-animate="2">
+                <div
+                    class="flex flex-col gap-spacing-xs items-start justify-start self-stretch shrink-0 relative">
+                    <div class="md:text-xs text-mb-text-sm font-sans text-white uppercase  mb-1"
+                        >
+                        Store location:
+                    </div>
+                    <div class="text-[#98A2B3] text-text-sm font-sans"
+                        >
+                        7003 Steeles Avenue West Toronto, M9W 0A2, Canada
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 items-start justify-start self-stretch shrink-0 relative">
+                    <div class="md:text-xs text-mb-text-sm font-sans text-white uppercase  mb-1"
+                        >
+                        Contact info:
+                    </div>
+                    <div class="text-[#98A2B3] text-text-sm font-sans"
+                        >
+                        contactus@singhelectronics.ca
+                        <br />
+                        +1 (416) 745-1021
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
+                    <div class="md:text-xs text-mb-text-sm font-sans text-white uppercase  mb-1">
+                        FOLLOW US
+                    </div>
+                    <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
+                        {{> components/common/social-links}}
+                    </div>
+                </div>
+                <div class="md:flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative hidden">
+                    <div class="md:text-xs text-mb-text-sm font-sans text-white uppercase">
+                        PAYMENT GATEWAY
+                    </div>
+                    <div class="flex flex-row gap-2 items-start justify-start shrink-0 w-[233px] relative md:flex-nowrap flex-wrap">
+                        <img alt="Payment 1"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-1-1.png?t=1748920372" />
+                        <img alt="Payment 2"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-2-1.png?t=1748920373" />
+                        <img alt="Payment 3"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-3-1.png?t=1748920373" />
+                        <img alt="Payment 4"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-4-1.png?t=1748920373" />
+                        <img alt="Payment 5"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-5-1.png?t=1748920373" />
+                        <img alt="Payment 6"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-6-1.png?t=1748920373" />
+                        <img alt="Payment 7"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                            data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-7-1.png?t=1748920373" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__right flex flex-row gap-6 items-start justify-start shrink-0 w-full xs:w-auto lg:w-[970px]">
+            <section class="footer-info tabs-contents md:flex-row flex flex-col m-0 flex-wrap md:gap-0 gap-4">
+                {{#for 1 2}}
+                    {{assignVar "newindex" $index}}
+                    <article class="flex flex-col gap-4 items-start justify-start w-[100%] md:w-[150px] lg:w-[200px] footer-info-col custom-fadeInUp" data-step-animate="2" data-section-type="footer-webPages">
+                        <div class="xs:block flex flex-row justify-between items-center w-full xs:border-b-0 border-b-[1px] border-white xs:border-transparent">
+                            <h3 class="md:text-xs text-mb-text-sm font-sans text-white footer-info-heading footer-info-heading--toggle f-bold uppercase tab-toggle{{#if (getVar 'newindex') '==' 1}} is-active{{/if}}"
+                                data-toggle-id="#footer-infor-col-{{getVar 'newindex'}}">{{lookup ../theme_settings (multiConcat
+                                'footer_col' (getVar "newindex") '_heading')}}</h3>
+                            <div class="icon-toggle xs:hidden block">
+                                <svg class="w-6 h-6 text-white">
+                                    <use href="#svg-arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer-info-list{{#if (getVar 'newindex') '==' 1}} is-active{{/if}}"
+                            id="footer-infor-col-{{getVar 'newindex'}}">
+                            {{#for 1 10}}
+                            {{#if (lookup ../../theme_settings (multiConcat 'footer_col' (getVar "newindex") '_text' $index))}}
+                            <li class="text-white">
+                                <a href="{{lookup ../../theme_settings (multiConcat 'footer_col' (getVar 'newindex') '_link' $index)}}"
+                                    class="link-line">
+                                    <span class="text-[#98A2B3] text-text-sm font-sans">
+                                        {{lookup ../../theme_settings (multiConcat 'footer_col' (getVar "newindex") '_text'
+                                        $index)}}
+                                    </span>
+                                </a>
+                            </li>
+                            {{/if}}
+                            {{/for}}
+                        </ul>
+                    </article>
+                {{/for}}
+                <article class="flex flex-col gap-4 items-start justify-start shrink-0 w-full md:w-[150px] lg:w-[200px] footer-info-col custom-fadeInUp" data-step-animate="2" data-section-type="footer-brands">
+                <div
+                    class="xs:block flex flex-row justify-between items-center w-full xs:border-b-0 border-b-[1px] border-white xs:border-transparent">
+                        <h3 class="footer-info-heading footer-info-heading--toggle f-bold uppercase tab-toggle{{#if (getVar 'newindex') '==' 1}} is-active{{/if}} md:text-xs text-mb-text-sm font-sans text-white uppercase"
+                            data-toggle-id="#footer-infor-col-3">Shop By Brand</h3>
+                            <div class="icon-toggle xs:hidden block">
+                                <svg class="w-6 h-6 text-white">
+                                    <use href="#svg-arrow-down"></use>
+                                </svg>
+                            </div>
+                    </div>
+                    <ul class="footer-info-list{{#if (getVar 'newindex') '==' 1}} is-active{{/if}}"
+                        id="footer-infor-col-3">
+                        <li class="text-white">
+                            <a href="/brands/metra" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">Metra</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands/ds18" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">DS18</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands/rockford-fosgate" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">Rockford Fosgate</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands/jl-audio" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">JL Audio</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands/kicker" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">Kicker</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands/memphis-audio" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">Memphis Audio</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands/skar-audio" class="link-line custom-animation text-white animate-loaded animated"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-[#98A2B3] text-text-sm font-sans">Skar Audio</span>
+                            </a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/brands" class="link-line custom-animation text-white animate-loaded animated font-semibold"
+                                data-section-load="animation" data-step-animate="1">
+                                <span class="text-text-sm font-sans text-white">View All Brand</span>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="block footer-info-col max-w-full md:w-[300px] custom-fadeInUp" data-step-animate="2" data-section-type="newsletterSubscription">
+                    {{#if settings.show_newsletter_box}}
+                    {{> components/common/subscription-form}}
+                    {{/if}}
+                    {{> components/common/payment-icons}}
+                </article>
+            </section>
+            
+        </div>
+        <div
+            class="md:hidden flex-col gap-4 items-start justify-start self-stretch shrink-0 relative flex mb-4">
+            <div class="text-white text-left font-['Inter-Regular',_sans-serif] text-xs leading-5 font-normal relative self-stretch"
+                style="letter-spacing: 0.1em">
+                PAYMENT GATEWAY
+            </div>
+            <div
+                class="flex flex-row gap-2 items-start justify-start shrink-0 w-[233px] relative xs:flex-nowrap flex-wrap">
+                <img alt="Payment 8"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-1-1.png?t=1748920372" />
+                <img alt="Payment 9"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-2-1.png?t=1748920373" />
+                <img alt="Payment 10"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-3-1.png?t=1748920373" />
+                <img alt="Payment 11"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-4-1.png?t=1748920373" />
+                <img alt="Payment 12"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-5-1.png?t=1748920373" />
+                <img alt="Payment 13"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-6-1.png?t=1748920373" />
+                <img alt="Payment 14"class="rounded shrink-0 w-[51px] h-8 relative lazyload" style="object-fit: cover; aspect-ratio: 51/32"
+                    data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/payment-7-1.png?t=1748920373" />
+            </div>
+        </div>
+        {{{region name="ssl_site_seal--global"}}}
+    </div>
+<div class="text-small relative text-[#98A2B3] pt-2 md:pt-5 border-solid border-[#1e1e1e] border-t custom-fadeInUp text-center" data-section-load="animation" data-step-animate="3">
+    © Copyright 2025 Singh Electronics | All Rights Reserved | Privacy Policy |
+    Terms &amp; Conditions
+</div>
+</footer>

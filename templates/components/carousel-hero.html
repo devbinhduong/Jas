@@ -1,0 +1,40 @@
+<section class="heroCarousel">
+        <div class="heroCarousel-slide heroCarousel-slide--first customize-banner">
+            <div class="heroCarousel-image-wrapper">
+                <a rel="preload" as="image" class="heroCarousel-image" href="{{url}}"
+                    aria-label="{{#if this.alt_text.length '!=' 0}}{{this.alt_text}}{{else}}{{lang 'common.carousel_slide_number' slide_number=(add @index 1)}}{{/if}}">
+                    {{> components/common/responsive-img
+                    image='https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/categorynew.png?t=1749116898'
+                    class="heroCarousel-image customize-banner"
+                    fallback_size='1280w'
+                    lazyload='disabled'
+                    }}
+                </a>
+            </div>
+            <div class="heroCarousel-content-wrapper {{position}}">
+            <div class="heroCarousel-content custom-animation flex flex-col gap-y-[16px] md:gap-y-[32px] top-[48%]"
+                data-section-load="animation">
+                <div class="heroCarousel-group--content">
+                    <span class="heroCarousel-subHeading">Car Audio & Video</span>
+                    <h2 class="heroCarousel-title custom-animation font-eina02 text-white" data-step-animate="3">Brands you'll hear loud & clear</h2>
+                    <p class="heroCarousel-description custom-animation mb-0 text-white" data-step-animate="4">Discover top-quality car audio systems from the best brands in Canada</p>
+                </div>
+                <div class="custom-heroCarousel-wrapper-button">
+                    <a href="#category-subcate"
+                        onclick="event.preventDefault(); document.getElementById('category-subcate').scrollIntoView({ behavior: 'smooth', block: 'start' });"
+                        aria-label=""
+                        class="heroCarousel-action flex gap-x-1 button button-style-2 custom-animation" data-step-animate="5"
+                        role="button">
+                        <span class="text-left text">
+                            Shop now
+                        </span>
+                        <span class="icon navPages-action-moreIcon w-6 h-6" aria-hidden="true">
+                            <svg class="w-6 h-6">
+                                <use href="#svg-arrow-down"></use>
+                            </svg>
+                        </span></a>
+                </div>
+            </div>
+            </div>
+        </div>
+</section>

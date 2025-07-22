@@ -1,0 +1,32 @@
+<nav class="headerTop h-[28px] md:h-[36px] flex items-center justify-center bg-[#F2F4F7] md:py-0 py-1">
+    <div class="container">
+        <div class="flex items-center justify-center md:justify-between headerTop__left">
+            <div class="headerTop__left">
+                <a href="tel:{{settings.phone_number}}" aria-label="Call us: {{settings.phone_number}}"
+                    tabindex="0" class="font-sans font-medium text-xs text-black">Happy to help! +1 (416) 745-1021</a>
+            </div>
+            <a href="#" class="gap-2 headerTop__center hidden md:flex items-center justify-center translate-x-[15%]">
+                <svg class="w-[20px] h-[20px]">
+                    <use href="#svg-leaf"></use>
+                </svg>
+                <p class="text-center-tablet font-sans font-medium text-xs text-black" role="text">
+                    {{theme_settings.header_top_center_text}}
+                </p>
+            </a>
+            <div class="headerTop__right md:block hidden">
+                <ul class="flex items-center justify-center gap-[24px]" style="--underlineColor: {{theme_settings.header_top_text_colorHover}}">
+                    {{#for 1 4}}
+                        {{assignVar "newindex" $index}}
+                        {{#if (lookup ../theme_settings (multiConcat 'header_right_item' (getVar 'newindex') '_text'))}}
+                        <li>
+                            <a class="link-line font-sans font-medium text-xs" href="{{lookup ../theme_settings (multiConcat 'header_right_item' (getVar 'newindex') '_link')}}">
+                                <span class="text-black">{{lookup ../theme_settings (multiConcat 'header_right_item' (getVar 'newindex') '_text')}}</span>
+                            </a>
+                        </li>
+                        {{/if}}
+                    {{/for}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

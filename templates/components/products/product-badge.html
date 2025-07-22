@@ -1,0 +1,11 @@
+<div class="card-badge {{badge-type}}">
+    <span class="{{badge-type}}-text">
+        {{#if badge-type '===' 'sale'}}
+            {{badge_label}}% Off
+        {{else if badge-type '===' 'new'}}
+            New
+        {{else if badge-type '===' 'sold-out'}}
+            Sold Out
+        {{/if}}
+    </span>
+</div>

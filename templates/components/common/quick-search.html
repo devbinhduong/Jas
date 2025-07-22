@@ -1,0 +1,25 @@
+<div class="w-full">
+    <form class="form mb-0 w-full flex items-center justify-center" onsubmit="return false" data-url="{{urls.search}}" data-quick-search-form>
+        <fieldset class="form-fieldset flex items-center justify-center w-full h-[48px] border border-gray-500 rounded-full py-[14px] pl-[18px] pr-2 bg-[#F2F4F7]">
+            <div class="form-field w-full mb-0">
+                <label class="is-srOnly" for="{{name}}">{{lang "search.quick_search.input_label"}}</label>
+                <input class="form-input unset-outline bg-[#F2F4F7] placeholder-[#98A2B3] font-sans" data-search-quick name="{{name}}" id="{{name}}"
+                    data-error-message="{{lang 'search.error.empty_field'}}"
+                    placeholder="{{lang 'search.quick_search.input_placeholder'}}" autocomplete="off">
+            </div>
+            <button class="flex items-center justify-center bg-red-600 rounded-full w-8 h-8 mr-[5px]" type="submit" aria-label="Search">
+                <span class="icon--search p-[7px]">
+                    <svg class="stroke-white w-[18px] h-[18px]">
+                        <use xlink:href="#svg-search"></use>
+                    </svg>
+                </span>
+            </button>
+        </fieldset>
+    </form>
+    <section class="quickSearchResults hidden" data-bind="html: results"></section>
+    <p role="status"
+       aria-live="polite"
+       class="aria-description--hidden"
+       data-search-aria-message-predefined-text="{{{lang 'search.results.quick_count_live'}}}"
+    ></p>
+</div>

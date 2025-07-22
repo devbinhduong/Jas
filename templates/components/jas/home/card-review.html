@@ -1,0 +1,20 @@
+<div class="bg-[#F9FAFB] rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between custom-fadeInUp skeletor-loading" data-step-animate="3">
+    <!-- Stars -->
+    <div class="">
+        <div class="flex gap-1 mb-7">
+            {{> components/jas/home/star-count count=count}}
+        </div>
+            <p class="text-medium leading-relaxed mb-6">
+                {{review}}
+            </p>
+        </div>
+    
+    
+    <div class="flex items-center gap-3">
+        <img src="{{cdn 'img/loading.svg'}}" data-src="{{img}}" alt="{{name}}" class="w-8 h-8 md:w-12 md:h-12 rounded-full object-cover lazyload">
+        <div>
+            <div class="text-medium">{{name}}</div>
+            <div class="text-small">{{company}}</div>
+        </div>
+    </div>
+</div>

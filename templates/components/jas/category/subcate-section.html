@@ -1,0 +1,89 @@
+<div class="w-full image-banner-slider mb-20">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-title-section font-eina02">
+            {{category.name}}
+        </h2>
+        <div class="flex items-center gap-x-4">
+            <button
+                class="text-gray-900 border border-gray-900 rounded-full p-2 cursor-pointer custom-slick-prev flex items-center gap-x-4">
+                <svg class="w-[24px] h-[24px]">
+                    <use href="#svg-chevron-prev"></use>
+                </svg>
+                <span class="font-semibold text-sm md:block hidden">Previous</span>
+            </button>
+            <button
+                class="text-gray-900 border border-gray-900 rounded-full p-2 cursor-pointer custom-slick-next flex items-center gap-x-4">
+                <span class="font-semibold text-sm md:block hidden">Next</span>
+                <svg class="w-[24px] h-[24px]">
+                    <use href="#svg-chevron-next"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div data-section-load="ajax" data-cateid-list="{{theme_settings.home_cate_tab_ids}}">
+        <div class="image-banner-list mx-[-8px] gap-x-4 gap-y-6" data-section-load="slick-slider" data-slick='{
+                                            "infinite": false,
+                                            "arrows": true,
+                                            "dots": false,
+                                            "mobileFirst": true,
+                                            "slidesToShow": 3,
+                                            "slidesToScroll": 3,
+                                            "prevArrow": ".image-banner-slider .custom-slick-prev",
+                                            "nextArrow": ".image-banner-slider .custom-slick-next",
+                                            "responsive": [
+                                                {
+                                                    "breakpoint": 550,
+                                                    "settings": {
+                                                        "slidesToShow": 4,
+                                                        "slidesToScroll": 4
+                                                    }
+                                                },
+                                                 {
+                                                    "breakpoint": 768,
+                                                    "settings": {
+                                                        "slidesToShow": 6,
+                                                        "slidesToScroll": 6
+                                                    }
+                                                },
+                                                {
+                                                    "breakpoint": 1025,
+                                                    "settings": {
+                                                        "slidesToShow": 8,
+                                                        "slidesToScroll": 4
+                                                    }
+                                                }
+                                            ]
+                                        }'>
+            {{#each category.subcategories}}
+                <div class="flex px-2 col-span-1 flex-col items-center justify-center md:h-auto h-[84px] md:w-auto w-[84px]">
+                    <div
+                        class="bg-[#EAECF0] rounded-full overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 aspect-square p-[10px] md:p-6 flex flex-col items-center justify-center gap-[10px]">
+                        <div class="relative overflow-hidden group">
+                            {{#if image}}
+                            <a href="#"
+                                class="aspect-square rounded flex items-center justify-center group-hover:scale-105 transition-transform duration-300 w-full h-full">
+                                <img src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image " category_size"}}" alt="{{name}}" class="object-contain w-full lazyload h-full">
+                            </a>
+                            {{else}}
+                            <a href="#"
+                                class="aspect-square rounded flex items-center justify-center group-hover:scale-105 transition-transform duration-300 w-full h-full">
+                                <img src="{{cdn 'img/loading.svg'}}" data-src="/img/ProductDefault.gif" alt="{{name}}" class="object-contain w-full lazyload h-full">
+                            </a>
+                            {{/if}}
+                            
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#"
+                            class="text-center block text-gray-800 hover:text-blue-600 transition-colors duration-300 ">
+                            <span class="block font-bold text-center">
+                                {{name}}
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="heroCarousel-content{{#and (if heading '==' false) (if text '==' false)}} heroCarousel-content--empty{{/and}} custom-animation flex flex-col gap-y-[16px] md:gap-y-[32px] top-[48%]"
+    data-section-load="animation">
+    <div class="heroCarousel-group--content">
+            {{#if subHeading}}
+            <span
+                class="heroCarousel-subHeading">{{subHeading}}</span>
+            {{/if}}
+            {{#if heading}}
+            <h2 class="heroCarousel-title custom-animation font-eina02 text-white" data-step-animate="3">{{{heading}}}</h2>
+            {{/if}}
+            {{#if text}}
+            <p class="heroCarousel-description custom-animation mb-0 text-white" data-step-animate="4">{{{text}}}</p>
+            {{/if}}
+    </div>
+    {{#or button_text}}
+    <div class="custom-heroCarousel-wrapper-button">
+        <a href="{{url}}"
+            aria-label="{{#if this.alt_text.length '!=' 0}}{{this.alt_text}}{{else}}{{lang 'carousel.slide_number' slide_number=(add @index 1)}}{{/if}}, {{button_text}}"
+            class="heroCarousel-action flex gap-x-1 button button-style-2 custom-animation" data-step-animate="5"
+            role="button">
+            <span class="text-left text">
+                {{{button_text}}}
+            </span>
+            <span class="icon navPages-action-moreIcon w-6 h-6" aria-hidden="true">
+                <svg class="w-6 h-6">
+                    <use href="#svg-arrow-down"></use>
+                </svg>
+            </span></a>
+    </div>
+    {{/or}}
+</div>

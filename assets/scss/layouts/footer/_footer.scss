@@ -1,0 +1,288 @@
+// =============================================================================
+// FOOTER (CSS)
+// =============================================================================
+
+
+// Layout and columns
+// -----------------------------------------------------------------------------
+//
+// 1. To enable the grid's display: inline-block; to work properly, we need to
+//    remove the white-space that it creates between columns with font-size: 0;
+// 2. Re-set the font-size that was reduced to 0 in point 1 for children.
+// 3. Fix for text flickers on windows devices
+//
+// -----------------------------------------------------------------------------
+
+.footer {
+    background-color: $footer-background;
+    border-top: container("border");
+    padding: spacing("double") 0;
+    position: relative;
+    transform: translateZ(0); // 3
+}
+
+.footer-title-sr-only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+.footer-info {
+    @include grid-row($behavior: nest);
+    font-size: 0; // 1
+}
+
+.footer-info-col {
+    color: stencilColor("color-textSecondary");
+    display: inline-block;
+    float: none;
+    font-size: fontSize("base"); // 2
+    overflow-wrap: break-word;
+    text-align: center;
+    vertical-align: top;
+    // TODO: specifically use vendor only for IE11 since overflow-wrap is not supported here
+    -ms-word-break: break-all;
+    @include breakpoint("small") {
+        text-align: left;
+    }
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.footer-info-col--social {
+    width: 100%;
+}
+
+.footer-info-col--left {
+    @include breakpoint("small") {
+        padding: 0;
+    }
+}
+
+.footer-info-col--right {
+    @include breakpoint("small") {
+        left: 50%;
+        position: inherit;
+        width: 50%;
+    }
+
+    @include breakpoint("medium") {
+        left: 0;
+        padding: 0;
+        text-align: right;
+        width: 100%;
+    }
+}
+
+
+// Content
+// -----------------------------------------------------------------------------
+
+.footer-info-heading {
+    color: $footer-heading-fontColor;
+    font-size: fontSize("base");
+    text-transform: inherit;
+}
+
+.footer-info-list {
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    a {
+        color: stencilColor("color-textSecondary");
+        text-decoration: none;
+
+        &:hover {
+            color: stencilColor("color-textSecondary--hover");
+        }
+    }
+}
+
+.footer-copyright {
+    text-align: center;
+
+    @include breakpoint("small") {
+        text-align: left;
+    }
+
+    > .powered-by {
+        color: stencilColor("color-textSecondary");
+        font-size: fontSize("tiny");
+        margin: 0;
+    }
+
+    a {
+        color: stencilColor("color-textSecondary");
+        text-decoration: none;
+
+        &:hover {
+            color: stencilColor("color-textSecondary--hover");
+        }
+    }
+}
+
+.footer-payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: spacing("single");
+
+    @include breakpoint("small") {
+        justify-content: normal;
+    }
+
+    @include breakpoint("medium") {
+        margin-top: spacing("double");
+    }
+
+    .footer-payment-icon {
+        height: remCalc(40);
+        margin: spacing("quarter");
+        vertical-align: middle;
+        width: remCalc(50);
+    }
+
+    svg {
+        fill: stencilColor("icon-color");
+    }
+}
+
+.footer-newsletter-summary {
+    text-align: left;
+}
+
+.footer-info-col {
+    overflow-wrap: break-word;
+    &.footer-info-col--submitForm {
+        width: 100%;
+
+        .footer-info-heading {
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.4;
+            text-transform: capitalize;
+            max-width: 300px;
+            letter-spacing: 0.03rem;
+            margin-top: 27px;
+        }
+
+        .form {
+            margin-bottom: 16px;
+
+            .form-prefixPostfix {
+                display: flex;
+                flex-direction: column;
+
+                .form-input {
+                    color: #000000;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.25;
+                    background-color: #f1f1f1;
+                    border-radius: 0;
+                    min-height: 40px;
+
+                    &::placeholder {
+                        color: inherit;
+                        text-transform: capitalize;
+                    }
+
+                    /* For Firefox */
+                    &::-moz-placeholder {
+                        opacity: 1
+                    }
+                }
+
+                .button {
+                    margin-left: 0;
+                    margin-top: 12px;
+                    min-height: 36px;
+                }
+            }
+
+            .form-field {
+                margin-bottom: 0;
+            }
+        }
+
+        @include smax-xs {
+            .form {
+                margin-bottom: 0;
+
+                .form-field {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @include smax-xs {
+        +.footer-info-col {
+            margin-top: 0;
+        }
+    }
+
+    /* Footer Toogle On Mobile */
+    &:not(.footer-info-col--submitForm) {
+        @include smax-xs {
+            margin-bottom: 0;
+
+            .footer-info-heading {
+                margin-bottom: 0;
+                padding: 15px 0;
+                position: relative;
+                        width: 100%;
+                        text-align: left;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &.open-dropdown .icon-toggle{
+                transform: rotate(180deg);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .footer-info-list {
+                display: none;
+                margin-bottom: 30px;
+                margin-top: 12px;
+                @include smax-xs {
+                    .text-white {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-icon-image {
+        @include smax-xs {
+            margin-top: 20px;
+        }
+    }
+}
+.footer {
+    .button-style {
+        @include smax-xs {
+            width: 100%;
+        }
+    }
+}

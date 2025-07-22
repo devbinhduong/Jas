@@ -1,0 +1,34 @@
+<div class="mt-6 md:mt-20 w-full" id="cate-by-tab-section" data-section-load="cateByTab">
+    <!-- Header Section -->
+    <div class="flex justify-between items-center" data-section-load="animation">
+        <h2 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">Shop Popular Brands</h2>
+        <a href="#" class="text-red-600 hover:text-red-700 font-medium flex items-center group custom-fadeInUp" data-step-animate="3">
+            <span class="text-sm font-tight font-semibold">See all products</span>
+            <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414]">
+                <use href="#svg-arrow-down"></use>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Brands Grid -->
+    <div class="flex flex-col mt-9">
+        <ul class="flex lists-title-tab gap-4 mb-7 max-content overflow-x-auto scroll-none max-md:pb-[15px]">
+            {{#each (split theme_settings.home_cate_tab_ids ",")}}
+                <li class="text-black text-[14px] py-[3px] px-4 border-[1px] border-black leading-[1.35] rounded-md tab-item" data-title-id="{{this}}"></li>
+            {{/each}}
+        </ul>
+        <div class="tab-content py-0 relative" data-section-load="animation">
+            {{#each (split theme_settings.home_cate_tab_ids ",")}}
+                <div class="tab-pane fade" id="tab-{{this}}" role="tabpanel" aria-labelledby="tab-{{this}}">
+                    <div class="tab-content-item">
+                        {{#if @first}}
+                            {{#for 1 5}}
+                                {{> components/jas/home/product-loading}}
+                            {{/for}}
+                        {{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

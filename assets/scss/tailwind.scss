@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+}
+@layer components {
+        .container-footer {
+          @apply max-w-container-footer mx-auto px-4 relative;
+        }
+        .display-1 {
+            @apply text-[18px] leading-[120%] tracking-[0] md:text-[48px] md:leading-[100%] md:tracking-[0];
+          }
+        
+          .text-xl {
+            @apply text-[20px] leading-[30px] tracking-[0] md:text-[32px] md:leading-[44px] md:tracking-[0];
+          }
+        
+          .text-lg {
+            @apply text-[18px] leading-[28px] tracking-[0] md:text-[28px] md:leading-[40px] md:tracking-[0];
+          }
+        
+          .text-md {
+            @apply text-[16px] leading-[24px] tracking-[0] md:text-[20px] md:leading-[30px] md:tracking-[0];
+          }
+        
+          .text-sm {
+            @apply text-[14px] leading-[1.42857143] tracking-[0] md:text-[16px] md:leading-[24px] md:tracking-[0];
+          }
+        
+          .text-xs {
+            @apply text-[12px] leading-[18px] tracking-[0] md:text-[14px] md:leading-[20px] md:tracking-[0];
+          }
+          .title-menu {
+              @apply flex lg:hidden justify-center border-b-gray-400 border-b-[1px] pb-2;
+          }
+          
+          .text-title-section {
+            @apply text-[#231F1E] text-[18px] md:text-[32px] capitalize font-bold;
+          }
+          .text-medium {
+             @apply text-[14px] font-medium md:text-[18px] font-sans leading-[150%] text-[#0F0F0F];
+          }
+          .text-small {
+            @apply text-[12px] font-medium md:text-[16px] font-sans leading-[150%] text-[#1E1E1E];
+          }
+          .text-title-video {
+            @apply text-white text-[18px] md:text-[32px] capitalize font-bold;
+          }
+                    .btn-login {
+                      @apply bg-[#C51414] text-white hover:bg-black rounded-full px-4 py-2 text-center;
+                    }
+}

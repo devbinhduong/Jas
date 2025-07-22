@@ -1,0 +1,56 @@
+<div class="mt-6 md:mt-20">
+<div class="flex justify-between items-center mb-4 md:mb-8 md:mt-0 mt-6">
+    <h2 class="text-title-section font-eina02">
+        {{lang 'products.top' }}
+    </h2>
+    <a href="#" class="text-red-600 hover:text-red-700 font-medium flex items-center group">
+        <span class="text-sm font-sans font-semibold">See all products</span>
+        <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414]">
+            <use href="#svg-arrow-down"></use>
+        </svg>
+    </a>
+    </div>
+    <ul class="productGrid productGrid--maxCol{{ columns }}" data-product-type="top_sellers"
+        data-list-name="Most Popular Products"
+        data-section-load="slick-slider"
+        data-slick='{
+        "infinite": false,
+        "mobileFirst": true,
+        "arrows": false,
+        "dots": false,
+        "slidesToShow": 2,
+        "slidesToScroll": 2,
+        "responsive": [
+            {
+                "breakpoint": 1441,
+                "settings": {
+                    "slidesToShow": 5,
+                    "slidesToScroll": 5
+                }
+            },
+             {
+                "breakpoint": 1024,
+                "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 4
+                }
+            },
+            {
+                "breakpoint": 550,
+                "settings": {
+                    "slidesToShow": 3,
+                    "slidesToScroll": 3
+                }
+            }
+        ]
+    }'
+        >
+        {{#each products}}
+        <li class="product">
+            {{>components/products/card productsnew=../products settings=../settings theme_settings=../theme_settings customer=../customer
+            event="list" position=(add @index 1)}}
+        </li>
+        {{/each}}
+    </ul>
+
+</div>

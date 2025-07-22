@@ -1,0 +1,12 @@
+<div class="body {{#or (if page_type '===' 'page') (if page_type '===' 'category')}}mt-0{{/or}}" id="main-content" data-currency-code="{{currency_selector.active_currency_code}}">
+    {{#block "hero"}} {{/block}}
+    {{#or (if page_type '===' 'page') (if page_type '===' 'category')}}
+        {{#block "page"}} {{/block}}
+    {{else}}
+    <div class="container">
+        {{#block "page"}} {{/block}}
+    </div>
+    {{/or}}
+    {{> components/common/modal/modal}}
+    {{> components/common/alert/alert-modal}}
+</div>

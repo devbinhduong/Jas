@@ -1,0 +1,72 @@
+<nav class="headerMid flex items-center justify-center bg-white">
+    <div class="container md:p-0">
+        <div class="headerMid__container flex items-center justify-between py-4 md:py-[16px] gap-x-[13.5px] md:gap-x-12">
+            <div class="headerMid__left flex items-center gap-3">
+                <div class="items item--hamburger block md:hidden">
+                    <a class="sidebar-toggle" href="#" data-mobile-menu-toggle="menu">
+                        <svg class="stroke-black w-[24px] h-[24px]">
+                            <use xlink:href="#svg-hambuger"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div data-search='quickSearch' class="items item--search block md:hidden">
+                        <svg class="stroke-black w-[24px] h-[24px]">
+                            <use xlink:href="#svg-search"></use>
+                        </svg>
+                </div>
+                <div class="header-logo hidden md:block">
+                    {{> components/common/store-logo}}
+                </div>
+            </div>
+            <div class="headerMid__center">
+                    <div class="md:block hidden" id="quickSearch" data-prevent-quick-search-close>
+                        {{> components/common/quick-search}}
+                    </div>
+                    <div class="header-logo block md:hidden max-md:m-0 z-0 relative">
+                        {{> components/common/store-logo}}
+                    </div>
+            </div>
+            <div class="headerMid__right">
+                <div class="headerMid__right--desktop md:block hidden">
+                    {{> components/common/navigation}}
+                </div>
+                <div class="headerMid__right--mobile md:hidden flex items-center justify-center">
+                            <li class="navUser-item block">
+                                <a class="navUser-action flex items-center justify-center" href="/wishlist.php"
+                                    aria-label="Search">
+                                    <span class="icon icon-wishlist">
+                                        <svg class="stroke-black">
+                                            <use xlink:href="#svg-heart"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="navUser-item block navUser-item--cart">
+                                <a class="navUser-action flex items-center justify-center" data-cart-preview2
+                                     data-options="align:right" href="{{urls.cart}}"
+                                    aria-label="{{lang 'cart.nav_aria_label'}}">
+                                    <span class="icon icon-cart">
+                                        <svg class="stroke-black">
+                                            <use xlink:href="#svg-cart"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="countPill cart-quantity"></span>
+                                </a>
+                            
+                                <div class="dropdown-cart" id="cart-preview-dropdown" aria-hidden="true"></div>
+                            </li>
+                            <li class="navUser-item block navUser-item--account">
+                                <a data-login-form-mobile class="navUser-action flex items-center justify-center text-sm" href="{{urls.auth.login}}"
+                                    aria-label="{{lang 'common.login'}}">
+                                    <span class="icon icon-wishlist">
+                                        <svg class="stroke-black">
+                                            <use xlink:href="#svg-user"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

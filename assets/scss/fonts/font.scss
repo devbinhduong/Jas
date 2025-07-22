@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Eina 02';
+    src: url('../fonts/Eina02-Bold.woff2') format('woff2'),
+        url('../fonts/Eina02-Bold.woff') format('woff'),
+        url('../fonts/Eina02-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Eina 01';
+    src: url('../fonts/Eina01-SemiBold.woff2') format('woff2'),
+        url('../fonts/Eina01-SemiBold.woff') format('woff'),
+        url('../fonts/Eina01-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+}
