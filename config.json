@@ -579,7 +579,13 @@
         "footer_col2_link10": "#",
         "footer_info_logo": "logo-load.jpeg",
         "show_sticky_header": true,
-        "custom_add_to_cart_popup": "mini"
+        "custom_add_to_cart_popup": "mini",
+        "halo_ask_an_expert": true,
+        "halo_ask_an_expert_title": "Have Question?",
+        "halo_ask_an_expert_desc1": "Ask an Expert anything on here.",
+        "halo_ask_an_expert_desc2": "We will follow up with you via email within 24-36 hours",
+        "halo_ask_an_expert_desc3": "Please answer the following questionnaire",
+        "halo_ask_an_expert_pagelink": "/ask-an-expert/"
       }
     }
   ]

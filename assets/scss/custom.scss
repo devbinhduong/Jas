@@ -1222,3 +1222,410 @@ body {
 .body-font {
     font-family: stencilFontFamily("body-font");
 }
+
+// Ask an expert
+.has-askAnExpert {
+    .halo-ask-an-expert-popup {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.halo-ask-an-expert-popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    transition: $anchor-transition;
+    background-color: rgba(59, 59, 59, .7);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 100%;
+    z-index: 1050;
+
+    .g-recaptcha {
+        margin-top: 15px;
+    }
+
+    [data-close-ask-an-expert-popup] {
+        line-height: 1;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        z-index: 50;
+        top: 16px;
+        right: 20px;
+        font-size: 0;
+    }
+
+    .halo-ask-an-expert-container {
+        position: relative;
+        width: auto;
+        min-height: 240px;
+        max-height: 90%;
+        margin: 1.75rem auto;
+        max-width: calc(100% - 30px);
+        background-color: #ffffff;
+        top: 46%;
+        transform: translateY(-50%);
+
+        @media (min-width: 768px) {
+            max-width: 700px;
+        }
+
+        @media (min-width: 1025px) {
+            width: 740px;
+        }
+    }
+
+    .halo-ask-an-expert-logo {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        background: #fafafa;
+
+        .home-layout-2 & {
+            background: $header-bg;
+        }
+
+        >a {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 165px;
+                margin: 0 auto;
+
+                &.lazyload,
+                &.lazyloading {
+                    width: auto;
+                    height: auto;
+                    margin: auto;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .halo-ask-an-expert-subtitle {
+        font-family: $fontFamily-headings;
+        font-size: $fontSize-root;
+        font-weight: $fontWeight-normal;
+        color: $header-font-color;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0 0 15px 0;
+
+        span {
+            border-bottom: 1px solid #bec9ca;
+        }
+    }
+
+    .halo-ask-an-expert-text {
+        font-size: $fontSize-root - 2px;
+        font-weight: $fontWeight-normal;
+        font-style: italic;
+        color: $color-textBase;
+        line-height: 24px;
+        text-align: center;
+        margin: 0;
+        padding: 2px 0 0 0;
+
+        .alertBox {
+            margin: 20px 0 40px;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: $fontSize-root - 2px;
+        }
+    }
+
+    .halo-ask-an-expert-form {
+        .form-field:not(.form-field-radio):not(.form-field-checkbox) {
+            .form-label {
+                width: auto;
+                display: inline-block;
+    
+                small {
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+    }
+
+    .hl-form-field-wrapper {
+        +.form-field {
+            margin-top: 15px;
+        }
+    }
+
+    .form-field-checkbox {
+        position: relative;
+
+        input[type="checkbox"] {
+            position: absolute;
+            top: 2.5px;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 0;
+            border: 1px solid #d0d0d0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            +.form-label {
+                font-size: $fontSize-root - 2px;
+                font-weight: $fontWeight-normal;
+                font-style: italic;
+                color: $color-textBase;
+                padding-left: 25px;
+                margin-bottom: 0;
+                position: relative;
+            }
+
+            &:checked {
+                background: $check-pip-backgroundImage;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        span {
+            border-bottom: 1px solid $header-font-color;
+            color: $header-font-color;
+        }
+    }
+
+    .form-field-radio {
+        position: relative;
+
+        span {
+            border-bottom: 1px solid $header-font-color;
+            color: $header-font-color;
+        }
+    }
+
+    .form-actions {
+        text-align: center;
+        margin-top: 19px;
+
+        .button {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.halo-ask-an-expert {
+    .halo-ask-an-expert-container {
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #a6a6a6;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #787878;
+        }
+    }
+
+    .modal-body {
+        padding: 15px 30px 0 30px;
+        overflow: unset;
+        margin: 12px auto 0 auto;
+        max-width: 100%;
+
+        .halo-ask-an-expert-heading {
+            font-size: $fontSize-root;
+            font-weight: $fontWeight-semibold;
+            color: $color-textBase;
+            letter-spacing: $letterSpacing-base;
+            line-height: 24px;
+            text-align: center;
+            margin: 0;
+            text-transform: unset;
+            padding: 4px 30px;
+        }
+
+        .halo-ask-an-expert-text {
+            font-size: $fontSize-root;
+            font-weight: $fontWeight-normal;
+            color: $color-textBase;
+            letter-spacing: $letterSpacing-base;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .halo-ask-an-expert-intro {
+            font-size: $fontSize-root;
+            font-weight: $fontWeight-normal;
+            color: $color-textBase;
+            letter-spacing: $letterSpacing-base;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 0
+        }
+
+        .halo-line {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            height: 1px;
+            background: #DCE4E9;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            font-size: 0px;
+            margin-bottom: 20px;
+        }
+
+        #halo-ask-an-expert-results {
+            margin-bottom: 22px;
+        }
+    }
+
+
+    .alertBox {
+        font-size: $fontSize-root;
+        margin: 20px 0 40px;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .alertBox-message {
+        display: inherit;
+        text-align: center;
+    }
+
+    .form-field {
+        margin-bottom: 0;
+
+        .hiddenLabels {
+            display: none;
+        }
+
+        +.form-field {
+            margin-top: 15px;
+
+            &.form-field-radio {
+                margin-top: 22px;
+                border-bottom: none;
+                padding-bottom: 0;
+
+                @media (max-width: 767px) {
+                    .form-label {
+                        &:first-child {
+                            display: block;
+                            margin-right: 0;
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        +.form-field-textarea {
+            margin-top: 13px;
+
+            .form-input {
+                max-height: 136px;
+                line-height: 26px;
+            }
+        }
+
+        +.form-field-checkbox {
+            margin-top: 21px;
+        }
+
+        &.form-field-radio .form-radio+.form-label {
+            color: $color-textBase;
+        }
+    }
+
+    .form-label {
+        margin-bottom: 10px;
+    }
+
+    .form-input {
+        font-style: normal;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-field-checkbox {
+        position: relative;
+
+        input[type="checkbox"] {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 0;
+            border: 1px solid #d0d0d0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            +.form-label {
+                font-size: $fontSize-root;
+                font-weight: $fontWeight-normal;
+                color: $color-textSecondary;
+                padding-left: 25px;
+                margin-bottom: 0;
+                position: relative;
+            }
+
+            &:checked {
+                background: $check-pip-backgroundImage;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .link {
+            border-bottom: 1px solid $color-textLink;
+            color: $color-textLink;
+        }
+    }
+
+    .form-field-radio {
+        padding-top: 0;
+    }
+
+    .form-actions {
+        text-align: center;
+        margin-top: 25px;
+
+        .button {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .modal-body {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 500px;
+        }
+    }
+}
