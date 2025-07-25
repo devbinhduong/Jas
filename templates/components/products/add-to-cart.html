@@ -1,15 +1,15 @@
 <div id="add-to-cart-wrapper" class="add-to-cart-wrapper" {{#unless product.can_purchase}}style="display: none"{{/unless}}>
     {{#if product.show_quantity_input}}
         {{inject 'productQuantityErrorMessage'  (lang 'products.quantity_error_message')}}
-        <div class="form-field form-field--increments">
-            <label class="form-label form-label--alternate"
+        <div class="form-field form-field--increments flex items-center gap-2">
+            <label class="form-label form-label--alternate mb-0"
                    for="qty[]">{{lang 'products.quantity'}}</label>
                 <div class="form-increment" data-quantity-change>
                     <button class="button button--icon" data-action="dec">
                         <span class="is-srOnly">{{lang 'products.quantity_decrease' name=product.title}}</span>
                         <i class="icon" aria-hidden="true">
                             <svg>
-                                <use href="#icon-keyboard-arrow-down"/>
+                                <use href="#icon-minus"/>
                             </svg>
                         </i>
                     </button>
@@ -27,11 +27,15 @@
                         <span class="is-srOnly">{{lang 'products.quantity_increase' name=product.title}}</span>
                         <i class="icon" aria-hidden="true">
                             <svg>
-                                <use href="#icon-keyboard-arrow-up"/>
+                                <use href="#icon-plus"/>
                             </svg>
                         </i>
                     </button>
                 </div>
+
+                {{#if product.stock_level}}
+                    <span class="text-[14px] leading-none tracking-[-0.07px] text-[#067647] font-normal md:tracking-[-0.08px] md:text-[16px]">In Stock <span data-product-stock>{{product.stock_level}}</span></span>
+                {{/if}}
         </div>
     {{/if}}
 
@@ -42,16 +46,20 @@
         <p class="alertBox-column alertBox-message"></p>
     </div>
     {{#or customer (unless settings.hide_price_from_guests)}}
-        <div class="add-to-cart-buttons {{#if product.pre_order}}pre-order-buttons{{/if}}">
-            <div class="form-action">
-                <input
-                        id="form-action-addToCart"
-                        data-wait-message="{{lang 'products.adding_to_cart'}}"
-                        class="button button--primary"
-                        type="submit"
-                        value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}"
-                >
-                <span class="product-status-message aria-description--hidden">{{lang 'products.adding_to_cart'}} {{lang 'category.add_cart_announcement'}}</span>
+        <div class="add-to-cart-buttons{{#if product.pre_order}} pre-order-buttons{{/if}}">
+            <div class="form-action grid grid-cols-2 gap-3 md:gap-4 w-full">
+                <div class="atc-button-wrapper">
+                    <button class="button button--primary w-full mb-0" id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}">
+                        <span>{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}</span>
+                    </button>
+                    <span class="product-status-message aria-description--hidden">{{lang 'products.adding_to_cart'}} {{lang 'category.add_cart_announcement'}}</span>
+                </div>
+
+                <div class="button-app-wrapper">
+                    <a class="button button--primary w-full mb-0">
+                        <span>Sezzle button</span>
+                    </a>
+                </div>
             </div>
             {{#if this.with_wallet_buttons}}
                 <div class="add-to-cart-wallet-buttons" data-add-to-cart-wallet-buttons>

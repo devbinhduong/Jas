@@ -4,47 +4,32 @@
             <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
         </li>
     {{/if}}
-    {{#if product.warranty}}
-        <li class="tab {{#unless product.description}}is-active{{/unless}}">
-            <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
-        </li>
-    {{/if}}
-    {{#all product.custom_fields theme_settings.show_custom_fields_tabs}}
-        <li class="tab">
-            <a class="tab-title"
-               href="#tab-{{dashcase (lowercase (sanitize theme_settings.pdp-custom-fields-tab-label))}}"
-            >
-                {{sanitize theme_settings.pdp-custom-fields-tab-label}}
-            </a>
-        </li>
-    {{/all}}
-    {{#all settings.show_product_reviews theme_settings.show_product_reviews product.reviews.total}}
-        <li class="tab">
-            <a class="tab-title productView-reviewTabLink" href="#tab-reviews">{{lang 'products.reviews.header' total=product.reviews.total}}</a>
-        </li>
-    {{/all}}
+    <li class="tab">
+        <a class="tab-title" href="#tab-shipping">Shipping & Returns</a>
+    </li>
 </ul>
-<div class="tabs-contents">
+<div class="tabs-contents text-[14px] md:text-[16px]">
     {{#if product.description}}
         <div class="tab-content is-active" id="tab-description">
+            <h3 class="description-title font-eina02 ">Descriptions</h3>
             {{{product.description}}}
         </div>
     {{/if}}
-    {{#if product.warranty}}
-        <div class="tab-content {{#unless product.description}}is-active{{/unless}}" id="tab-warranty">
-            {{{product.warranty}}}
-        </div>
-    {{/if}}
-    {{#all product.custom_fields theme_settings.show_custom_fields_tabs}}
-      <div class="tab-content" id="tab-{{dashcase (lowercase (sanitize theme_settings.pdp-custom-fields-tab-label))}}">
-         <dl class="productView-info">
-            {{> components/products/custom-fields }}
-         </dl>
-      </div>
-    {{/all}}
-    {{#all settings.show_product_reviews theme_settings.show_product_reviews}}
-       <div class="tab-content" id="tab-reviews">
-           {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
-       </div>
-    {{/all}}
+    <div class="tab-content" id="tab-shipping">
+        <h3 class="description-title font-eina02">Shipping & Returns</h3>
+
+        <h4 class="mb-3 body-font text-[16px] md:text-[18px] font-semibold leading-[26px]">Returns Policy</h4>
+        <ul class="ml-3 list-disc flex flex-col gap-2">
+        <li>You may return most new, unopened items within 30 days of delivery for a refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect item)</li>
+        <li>You may return most new, unopened items within 30 days of delivery for a refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect item). 
+            You should expect to receive your refund within two-three weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).</li>
+        <li>If you need to return an item, simply login to your account, view the order using the "Complete Orders" link under the My Account menu and click the Return Item(s) button. We'll notify you via e-mail of your refund once we've received and processed the returned item.</li>
+        </ul>
+        <h3 class="description-title mt-10 font-eina02">What's in the box:</h3>
+        <ul class="ml-3 list-disc flex flex-col gap-2">
+        <li>We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.</li>
+        <li>When you place an order, we will estimate shipping and delivery dates for you based on the availability of your items and the shipping options you choose. Depending on the shipping provider you choose, shipping date estimates may appear on the shipping quotes page.</li>
+        </ul>
+
+    </div>
 </div>

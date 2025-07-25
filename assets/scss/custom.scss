@@ -472,6 +472,23 @@ a.link-line{
         }
 }
 
+.button--primary {
+    border: 1px solid transparent;
+    @include button-style($textColor: stencilColor("button--primary-color"),
+        $bgColor: stencilColor("button--primary-backgroundColor"),
+        $hoverTextColor: stencilColor("button--primary-colorHover"),
+        $hoverBgColor: stencilColor("button--primary-backgroundColorHover"),
+        $fontSize: 16px,
+        $borderRadius: 99px,
+        $fontWeight: 600,
+        $lineHeight: 150%,
+        $borderColor: stencilColor("button--primary-borderColor"),
+        $padding: 10px 32px);
+        @include smax-m {
+            font-size: 14px;
+        }
+}
+
 
 #review-section {
     .col-span-12 {
@@ -1200,4 +1217,8 @@ body {
     svg {
         fill: #e4e4e4 !important;
     }
+}
+
+.body-font {
+    font-family: stencilFontFamily("body-font");
 }

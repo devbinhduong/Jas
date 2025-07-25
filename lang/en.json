@@ -151,7 +151,7 @@
         "form_submit": "Submit",
         "no_preference": "No Preference",
         "other_details": "Other Details",
-        "required": "Required",
+        "required": "*",
         "optional": "Optional",
         "email_address": "Email Address",
         "edit": "Edit",
@@ -719,7 +719,7 @@
     },
     "products": {
         "current_stock": "Current Stock:",
-        "quantity": "Quantity:",
+        "quantity": "Select Quantity:",
         "change_product_options": "Change options for {name}",
         "quantity_decrease": "Decrease Quantity of {name}",
         "quantity_increase": "Increase Quantity of {name}",

@@ -1,22 +1,24 @@
-<section class="productCarousel"
+<section data-section-load="slick-slider" class="productCarousel"
     data-list-name="{{list}}"
     data-slick='{
         "infinite": false,
-        "arrows": false,
+        "arrows": true,
         "mobileFirst": true,
         "slidesToShow": 2,
         "slidesToScroll": 2,
         "slide": "[data-product-slide]",
+        "prevArrow":".productRelated-section button[prev-arrow]",
+        "nextArrow":".productRelated-section button[next-arrow]",
         "responsive": [
             {
-                "breakpoint": 800,
+                "breakpoint": 1024,
                 "settings": {
                     "slidesToShow": {{ columns }},
                     "slidesToScroll": {{ columns }}
                 }
             },
             {
-                "breakpoint": 550,
+                "breakpoint": 768,
                 "settings": {
                     "slidesToShow": 3,
                     "slidesToScroll": 3

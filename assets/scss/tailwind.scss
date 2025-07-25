@@ -48,7 +48,50 @@
           .text-title-video {
             @apply text-white text-[18px] md:text-[32px] capitalize font-bold;
           }
-                    .btn-login {
-                      @apply bg-[#C51414] text-white hover:bg-black rounded-full px-4 py-2 text-center;
-                    }
+          .btn-login {
+            @apply bg-[#C51414] text-white hover:bg-black rounded-full px-4 py-2 text-center;
+          }
+
+          .productView-nav:not(.slick-initialized) .productView-image:nth-child(n+2) {
+            @apply hidden;
+          }
+          .productView-thumbnail.slick-current .productView-thumbnail-link {
+            @apply border border-black bg-[#EAECF0];
+          }
+          .productView-image-wrapper {
+            .slick-arrow {
+              @apply bg-transparent border-none;
+          
+              &:hover {
+                @apply text-black;
+              }
+          
+              &.slick-prev {
+                @apply left-0;
+              }
+          
+              &.slick-next {
+                @apply right-0;
+              }
+            }
+          }
+          .productView-price .price--withoutTax {
+            @apply text-[20px] font-semibold leading-none tracking-[-0.1px] text-[#000000] md:text-[32px] md:tracking-[-0.16px];
+          }
+
+          .productView-info-item .productView-info-name {
+            @apply text-[14px] font-normal leading-none text-[#000000] md:text-[16px] md:text-[#667085];
+          }
+
+          .productView-info-item .productView-info-value {
+            @apply text-[14px] font-medium leading-none text-[#000000] md:text-[16px];
+          }
+
+          .form-label {
+            @apply text-[14px] font-semibold leading-[24px] md:text-[16px] mb-2;
+          }
+
+          .description-title {
+            @apply text-[18px] md:text-[24px] font-normal leading-[32px] text-[#1B0832] mb-2 mt-0;
+          }
 }

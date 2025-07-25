@@ -146,7 +146,7 @@
 }
 
 .form-label--alternate {
-    font-family: fontFamily("headingSans");
+    font-family: $fontFamily-sans;
     font-size: fontSize("smallest");
     margin-bottom: spacing("half");
 }
@@ -268,22 +268,57 @@
 // -----------------------------------------------------------------------------
 
 .form-increment {
+    border-radius: 999px;
+    border: 1px solid #DCE4E9;
+    padding: 12px 6px;
+    background-color: #F6F8F9;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    @include smax-m {
+        height: 40px;
+    }
+
     .button {
         margin: 0;
-        padding: remCalc(3px) remCalc(5px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #DCE4E9;
+        padding: 0;
+
+        @include smax-m {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 
 .form-input--incrementTotal {
     border: 0;
     display: inline-block;
-    font-size: fontSize("smaller");
-    font-weight: fontWeight("bold");
+    font-size: 20px;
+    font-weight: 600;
     height: auto;
     padding: 0;
     text-align: center;
     vertical-align: middle;
-    width: remCalc(35px);
+    width: remCalc(37px);
+    background: transparent;
+    color: #1B0832;
+    line-height: 28px;
+
+    @include smax-m {
+        font-size: $fontSize-root;
+        width: 30px;
+    }
 
     .form-field--success & {
         float: none;
