@@ -1629,3 +1629,105 @@ body {
         }
     }
 }
+
+// FAQ
+.faqAccordion {
+    padding: 18px 0;
+    border-top: 1px solid #D0D5DD;
+
+    @media (max-width: 768px) {
+        padding: 12px 0;
+    }
+
+    &:last-child {
+        border-bottom: 1px solid #D0D5DD;
+    }
+
+    &__title {
+        position: relative;
+        cursor: pointer;
+        &::before {
+            top: 50%;
+            right: 11px;
+            z-index: 2;
+            content: '';
+            width: 2px;
+            height: 12px;
+            position: absolute;
+            transition: all .4s ease;
+            transform: translateY(-50%);
+            background-color: #000000;
+        }
+
+        &::after {
+            top: 50%;
+            right: 6px;
+            z-index: 2;
+            content: '';
+            width: 12px;
+            height: 2px;
+            position: absolute;
+            transform: translateY(-50%);
+            background-color: #000000;
+        }
+
+        &.is-active {
+            h3 {
+                font-weight: 500;
+            }
+            
+            &::before {
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 150%;
+            color: #0B042C;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+    &__content {
+        display: none;
+        color: #32302F;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            padding-top: 12px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.faqs {
+    &-block-title {
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 110%;
+            letter-spacing: -0.2px;
+    
+            @media (max-width: 768px) {
+                font-size: 14px;
+                letter-spacing: -0.14px;
+            }
+        }
+    }
+}

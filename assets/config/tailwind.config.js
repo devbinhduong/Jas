@@ -883,6 +883,7 @@ module.exports = {
     extend: {
       maxWidth: {
         'container-footer': '1352px',
+        'container-page': '1098px',
       }
     }
   },

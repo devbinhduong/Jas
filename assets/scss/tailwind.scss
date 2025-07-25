@@ -9,6 +9,9 @@
         .container-footer {
           @apply max-w-container-footer mx-auto px-4 relative;
         }
+        .container-page {
+          @apply max-w-container-page mx-auto px-4 relative;
+        }
         .display-1 {
             @apply text-[18px] leading-[120%] tracking-[0] md:text-[48px] md:leading-[100%] md:tracking-[0];
           }
@@ -93,5 +96,13 @@
 
           .description-title {
             @apply text-[18px] md:text-[24px] font-normal leading-[32px] text-[#1B0832] mb-2 mt-0;
+          }
+
+          .page-heading {
+            @apply text-[48px] font-normal leading-none font-eina02 text-[#000000] capitalize text-left mt-4 mb-4 md:mt-5 md:mb-10 md:max-w-[534px];
+          }
+
+          .page-sub-heading {
+            @apply uppercase font-medium text-[#000000] mt-5 md:mt-10 text-[12px] md:text-[16px] leading-[135%] tracking-[0.96px] md:tracking-[1.28px] block;
           }
 }

@@ -9,8 +9,9 @@ export default class Page extends PageManager {
         function initTimelineScrollAnimation() {
             const timelineSection = document.getElementById('timeline-section');
             const timelineProgress = document.getElementById('timeline-progress');
-            const fillProgress = timelineSection.querySelectorAll('.point-target');
             if (!timelineSection || !timelineProgress) return;
+
+            const fillProgress = timelineSection.querySelectorAll('.point-target');
             gsap.registerPlugin(ScrollTrigger);
             gsap.set(timelineProgress, { height: "0%" });
             const tl = gsap.timeline({
@@ -65,5 +66,98 @@ export default class Page extends PageManager {
         window.addEventListener('load', () => {
             ScrollTrigger.refresh();
         });
-    } 
+
+        this.handleFaqsTab();
+    }
+
+    handleFaqsTab() {
+        function toggleContent() {
+            const $toggleTitle = $('.faqAccordion__title');
+        
+            if (!$toggleTitle) return;
+        
+            $toggleTitle.on('click', (e) => {
+                e.preventDefault();
+        
+                const $target = $(e.currentTarget);
+                const $toggleContent = $target.next();
+        
+                $target.toggleClass('is-active');
+        
+                if ($target.hasClass('is-active')) {
+                    $toggleContent.slideDown(400);  
+                }
+                else {
+                    $toggleContent.slideUp(400);
+                }
+            });
+        }
+
+        function sectionScroll() {
+            let scrollList = document.querySelectorAll(".faqs-tab .tab-title");
+        
+            for (let scrollItem of scrollList) {
+                scrollItem.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    let itemHref = scrollItem.getAttribute("href");
+                    let parentElement = scrollItem.parentElement;
+
+                    scrollList.forEach(item => {
+                        item.parentElement.classList.remove("is-active");
+                    });
+
+                    parentElement.classList.add("is-active");
+
+                    $('html, body').animate({
+                        scrollTop: $(itemHref).offset().top - 200
+                    }, 1000);
+                })
+            }
+        }
+
+        function initFaqs() {
+            const qaData = JSON.parse(document.getElementById('qa-data').textContent);
+            if (!qaData) return;
+            
+            const headings = qaData.map(group => group[0].heading);
+            const blockContents = qaData.map(group => group.slice(1));
+
+            headings.forEach((heading, index) => {
+                const faqsBlock = document.createElement('div');
+                faqsBlock.classList.add('faqs-block', 'mb-6', 'md:mb-10');
+                faqsBlock.id = `tabID-${heading.replace(/\s+/g, '-')}`;
+                faqsBlock.innerHTML = `
+                    <div class="faqs-block-title">
+                        <h2 class="font-eina02"> ${heading}</h2>
+                    </div>
+                    <div class="faqs-block-content" id="blockContent-${index}">
+                        ${blockContents[index].map(item => `
+                            <div class="faqAccordion">
+                                <div class="faqAccordion__title">
+                                    <h3 class="body-font">${item.question}</h3>
+                                </div>
+                                <div class="faqAccordion__content">
+                                    ${item.answer}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+
+                document.querySelector(".loadingOverlay__content").style.display = 'none';
+                document.querySelector('.faqs-content').appendChild(faqsBlock);
+
+                const tabsList = document.querySelector('.faqs-tab .tabs');
+
+                tabsList.innerHTML += `
+                    <li class="tab ${index === 0 ? 'is-active' : ''}">
+                        <a class="tab-title" href="#tabID-${heading.replace(/\s+/g, '-')}">${heading}</a>
+                    </li>`;
+            });
+            toggleContent();
+            sectionScroll();
+        }
+        
+        initFaqs();
+    }
 }
