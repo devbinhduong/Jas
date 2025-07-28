@@ -103,7 +103,7 @@
 .form-actions {
     @include grid-row();
     display: block;
-    text-align: center;
+    text-align: left;
 
     @include breakpoint("small") {
         margin-top: spacing("single");
@@ -113,7 +113,7 @@
     input,
     a {
         vertical-align: top;
-        width: 100%;
+        width: fit-content;
 
         @include breakpoint("small") {
             margin-bottom: 0;

@@ -1,0 +1,15 @@
+.page-type-page_contact_form {
+    .body {
+        margin-top: 20px;
+    }
+    .page-content {
+        &--centered {
+            width: 100%;
+        }
+    }
+    @include smin-m {
+        .body {
+            margin-top: 40px;
+        }
+    }
+}
