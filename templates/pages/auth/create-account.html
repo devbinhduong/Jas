@@ -2,10 +2,10 @@
 {{inject 'recaptchaTitle' (lang 'create_account.recaptcha_title')}}
 {{#partial "page"}}
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-    <h1 class="page-heading">{{lang 'create_account.heading' }}</h1>
+    <h1 class="page-heading font-eina02">{{lang 'create_account.heading' }}</h1>
 
-    <div class="account account--fixed">
-        <div class="account-body">
+    <div class="account account--fixed mt-10 md:mt-0">
+        <div class="account-body m-0">
             {{#if forms.create_account.error}}
                 {{> components/common/alert/alert-error forms.create_account.error}}
             {{/if}}
