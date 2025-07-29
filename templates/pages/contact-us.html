@@ -4,7 +4,7 @@
 
     <div id="contact-us-page" class="page-content page-content--centered">
         <section class="contact-form flex items-start justify-between gap-7 relative z-10 pb-6 md:flex-row md:gap-6 md:pb-10 flex-col" data-section-load="animation">
-            <div class="contact-form__left flex-1 w-full">
+            <div class="contact-form__left flex-1 w-full custom-fadeInUp" data-step-animate="2">
                 {{#unless theme_settings.hide_contact_us_page_heading }}
                     <span class="page-sub-heading mt-0">{{page.title}}</span>
                     <h1 class="page-heading font-eina02 leading-[1.34] mt-2 mb-6 md:leading-[1] md:mt-5 md:mb-[40px]">Contact with us</h1>
@@ -16,8 +16,8 @@
                     {{> components/page/contact-us-form}}
                 {{/if}}
             </div>
-            <div class="contact-form__right flex-1 w-full">
-                <span class="custom-fadeInUp w-full" data-step-animate="3">
+            <div class="contact-form__right flex-1 w-full o-h">
+                <span class="custom-fadeZoom w-full" data-step-animate="1">
                     <img data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/contact-form-banner.jpg"
                         class="lazyload rounded-2xl w-full aspect-square mx-auto sm:aspect-[5/3] md:w-[640px] md:aspect-square object-cover shadow-2xl"
                         alt="Contact Form Banner"/>
@@ -25,9 +25,9 @@
             </div> 
         </section>
 
-        <section class="contact-infor pt-6 pb-6 md:pt-10 md:pb-10">
+        <section class="contact-infor pt-6 pb-6 md:pt-10 md:pb-10" data-section-load="animation">
             <div class="self-stretch w-full p-6 bg-[#F2F4F7] rounded-2xl flex flex-wrap justify-start items-start gap-6 md:p-10">
-                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4">
+                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4 custom-fadeInUp" data-step-animate="1">
                     <div class="self-stretch w-[100%] min-w-[120px] xxs:w-[30%] sm:w-full flex flex-col justify-start items-start gap-3">
                         <div class="size-6 p-[2px] md:size-8 relative overflow-hidden">
                             <span class="icon w-full h-full icon-store">
@@ -50,7 +50,7 @@
                             Canada</div>
                     </div>
                 </div>
-                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4">
+                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4 custom-fadeInUp" data-step-animate="2">
                     <div class="self-stretch w-[100%] min-w-[120px] xxs:w-[30%] sm:w-full flex flex-col justify-start items-start gap-3">
                         <div class="size-6 p-[2px] md:size-8 relative overflow-hidden">
                             <span class="icon w-full h-full icon-clock">
@@ -72,7 +72,7 @@
                             Sundays: Closed</div>
                     </div>
                 </div>
-                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4">
+                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4 custom-fadeInUp" data-step-animate="3">
                     <div class="self-stretch w-[100%] min-w-[120px] xxs:w-[30%] sm:w-full flex flex-col justify-start items-start gap-3">
                         <div class="size-6 p-[2px] md:size-8 relative overflow-hidden">
                             <span class="icon w-full h-full icon-envelope">
@@ -96,13 +96,13 @@
             </div>
         </section>
 
-        <section class="suggestions w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0">
+        <section class="suggestions w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0" data-section-load="animation">
             <div class="p-4 pb-[28px] md:p-10 bg-[#F2F4F7] rounded-2xl flex flex-wrap justify-between items-start gap-8">
-                <div class="w-full md:w-80 md:flex-1 inline-flex flex-col justify-start items-start gap-2 md:gap-3">
+                <div class="w-full md:w-80 md:flex-1 inline-flex flex-col justify-start items-start gap-2 md:gap-3 custom-fadeInUp" data-step-animate="1">
                     <div class="text-[18px] text-black leading-[1.34] md:text-[24px] font-bold font-['Inter']">Suggestions for you</div>
                     <div class="self-stretch justify-start text-[#182230] leading-[1.58] text-[14px] font-normal font-['Inter']">Select an action or article to learn more</div>
                 </div>
-                <div class="w-full md:flex-[0_0_63%] flex flex-wrap justify-start items-start gap-8 md:gap-12">
+                <div class="w-full md:flex-[0_0_63%] flex flex-wrap justify-start items-start gap-8 md:gap-12 custom-fadeInUp" data-step-animate="2">
                     <div class="w-full sm:w-[50%] inline-flex flex-col justify-start items-start gap-8">
                         <a href="#" class="self-stretch inline-flex justify-between items-center hover:text-blue-600"> 
                             <div class="inline-flex flex-col justify-start items-start gap-3">
@@ -186,7 +186,7 @@
             </div>
         </section>
 
-        <section class="suggestions w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0">
+        <section class="suggestions w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0 custom-fadeInUp" data-step-animate="2" data-section-load="animation">
             <div class="map-box rounded-2xl overflow-hidden">
                 <iframe class="min-h-[253px] aspect-[343/253] sm:aspect-[1284/620]"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10852.725899226467!2d-79.6371467099306!3d43.7505830165029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3b6c28255bcb%3A0xd76a577c7166dbec!2sSingh%20Electronics%20Hi-fi%20Ltd!5e0!3m2!1sen!2s!4v1753693369707!5m2!1sen!2s"
@@ -198,7 +198,7 @@
         <section class="page-about-us supports-section w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0" data-section-load="animation">
             <div class="overflow-hidden">
                 <div
-                    class="relative w-full h-full min-h-[424px] rounded-3xl my-4 overflow-hidden bg-cover bg-center bg-no-repeat bg-image md:bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')] bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')]">
+                    class="relative w-full h-full min-h-[424px] rounded-3xl overflow-hidden bg-cover bg-center bg-no-repeat bg-image md:bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')] bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')]">
                     <div class="flex items-center h-full px-4 md:px-8 lg:px-6 w-full absolute top-[50%] translate-y-[-50%]">
                         <div class="sm:max-w-[40rem] md:max-w-[83rem] max-w-full mx-auto w-full">
                             <div class="md:max-w-[612px] max-w-full custom-fadeInUp" data-step-animate="3">

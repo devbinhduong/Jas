@@ -1,10 +1,27 @@
 .page-type-page_contact_form {
     .body {
         margin-top: 20px;
+        margin-bottom: 0;
     }
     .page-content {
         &--centered {
             width: 100%;
+        }
+    }
+    .contact-form {
+        .g-recaptcha {
+            height: 71px;
+            & > div {
+                height: 100% !important;
+                & > div {
+                    iframe {
+                        height: 100% !important;
+                    }
+                }
+            }
+            & + br {
+                display: none;
+            }
         }
     }
     @include smin-m {
