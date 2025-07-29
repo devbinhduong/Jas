@@ -1,118 +1,126 @@
-<div class="cart border border-[#E0E0E0] border-b-0 rounded-xl bg-white overflow-hidden" data-cart-quantity="{{cart.quantity}}">
+<div class="cart border border-[#E0E0E0] sm:border-b-0 rounded-xl bg-white overflow-hidden" data-cart-quantity="{{cart.quantity}}">
     <div class="cart__header flex flex-wrap bg-[#F4F7FA]">
-        <div class="cart__header-item p-4 item-col-1">
+        <div class="cart__header-item p-4 item-col-1 hidden sm:block">
             <span class="uppercase text-[#4D5462] text-[14px] font-medium leading-[20px]">Image</span>
         </div>
         <div class="cart__header-item p-4 item-col-2">
             <span class="uppercase text-[#4D5462] text-[14px] font-medium leading-[20px]">Product</span>
         </div>
-        <div class="cart__header-item p-4 item-col-3">
+        <div class="cart__header-item p-4 item-col-3 hidden sm:block">
             <span class="uppercase text-[#4D5462] text-[14px] font-medium leading-[20px]">Price</span>
         </div>
-        <div class="cart__header-item p-4 item-col-4">
+        <div class="cart__header-item p-4 item-col-4 hidden sm:block">
             <span class="uppercase text-[#4D5462] text-[14px] font-medium leading-[20px]">Quantity</span>
         </div>
-        <div class="cart__header-item p-4 item-col-5">
+        <div class="cart__header-item p-4 item-col-5 hidden sm:block">
             <span class="uppercase text-[#4D5462] text-[14px] font-medium leading-[20px]">Total</span>
         </div>
     </div>
  
-    <div class="cart__body flex flex-wrap">
+    <div class="cart__body">
         {{#each cart.items}}
-            <div class="cart__body-item p-4 border-b border-b-[#E2E8F0] flex items-center item-col-1">
-                {{#if type '==' 'GiftCertificate'}}
-                        <img
-                            class="cart-item-fixed-image"
-                            src="{{cdn ../theme_settings.default_image_gift_certificate}}"
-                            alt="{{lang 'cart.gift_certificates.gift_certificate'}}"
-                            title="{{lang 'cart.gift_certificates.gift_certificate'}}"
-                        >
-                    {{else}}
-                        {{> components/common/responsive-img
-                            image=image
-                            class="cart-item-image"
-                            fallback_size=../theme_settings.cartpagethumb_size
-                            lazyload="lazyload"
-                            default_image=../theme_settings.default_image_product
-                        }}
-                    {{/if}}
-            </div>
-
-            <div class="cart__body-item p-4 border-b border-b-[#E2E8F0] flex items-center item-col-2">
-                <h2>
-                    <a class="text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font" href="{{url}}">{{name}}</a>
-                </h2>
-            </div>
-
-            <div class="cart__body-item p-4 border-b border-b-[#E2E8F0] flex items-center item-col-3">
-                {{#or ../customer (unless ../settings.hide_price_from_guests) (if type '==' 'GiftCertificate')}}
-                    <span class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font {{#if price_discounted}}price--discounted{{/if}}">{{price.formatted}}</span>
-                    {{#if price_discounted}}
-                        <span class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font">{{price_discounted.formatted}}</span>
-                    {{/if}}
-                {{else}}
-                    {{> components/common/login-for-pricing}}
-                {{/or}}
-            </div>
-
-            <div class="cart__body-item p-4 border-b border-b-[#E2E8F0] flex items-center item-col-4">
-                <div class="form-increment form-increment--transparent">
-                    {{#if can_modify}}
-                        <button class="button button--icon text-[#1E293B] hover:text-[#c51414]"
-                                data-cart-update
-                                data-cart-itemid="{{id}}"
-                                data-action="dec"
-                        >
-                            <span class="is-srOnly">{{lang 'products.quantity_decrease' name=name}}</span>
-                            <i class="icon w-5 h-5" aria-hidden="true"><svg><use href="#icon-minus" /></svg></i>
-                        </button>
-                    {{/if}}
-                    <input class="form-input form-input--incrementTotal cart-item-qty-input"
-                           id="qty-{{id}}"
-                           name="qty-{{id}}"
-                           type="tel"
-                           value="{{#gt quantity 9}}{{quantity}}{{else}}0{{quantity}}{{/gt}}"
-                           data-quantity-min="{{min_purchase_quantity}}"
-                           data-quantity-max="{{max_purchase_quantity}}"
-                           data-quantity-min-error="{{lang 'products.quantity_min' quantity=min_purchase_quantity}}"
-                           data-quantity-max-error="{{lang 'products.quantity_max' quantity=max_purchase_quantity}}"
-                           min="1"
-                           pattern="[0-9]*"
-                           data-cart-itemid="{{id}}"
-                           data-action="manualQtyChange"
-                           aria-label="{{name}}"
-                           aria-live="polite"{{#unless can_modify}} disabled{{/unless}}>
-                    {{#if can_modify}}
-                        <button class="button button--icon text-[#1E293B] hover:text-[#c51414]"
-                                data-cart-update
-                                data-cart-itemid="{{id}}"
-                                data-action="inc"
-                        >
-                            <span class="is-srOnly">{{lang 'products.quantity_increase' name=name}}</span>
-                            <i class="icon w-5 h-5" aria-hidden="true"><svg><use href="#icon-plus" /></svg></i>
-                        </button>
-                    {{/if}}
+            <div class="cart__body-item-wrapper relative flex flex-wrap p-4 sm:p-0">
+                <div class="cart__body-item p-4 sm:border-b sm:border-b-[#E2E8F0] flex items-center item-col-1">
+                    {{#if type '==' 'GiftCertificate'}}
+                            <img
+                                class="cart-item-fixed-image"
+                                src="{{cdn ../theme_settings.default_image_gift_certificate}}"
+                                alt="{{lang 'cart.gift_certificates.gift_certificate'}}"
+                                title="{{lang 'cart.gift_certificates.gift_certificate'}}"
+                            >
+                        {{else}}
+                            {{> components/common/responsive-img
+                                image=image
+                                class="cart-item-image"
+                                fallback_size=../theme_settings.cartpagethumb_size
+                                lazyload="lazyload"
+                                default_image=../theme_settings.default_image_product
+                            }}
+                        {{/if}}
                 </div>
-            </div>
-
-            <div class="cart__body-item p-4 border-b border-b-[#E2E8F0] flex items-center item-col-5 gap-4">
+    
+                <div class="cart__body-item p-4 sm:border-b sm:border-b-[#E2E8F0] flex items-center item-col-2">
+                    <h2>
+                        <a class="text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font" href="{{url}}">{{name}}</a>
+                    </h2>
+                </div>
+    
+                <div class="cart__body-item p-4 sm:border-b sm:border-b-[#E2E8F0] flex items-center item-col-3 order-5 sm:order-none">
+                    <span class="flex items-center gap-1 sm:hidden mr-1">
+                        Qty:1 
+                        <span class="icon icon--dot w-[3px] h-[4px]">
+                            <svg><use xlink:href="#icon-dot"></use></svg>
+                        </span>
+                    </span>
                     {{#or ../customer (unless ../settings.hide_price_from_guests) (if type '==' 'GiftCertificate')}}
-                        <strong class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font {{#if total_discounted}}price--discounted{{/if}}">{{total.formatted}}</strong>
-                        {{#if total_discounted}}
-                            <strong class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font">{{total_discounted.formatted}}</strong>
+                        <span class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font {{#if price_discounted}}price--discounted{{/if}}">{{price.formatted}}</span>
+                        {{#if price_discounted}}
+                            <span class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font">{{price_discounted.formatted}}</span>
                         {{/if}}
                     {{else}}
-                        --
+                        {{> components/common/login-for-pricing}}
                     {{/or}}
-                    {{#or can_modify (if type '==' 'GiftCertificate')}}
-                        <button class="cart-remove icon w-6 h-6 text-[#64748B] hover:text-[#c51414]"
-                                data-cart-itemid="{{id}}"
-                                data-confirm-delete="{{lang 'cart.confirm_delete'}}"
-                                aria-label="{{lang 'cart.remove_item' name=name}}"
-                        >
-                            <svg aria-hidden="true"><use href="#icon-trash"></use></svg>
-                        </button>
-                    {{/or}}
+                </div>
+    
+                <div class="cart__body-item p-4 sm:border-b sm:border-b-[#E2E8F0] flex items-center item-col-4 mt-4 mb-2 sm:mt-0 sm:mb-0">
+                    <div class="form-increment form-increment--transparent">
+                        {{#if can_modify}}
+                            <button class="button button--icon text-[#1E293B] hover:text-[#c51414]"
+                                    data-cart-update
+                                    data-cart-itemid="{{id}}"
+                                    data-action="dec"
+                            >
+                                <span class="is-srOnly">{{lang 'products.quantity_decrease' name=name}}</span>
+                                <i class="icon w-5 h-5" aria-hidden="true"><svg><use href="#icon-minus" /></svg></i>
+                            </button>
+                        {{/if}}
+                        <input class="form-input form-input--incrementTotal cart-item-qty-input"
+                               id="qty-{{id}}"
+                               name="qty-{{id}}"
+                               type="tel"
+                               value="{{#gt quantity 9}}{{quantity}}{{else}}0{{quantity}}{{/gt}}"
+                               data-quantity-min="{{min_purchase_quantity}}"
+                               data-quantity-max="{{max_purchase_quantity}}"
+                               data-quantity-min-error="{{lang 'products.quantity_min' quantity=min_purchase_quantity}}"
+                               data-quantity-max-error="{{lang 'products.quantity_max' quantity=max_purchase_quantity}}"
+                               min="1"
+                               pattern="[0-9]*"
+                               data-cart-itemid="{{id}}"
+                               data-action="manualQtyChange"
+                               aria-label="{{name}}"
+                               aria-live="polite"{{#unless can_modify}} disabled{{/unless}}>
+                        {{#if can_modify}}
+                            <button class="button button--icon text-[#1E293B] hover:text-[#c51414]"
+                                    data-cart-update
+                                    data-cart-itemid="{{id}}"
+                                    data-action="inc"
+                            >
+                                <span class="is-srOnly">{{lang 'products.quantity_increase' name=name}}</span>
+                                <i class="icon w-5 h-5" aria-hidden="true"><svg><use href="#icon-plus" /></svg></i>
+                            </button>
+                        {{/if}}
+                    </div>
+                </div>
+    
+                <div class="cart__body-item p-4 sm:border-b sm:border-b-[#E2E8F0] flex items-center item-col-5 gap-4">
+                        {{#or ../customer (unless ../settings.hide_price_from_guests) (if type '==' 'GiftCertificate')}}
+                            <strong class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font {{#if total_discounted}}price--discounted{{/if}} hidden sm:block">{{total.formatted}}</strong>
+                            {{#if total_discounted}}
+                                <strong class="cart-item-value text-sm font-medium leading-[140%] md:leading-[150%] text-[#1B0832] body-font hidden sm:block">{{total_discounted.formatted}}</strong>
+                            {{/if}}
+                        {{else}}
+                            --
+                        {{/or}}
+                        {{#or can_modify (if type '==' 'GiftCertificate')}}
+                            <button class="cart-remove icon w-[18px] h-[18px] sm:w-6 sm:h-6 text-[#2D3139] sm:text-[#64748B] hover:text-[#c51414] absolute top-4 right-4 sm:static"
+                                    data-cart-itemid="{{id}}"
+                                    data-confirm-delete="{{lang 'cart.confirm_delete'}}"
+                                    aria-label="{{lang 'cart.remove_item' name=name}}"
+                            >
+                                <svg aria-hidden="true"><use href="#icon-trash"></use></svg>
+                            </button>
+                        {{/or}}
+                </div>
             </div>
         {{/each}}
     </div>
