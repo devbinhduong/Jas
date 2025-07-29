@@ -385,6 +385,22 @@ a.link-line{
             background: transparent;
         }
 }
+
+.button--transparent {
+    border: 1px solid #C51414;
+
+    @include button-style($textColor: #C51414,
+        $bgColor: transparent,
+        $hoverTextColor: #fff,
+        $hoverBgColor: #C51414,
+        $fontSize: 16px,
+        $borderRadius: 99px,
+        $fontWeight: 600,
+        $lineHeight: 24px,
+        $borderColor: #C51414,
+        $padding: 10px 20px);
+}
+
 .text-sm {
     font-size: 16px;
     line-height: 20px;

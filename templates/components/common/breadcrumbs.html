@@ -7,7 +7,11 @@
                        href="{{url}}"
                        {{#if @last}}aria-current="page"{{/if}}
                     >
-                        <span>{{name}}</span>
+                        {{#if name '==' 'Your Cart' }}
+                            <span>Shopping Cart</span>
+                        {{else}}
+                            <span>{{name}}</span>
+                        {{/if}}
                     </a>
                 </li>
             {{/each}}

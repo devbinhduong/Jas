@@ -299,6 +299,43 @@
             height: 20px;
         }
     }
+
+    &.form-increment--transparent {
+        gap: 4px;
+        padding: 8px 12px;
+        height: 40px;
+
+        @media (max-width: 1024px) {
+            padding: 6px 12px;
+            height: 32px;
+            gap: 2px;
+        }
+
+        .button {
+            background-color: transparent;
+            border: none;
+            width: 20px;
+            height: 20px;
+
+            @media (max-width: 1024px) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        .form-input--incrementTotal {
+            width: 34px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+
+            @media (max-width: 1024px) {
+                width: 30px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
 }
 
 .form-input--incrementTotal {
