@@ -77,8 +77,9 @@
 
 @import "layouts/layouts"; // 1
 @import "custom";
-@import "custom/_sidebar";
-@import "custom/_contact-us";
+@import "custom/sidebar";
+@import "custom/contact-us";
+@import "custom/page-default";
 
 .font-eina01 {
     font-family: 'Eina 01', sans-serif;

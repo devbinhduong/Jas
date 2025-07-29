@@ -105,4 +105,10 @@
         .page-sub-heading {
             @apply uppercase font-medium text-[#000000] mt-5 md:mt-10 text-[12px] md:text-[16px] leading-[135%] tracking-[0.96px] md:tracking-[1.28px] block;
         }
+
+        .page-active {
+            span {
+                @apply text-[#C51414];
+            }
+        }
 }
