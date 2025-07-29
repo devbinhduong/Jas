@@ -1,31 +1,238 @@
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
 <main class="page">
-    {{#unless theme_settings.hide_contact_us_page_heading }}
-        <h1 class="page-heading">{{page.title}}</h1>
-    {{/unless}}
-
-    {{#if page.sub_pages}}
-        <nav class="navBar navBar--sub">
-            <ul class="navBar-section account-navigation">
-                {{#each page.sub_pages}}
-                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
-                {{/each}}
-            </ul>
-        </nav>
-    {{/if}}
 
     <div id="contact-us-page" class="page-content page-content--centered">
-        {{#if forms.contact.success}}
-            <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
-        {{else}}
-            <p>{{{page.content}}}</p>
-            {{> components/page/contact-us-form}}
-        {{/if}}
+        <section class="contact-form flex items-start justify-between gap-7 relative z-10 pb-6 md:flex-row md:gap-6 md:pb-10 flex-col" data-section-load="animation">
+            <div class="contact-form__left flex-1 w-full custom-fadeInUp" data-step-animate="2">
+                {{#unless theme_settings.hide_contact_us_page_heading }}
+                    <span class="page-sub-heading mt-0">{{page.title}}</span>
+                    <h1 class="page-heading font-eina02 leading-[1.34] mt-2 mb-6 md:leading-[1] md:mt-5 md:mb-[40px]">Contact with us</h1>
+                {{/unless}}
+                {{#if forms.contact.success}}
+                    <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+                {{else}}
+                    <p>{{{page.content}}}</p>
+                    {{> components/page/contact-us-form}}
+                {{/if}}
+            </div>
+            <div class="contact-form__right flex-1 w-full o-h">
+                <span class="custom-fadeZoom w-full" data-step-animate="1">
+                    <img data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/contact-form-banner.jpg"
+                        class="lazyload rounded-2xl w-full aspect-square mx-auto sm:aspect-[5/3] md:w-[640px] md:aspect-square object-cover shadow-2xl"
+                        alt="Contact Form Banner"/>
+                </span>
+            </div> 
+        </section>
 
-    </div>
+        <section class="contact-infor pt-6 pb-6 md:pt-10 md:pb-10" data-section-load="animation">
+            <div class="self-stretch w-full p-6 bg-[#F2F4F7] rounded-2xl flex flex-wrap justify-start items-start gap-6 md:p-10">
+                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4 custom-fadeInUp" data-step-animate="1">
+                    <div class="self-stretch w-[100%] min-w-[120px] xxs:w-[30%] sm:w-full flex flex-col justify-start items-start gap-3">
+                        <div class="size-6 p-[2px] md:size-8 relative overflow-hidden">
+                            <span class="icon w-full h-full icon-store">
+                                <svg><use xlink:href="#icon-store"></use></svg>
+                            </span>
+                        </div>
+                        <div class="justify-start text-[18px] text-[#182230] leading-[1.3] md:text-[24px] font-semibold font-['Inter']">Store Location:</div>
+                    </div>
+                    <div class="self-stretch flex-1 flex flex-col min-w-[200px] justify-start items-start gap-2">
+                        <div
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">
+                            Singh Electronics</div>
+                        <div
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">
+                            7003 Steeles Avenue West</div>
+                        <div class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">Toronto,
+                            M9W 0A2</div>
+                        <div
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">
+                            Canada</div>
+                    </div>
+                </div>
+                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4 custom-fadeInUp" data-step-animate="2">
+                    <div class="self-stretch w-[100%] min-w-[120px] xxs:w-[30%] sm:w-full flex flex-col justify-start items-start gap-3">
+                        <div class="size-6 p-[2px] md:size-8 relative overflow-hidden">
+                            <span class="icon w-full h-full icon-clock">
+                                <svg><use xlink:href="#icon-clock"></use></svg>
+                            </span>
+                        </div>
+                        <div class="justify-start text-Text-Heading-Text text-[18px] md:text[] font-semibold font-['Inter']">
+                            Opening Hours:</div>
+                    </div>
+                    <div class="self-stretch flex-1 flex flex-col min-w-[200px] justify-start items-start gap-2">
+                        <div
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">
+                            Monday to Friday: 11am - 7pm</div>
+                        <div
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">
+                            Saturdays: 11am - 5pm</div>
+                        <div
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all">
+                            Sundays: Closed</div>
+                    </div>
+                </div>
+                <div class="w-full flex-row sm:flex-1 sm:flex-col inline-flex flex-wrap justify-start items-start gap-2 md:gap-4 custom-fadeInUp" data-step-animate="3">
+                    <div class="self-stretch w-[100%] min-w-[120px] xxs:w-[30%] sm:w-full flex flex-col justify-start items-start gap-3">
+                        <div class="size-6 p-[2px] md:size-8 relative overflow-hidden">
+                            <span class="icon w-full h-full icon-envelope">
+                                <svg><use xlink:href="#icon-envelope-2"></use></svg>
+                            </span>
+                        </div>
+                        <div class="justify-start text-Text-Heading-Text text-[18px] md:text[] font-semibold font-['Inter']">
+                            Contact:</div>
+                    </div>
+                    <div class="self-stretch flex-1 flex flex-col min-w-[200px] justify-start items-start gap-2">
+                        <a href="mailto:contactus@singhelectronics.ca"
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all hover:text-blue-600">
+                            Email: contactus@singhelectronics.ca
+                        </a>
+                        <a href="tel:+14167451021"
+                            class="self-stretch justify-start text-[16px] font-normal font-['Inter'] leading-[1.4] text-[#344054] break-all hover:text-blue-600">
+                            Office: +1 (416) 745-1021
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="suggestions w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0" data-section-load="animation">
+            <div class="p-4 pb-[28px] md:p-10 bg-[#F2F4F7] rounded-2xl flex flex-wrap justify-between items-start gap-8">
+                <div class="w-full md:w-80 md:flex-1 inline-flex flex-col justify-start items-start gap-2 md:gap-3 custom-fadeInUp" data-step-animate="1">
+                    <div class="text-[18px] text-black leading-[1.34] md:text-[24px] font-bold font-['Inter']">Suggestions for you</div>
+                    <div class="self-stretch justify-start text-[#182230] leading-[1.58] text-[14px] font-normal font-['Inter']">Select an action or article to learn more</div>
+                </div>
+                <div class="w-full md:flex-[0_0_63%] flex flex-wrap justify-start items-start gap-8 md:gap-12 custom-fadeInUp" data-step-animate="2">
+                    <div class="w-full sm:w-[50%] inline-flex flex-col justify-start items-start gap-8">
+                        <a href="#" class="self-stretch inline-flex justify-between items-center hover:text-blue-600"> 
+                            <div class="inline-flex flex-col justify-start items-start gap-3">
+                                <div
+                                    class="self-stretch justify-start text-[16px] leading-[1] underline-offset-[3px] md:text-[18px] font-semibold font-['Inter'] underline">
+                                    FAQs</div>
+                                <div
+                                    class="self-stretch justify-start text-[#182230] leading-[1] font-normal font-['Inter']">
+                                    Frequently Asked Questions (FAQ)</div>
+                            </div>
+                            <div class="size-[20px]">
+                                <span class="icon size-[100%] icon--chevron-right-2">
+                                    <svg><use xlink:href="#icon-chevron-right-2"></use></svg>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#" class="self-stretch inline-flex justify-between items-center hover:text-blue-600">
+                            <div class="inline-flex flex-col justify-start items-start gap-3">
+                                <div
+                                    class="self-stretch justify-start text-[16px] leading-[1] underline-offset-[3px] md:text-[18px] font-semibold font-['Inter'] underline">
+                                    Shipping & Returns</div>
+                                <div
+                                    class="self-stretch justify-start text-[#182230] leading-[1] font-normal font-['Inter']">
+                                    Click here to learn more</div>
+                            </div>
+                            <div class="size-[20px]">
+                                <span class="icon size-[100%] icon--chevron-right-2">
+                                    <svg><use xlink:href="#icon-chevron-right-2"></use></svg>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#" class="self-stretch inline-flex justify-between items-center hover:text-blue-600">
+                            <div class="inline-flex flex-col justify-start items-start gap-3">
+                                <div
+                                    class="self-stretch justify-start text-[16px] leading-[1] underline-offset-[3px] md:text-[18px] font-semibold font-['Inter'] underline">
+                                    Warranty</div>
+                                <div
+                                    class="self-stretch justify-start text-[#182230] leading-[1] font-normal font-['Inter']">
+                                    Select an action or article to learn more</div>
+                            </div>
+                            <div class="size-[20px]">
+                                <span class="icon size-[100%] icon--chevron-right-2">
+                                    <svg><use xlink:href="#icon-chevron-right-2"></use></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-full sm:flex-1 inline-flex flex-col justify-start items-start gap-8">
+                        <a href="#" class="self-stretch inline-flex justify-between items-center hover:text-blue-600">
+                            <div class="inline-flex flex-col justify-start items-start gap-3">
+                                <div
+                                    class="self-stretch justify-start text-[16px] leading-[1] underline-offset-[3px] md:text-[18px] font-semibold font-['Inter'] underline">
+                                    Payment Plans</div>
+                                <div
+                                    class="self-stretch justify-start text-[#182230] leading-[1] font-normal font-['Inter']">
+                                    Select an action or article to learn more</div>
+                            </div>
+                            <div class="size-[20px]">
+                                <span class="icon size-[100%] icon--chevron-right-2">
+                                    <svg><use xlink:href="#icon-chevron-right-2"></use></svg>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#" class="self-stretch inline-flex justify-between items-center hover:text-blue-600">
+                            <div class="inline-flex flex-col justify-start items-start gap-3">
+                                <div
+                                    class="self-stretch justify-start text-[16px] leading-[1] underline-offset-[3px] md:text-[18px] font-semibold font-['Inter'] underline">
+                                    Price Match Guarantee</div>
+                                <div
+                                    class="self-stretch justify-start text-[#182230] leading-[1] font-normal font-['Inter']">
+                                    Select an action or article to learn more</div>
+                            </div>
+                            <div class="size-[20px]">
+                                <span class="icon size-[100%] icon--chevron-right-2">
+                                    <svg><use xlink:href="#icon-chevron-right-2"></use></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="suggestions w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0 custom-fadeInUp" data-step-animate="2" data-section-load="animation">
+            <div class="map-box rounded-2xl overflow-hidden">
+                <iframe class="min-h-[253px] aspect-[343/253] sm:aspect-[1284/620]"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10852.725899226467!2d-79.6371467099306!3d43.7505830165029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3b6c28255bcb%3A0xd76a577c7166dbec!2sSingh%20Electronics%20Hi-fi%20Ltd!5e0!3m2!1sen!2s!4v1753693369707!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="page-about-us supports-section w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0" data-section-load="animation">
+            <div class="overflow-hidden">
+                <div
+                    class="relative w-full h-full min-h-[424px] rounded-3xl overflow-hidden bg-cover bg-center bg-no-repeat bg-image md:bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')] bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')]">
+                    <div class="flex items-center h-full px-4 md:px-8 lg:px-6 w-full absolute top-[50%] translate-y-[-50%]">
+                        <div class="sm:max-w-[40rem] md:max-w-[83rem] max-w-full mx-auto w-full">
+                            <div class="md:max-w-[612px] max-w-full custom-fadeInUp" data-step-animate="3">
+                                <div class="bg-black rounded-3xl p-4 md:p-8 lg:p-8 max-w-full">
+                                    <div class="text-white text-[14px] md:text-[20px] font-medium"> Need help? We&#039;re
+                                        available at </div>
+                                    <!-- Title -->
+                                    <h1
+                                        class="text-title-section mb-4 text-white font-eina01 text-[24px] md:text-[48px] md:mt-[0] leading-[1] mt-[12px]">
+                                        +1 (416) 745-1021 </h1>
+                                    <!-- Description -->
+                                    <p class="text-white text-mb-text-sm md:text-text-xl md:mt-[24px] mb-8 md:mb-10 mt-[16px]">
+                                        atcontactus@singhelectronics.ca </p>
+                                    <!-- Action Buttons -->
+                                    <div class="flex flex-col gap-4 md:gap-8">
+                                        <button class="group px-4 py-2 md:py-[15px] md:px-5 button-style-2 w-fit h-[48.8px]">
+                                            <span class="relative z-10 text-[14px] md:text-[16px]">Contact us</span>
+                                        </button>
+                                        <div class="gap-2 flex items-center">
+                                            <svg class="w-[32px] h-[32px]">
+                                                <use href="#svg-leaf"></use>
+                                            </svg>
+                                            <p class="text-white text-[14px] md:text-[16px] md:leading-[1.3] font-eina02 capitalize"
+                                                role="text"> Free shipping across Canada* </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> 
 
 </main>
 
