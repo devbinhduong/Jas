@@ -22,9 +22,13 @@
                         </dl>
                     {{/if}}
                     <form action="{{delete_url}}" method="post" data-delete-address="{{lang 'forms.address.confirm_delete'}}">
-                        <div class="form-actions">
-                            <a class="button button--primary button--small" href="{{edit_url}}">{{lang 'common.edit' }}</a>
-                            <button type="submit" class="button secondary button--small">{{lang 'common.delete' }}</button>
+                        <div class="form-actions flex items-center justify-start">
+                            <a class="button button--primary button--small" href="{{edit_url}}">
+                                <span>{{lang 'common.edit' }}</span>
+                            </a>
+                            <button type="submit" class="button secondary button--small mb-0">
+                                <span>{{lang 'common.delete' }}</span>
+                            </button>
                         </div>
                     </form>
                 </div>

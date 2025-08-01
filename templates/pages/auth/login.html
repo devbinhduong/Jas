@@ -1,7 +1,7 @@
 {{#partial "page"}}
 <div class="login">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-    <h1 class="page-heading">{{lang 'login.heading' }}</h1>
+    <h1 class="page-heading font-eina02">{{lang 'login.heading' }}</h1>
     {{#if forms.login.error}}
         {{> components/common/alert/alert-error forms.login.error}}
     {{/if}}
@@ -9,7 +9,7 @@
         {{> components/common/alert/alert-success forms.login.success}}
     {{/if}}
     <div class="login-row">
-        <form class="login-form form" action="{{urls.auth.check_login}}" method="post">
+        <form class="login-form form m-0" action="{{urls.auth.check_login}}" method="post">
             {{inject 'useValidEmail' (lang 'forms.validate.common.email_address')}}
             {{inject 'enterPass' (lang 'forms.validate.common.password')}}
             <div class="form-field">
@@ -20,7 +20,7 @@
                 <label class="form-label" for="login_pass">{{lang 'login.field_password'}}</label>
                 <input class="form-input" id="login_pass" type="password" name="login_pass" autocomplete="off">
             </div>
-            <div class="form-actions">
+            <div class="form-actions flex items-center justify-start">
                 <input type="submit" class="button button--primary" value="{{lang 'login.submit_value' }}">
                 <a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
             </div>
@@ -40,7 +40,9 @@
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact4' }}</li>
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact5' }}</li>
                         </ul>
-                        <a href="{{urls.auth.create_account}}"><button class="button button--primary">{{lang 'login.new_customer.create_account' }}</button></a>
+                        <a href="{{urls.auth.create_account}}" class="block mt-4"><button class="button button--primary">
+                            <span>{{lang 'login.new_customer.create_account' }}</span>
+                        </button></a>
                     </div>
                 </div>
             </div>
