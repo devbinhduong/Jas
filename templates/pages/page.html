@@ -9,8 +9,8 @@
                 <div class="page-list p-6 rounded-[8px] border-[1px] border-[#EAECF0]">
                     {{#each (limit pages 12)}}
                         <div class="page-item mb-1{{#if name '==' ../page.title}} page-active{{/if}}">
-                            <a href="{{url}}" target="_blank" class="self-stretch min-h-10 rounded-lg inline-flex justify-center items-center gap-2 py-[10px]" title="{{name}}">
-                                <span class="flex-1 justify-start text-[16px] text-[#1B0832] font-semibold font-['Inter'] leading-[1.25]">{{name}}</span>
+                            <a href="{{url}}" target="_blank" class="group self-stretch min-h-10 rounded-lg inline-flex justify-center items-center gap-2 py-[10px] text-[#1B0832] hover:text-[#c51414]" title="{{name}}">
+                                <span class="flex-1 justify-start text-[16px] text-[inherit] font-semibold font-['Inter'] leading-[1.25]">{{name}}</span>
                             </a>
                         </div>
                     {{/each}}
