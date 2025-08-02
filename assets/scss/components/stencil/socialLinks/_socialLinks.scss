@@ -78,3 +78,27 @@
         fill: $socialLinks-alt-iconColor;
     }
 }
+
+
+// socials link for post
+.post-share {
+    .socialLinks {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0;
+            line-height: 1;
+
+            a {
+                width: 28px;
+                height: 28px;
+                padding: 6px;
+
+                svg {
+                    fill: #000000;
+                }
+            }
+        }
+    }
+}

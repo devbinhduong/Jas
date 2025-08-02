@@ -20,9 +20,10 @@ ol.breadcrumbs {
     display: inline-block;
     float: none;
     margin-right: 0.25rem;
+    font-size: $fontSize-root + 2;
 
     @include smax-m {
-        font-size: $crumb-font-size - 2;
+        font-size: $crumb-font-size;
     }
     
     &.is-active {

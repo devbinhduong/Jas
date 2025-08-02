@@ -1,5 +1,5 @@
 {
-  "name": "Cornerstone - Jas - Tailwinds - Stage 1 - 09072025",
+  "name": "Cornerstone - Jas 30072025",
   "version": "6.16.1",
   "template_engine": "handlebars_v4",
   "meta": {
@@ -124,7 +124,8 @@
     "cartthumb_size": "56x56",
     "thumb_size": "100x100",
     "zoom_size": "1280x1280",
-    "blog_size": "190x250",
+    "blog_size": "1284x640",
+    "blog_first_size": "630x420",
     "default_image_brand": "img/BrandDefault.gif",
     "default_image_product": "img/ProductDefault.gif",
     "default_image_gift_certificate": "img/GiftCertificate.png",

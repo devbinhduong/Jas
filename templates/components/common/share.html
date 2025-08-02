@@ -1,7 +1,7 @@
 {{#if settings.add_this.buttons}}
     {{assignVar 'encodedUrl' (encodeURI url)}}
     {{assignVar 'encodedTitle' (encodeURI head.title)}}
-    <div>
+    <div class="{{#if isPost}}post-share{{/if}}">
         <ul class="socialLinks">
             {{#each settings.add_this.buttons}}
                 <li class="socialLinks-item socialLinks-item--{{service}}">
@@ -15,7 +15,7 @@
                     >
                         <span class="aria-description--hidden">{{{capitalize service}}}</span>
                         <svg>
-                            <use href="#icon-facebook"/>
+                            <use href="#icon-facebook-2"/>
                         </svg>
                     </a>
                     {{else if service '===' 'email'}}
@@ -52,7 +52,7 @@
                     >
                         <span class="aria-description--hidden">X</span>
                         <svg>
-                            <use href="#icon-x"/>
+                            <use href="#icon-x-2"/>
                         </svg>
                     </a>
                     {{else if service '===' 'linkedin'}}

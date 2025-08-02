@@ -127,9 +127,17 @@ export default class Page extends PageManager {
                 faqsBlock.classList.add('faqs-block', 'mb-6', 'md:mb-10');
                 faqsBlock.id = `tabID-${heading.replace(/\s+/g, '-')}`;
                 faqsBlock.innerHTML = `
+                    ${heading !== "" ? `
                     <div class="faqs-block-title">
                         <h2 class="font-eina02"> ${heading}</h2>
                     </div>
+                    ` : ''}
+                    ${descriptions[index] !== "" ? `
+                    <div class="faqs-block-description">
+                        <p class="body-font">${descriptions[index]}</p>
+                    </div>
+                    ` : ''}
+                    ${blockContents[index].length > 0 ? `
                     <div class="faqs-block-content" id="blockContent-${index}">
                         ${blockContents[index].map(item => `
                             <div class="faqAccordion">
@@ -142,6 +150,7 @@ export default class Page extends PageManager {
                             </div>
                         `).join('')}
                     </div>
+                    ` : ''}
                 `;
 
                 document.querySelector(".loadingOverlay__content").style.display = 'none';

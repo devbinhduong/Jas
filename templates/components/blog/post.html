@@ -1,11 +1,12 @@
-<article class="blog">
+<article class="blog mb-4{{#if isFirst}} blog-post-special{{/if}}{{#if isHidden}} hidden{{/if}}">
     <div class="blog-post-figure">
         {{#if post.thumbnail}}
-            <figure class="blog-thumbnail">
-                <a href="{{post.url}}">
+            <figure class="blog-thumbnail w-full">
+                <a href="{{post.url}}" class="rounded-2xl overflow-hidden">
                     {{> components/common/responsive-img
                         image=post.thumbnail
-                        fallback_size=theme_settings.blog_size
+                        class="rounded-2xl aspect-[412/275] object-cover"
+                        fallback_size=theme_settings.blog_first_size
                         lazyload=theme_settings.lazyload_mode
                     }}
                 </a>
@@ -15,37 +16,34 @@
 
     <div class="blog-post-body">
         <header class="blog-header">
-            <h{{#if is_blog_post}}1{{else}}2{{/if}} class="blog-title">
-                <a href="{{post.url}}">{{post.title}}</a>
-            </h{{#if is_blog_post}}1{{else}}2{{/if}}>
-            <p class="blog-date">{{#if post.author}}{{lang 'blog.posted_by' name=post.author}} on {{/if}}{{post.date_published}}</p>
+            <h4 class="mb-2 mt-4">
+                {{#if post.tags}}
+                    {{#get "0" post.tags}}
+                        <a href="{{url}}" class="blog-post-tag">{{name}}</a>
+                    {{/get}}
+                {{/if}}
+            </h4>
+            <h2 class="blog-title mb-2 sm:mb-4 tracking-normal">
+                <a href="{{post.url}}" class="blog-post-title font-eina02">{{post.title}}</a>
+            </h2>
         </header>
 
-        <div class="blog-post">
-            {{#if post.body}}
-                {{{post.body}}}
-            {{else}}
+        {{#if isFirst}}
+            <div class="blog-post mb-2 sm:mb-10">
                 {{{post.summary}}}
-                {{#if post.show_read_more}}
-                    &hellip; <a href="{{url}}" aria-label="{{post.title}} {{lang 'blog.read_more'}}">{{lang 'blog.read_more'}}</a>
-                {{/if}}
-            {{/if}}
-        </div>
-
-
-        {{#if show_tags}}
-            {{#if post.tags}}
-                <ul class="tags">
-                    {{#each post.tags}}
-                    <li class="tag">
-                        <a href="{{url}}">#{{name}}</a>
-                    </li>
-                    {{/each}}
-                </ul>
-            {{/if}}
+            </div>
         {{/if}}
 
-        {{>components/common/share url=post.url}}
-
+        <div class="flex items-center gap-2 blog-post-info">
+            {{#if post.author}}
+                <span>{{post.author}}</span>
+                <span class="icon icon--dot w-[6px] h-[6px]">
+                    <svg><use xlink:href="#icon-dot"></use></svg>
+                </span> 
+            {{/if}}
+            <span>
+                {{post.date_published}}
+            </span>
+        </div>
     </div>
 </article>
