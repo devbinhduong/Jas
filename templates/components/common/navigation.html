@@ -25,15 +25,7 @@
                 </div>
             </li>
         {{/if}}
-        <li class="navUser-item">
-            <a class="navUser-action navUser-item--compare"
-               href="{{urls.compare}}"
-               data-compare-nav
-               aria-label="{{lang 'common.compare'}}"
-            >
-                {{lang 'common.compare'}} <span class="countPill countPill--positive countPill--alt"></span>
-            </a>
-        </li>
+
         {{#if theme_settings.social_icon_placement_top}}
             <li class="navUser-item navUser-item--social">
                 {{> components/common/social-links}}
@@ -72,17 +64,9 @@
                    href="{{urls.account.index}}"
                    aria-label="{{lang 'common.account'}}"
                 >
-                   <span class="text-sm text-ei">
+                   <span class="text-sm font-eina01 font-normal">
                     {{lang 'common.account'}}
                    </span>
-                </a>
-                <a class="navUser-action"
-                   href="{{urls.auth.logout}}"
-                   aria-label="{{lang 'common.logout'}}"
-                >
-                    <span class="text-sm font-eina01 font-normal">
-                        {{lang 'common.logout'}}
-                    </span>
                 </a>
             {{else}}
                 <a class="navUser-action flex items-center justify-center gap-1 text-sm"

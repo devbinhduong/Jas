@@ -5,11 +5,11 @@
 </div>
 
 <div class="modal-body">
-    <div class="previewCart">
-        <section class="previewCartCheckout">
+    <div class="previewCart flex flex-col-reverse sm:flex-row-reverse p-0">
+        <section class="previewCartCheckout w-full sm:w-1/2 md:w-1/3">
             {{#if cart.show_primary_checkout_button}}
-                <a href="{{urls.checkout.single_address}}" class="button button--primary" data-primary-checkout-now-action>
-                    {{lang 'cart.added_to_cart.proceed_to_checkout'}}
+                <a href="{{urls.checkout.single_address}}" class="button button--primary w-full" data-primary-checkout-now-action>
+                    <span>{{lang 'cart.added_to_cart.proceed_to_checkout'}}</span>
                 </a>
             {{/if}}
 
@@ -22,13 +22,13 @@
             {{#if cart.show_multiple_address_shipping}}
                 <div class="previewCartAction-checkoutMultiple">
                     <a href="{{urls.checkout.multiple_address}}">
-                        {{lang 'cart.preview.checkout_multiple'}}
+                        <span>{{lang 'cart.preview.checkout_multiple'}}</span>
                     </a>
                 </div>
             {{/if}}
 
             <div class="previewCartCheckout-subtotal">
-                {{lang 'cart.added_to_cart.order_subtotal'}}
+                <span class="mb-2">{{lang 'cart.added_to_cart.order_subtotal'}}</span>
 
                 <strong class="previewCartCheckout-price">
                     {{#or customer (unless settings.hide_price_from_guests)}}
@@ -43,15 +43,17 @@
                 {{lang 'cart.added_to_cart.your_cart_contains' num_products=cart.quantity}}
             </p>
 
-            <a href="#" class="button button--primary" role="button" data-reveal-close>
-                {{lang 'cart.added_to_cart.continue_shopping'}}
-            </a>
-
-            <a href="{{urls.cart}}" class="button">
-                {{lang 'cart.added_to_cart.view_or_edit_cart'}}
-            </a>
+            <div class="flex flex-col">
+                <a href="#" class="button button--primary m-0" role="button" data-reveal-close>
+                    <span>{{lang 'cart.added_to_cart.continue_shopping'}}</span>
+                </a>
+    
+                <a href="{{urls.cart}}" class="button button--transparent m-0">
+                    <span>{{lang 'cart.added_to_cart.view_or_edit_cart'}}</span>
+                </a>
+            </div>
         </section>
-        <section class="productView">
+        <section class="productView w-full sm:w-1/2 md:w-2/3">
             {{#with cart.added_item}}
                 <figure class="productView-image">
                     <div class="productView-img-container">

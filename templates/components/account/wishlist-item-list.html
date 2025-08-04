@@ -5,7 +5,9 @@
         
         {{#if ../show_remove}}
             <form action="{{remove_url}}" class="form" method="post">
-                <input type="submit" class="button button--primary button--small" value="{{lang 'account.wishlists.remove_item'}}" />
+                <button class="button button--transparent card-figcaption-button button-style custom-add-to-cart text-[14px] font-sans leading-[120%]">
+                    <span>{{lang 'account.wishlists.remove_item'}}</span>
+                </button>
             </form>
         {{/if}}
     </li>

@@ -406,7 +406,7 @@ a.link-line{
     line-height: 20px;
     letter-spacing: -0.08px;
 }
-.card {
+.card:not(.card--brand) {
     min-height: 408px;
     display: flex;
     flex-direction: column;
@@ -844,13 +844,17 @@ a.link-line{
         .account-action {
             width: 100%;
             color: stencilColor('navPages-color');
-            font-size: $fontSize-root - 2px;
+            font-size: $fontSize-root;
             font-weight: $fontWeight-normal;
             padding: 0;
             margin: 0;
             text-transform: capitalize;
             transition: $anchor-transition;
             text-decoration: none;
+
+            &:hover {
+                color: #C51414;
+            }
         }
 
         .text {
@@ -870,7 +874,7 @@ a.link-line{
 
     @include smin-m {
         .custom-popup-content {
-            padding: 0 20px;
+            padding: 0;
         }
 
         .account-dropdown {
@@ -1746,4 +1750,12 @@ body {
             }
         }
     }
+}
+
+.hide-after::after {
+    display: none;
+}
+
+.hide-before::before {
+    display: none;
 }

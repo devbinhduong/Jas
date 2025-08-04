@@ -1,9 +1,11 @@
 {{#partial "page"}}
     <main class="page">
         <section class="page-content page-content--textCenter">
-            <h1 class="page-heading">{{lang 'create_account.created.heading'}}</h1>
+            <h1 class="page-heading w-full text-center max-w-full">{{lang 'create_account.created.heading'}}</h1>
             <p>{{lang 'create_account.created.intro' store_name=settings.store_name email=customer.email}}</p>
-            <a class="button button--primary" href="{{create_account.continue_url}}">{{lang 'create_account.created.continue'}}</a>
+            <a class="button button--primary mt-6" href="{{create_account.continue_url}}">
+                <span>{{lang 'create_account.created.continue'}}</span>
+            </a>
         </section>
     </main>
 {{/partial}}

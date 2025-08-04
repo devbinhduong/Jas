@@ -46,7 +46,7 @@
     @include square($reveal-close-height);
 
     @include addFocusTooltip;
-    color: stencilColor("icon-color");
+    color: #0F1112;
     font-size: 26px;
     line-height: remCalc($reveal-close-height);
     padding: 0;

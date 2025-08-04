@@ -2,4 +2,13 @@
     <!-- background overlay -->
     {{> components/jas/sidebar/custom-sidebar }}
     <div class="background-overlay"></div>
+
+    {{#if show_compare}}
+        <div class="compare-link">
+            <a href="{{urls.compare}}" class="button button--transparent" data-compare-nav>{{lang 'common.compare'}}
+                <span class="countPill">0</span>
+            </a>
+        </div>
+    {{/if}}
+
 </div>
