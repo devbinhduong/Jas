@@ -1028,6 +1028,396 @@
         "type": "text",
         "label": "Home Service 4 Description",
         "id": "homeService4Desc"
+      },
+      {
+        "type": "heading",
+        "content": "Home 3 Banners Section"
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "home3BannersTitle"
+      },
+      {
+        "type": "text",
+        "label": "Section All Text",
+        "id": "home3BannersAllText"
+      },
+      {
+        "type": "text",
+        "label": "Section Link",
+        "id": "home3BannersLink"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Image",
+        "id": "home3BannersItem1Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Title",
+        "id": "home3BannersItem1Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Description",
+        "id": "home3BannersItem1Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Link",
+        "id": "home3BannersItem1Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Button",
+        "id": "home3BannersItem1Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Image",
+        "id": "home3BannersItem2Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Title",
+        "id": "home3BannersItem2Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Description",
+        "id": "home3BannersItem2Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Link",
+        "id": "home3BannersItem2Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Button",
+        "id": "home3BannersItem2Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Image",
+        "id": "home3BannersItem3Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Title",
+        "id": "home3BannersItem3Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Description",
+        "id": "home3BannersItem3Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Link",
+        "id": "home3BannersItem3Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Button",
+        "id": "home3BannersItem3Btn"
+      },
+      {
+        "type": "heading",
+        "content": "Our Brands Section"
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "ourBrandsTitle"
+      },
+      {
+        "type": "text",
+        "label": "Section All Text",
+        "id": "ourBrandsAllText"
+      },
+      {
+        "type": "text",
+        "label": "Section All Text Link",
+        "id": "ourBrandsAllLink"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Image",
+        "id": "ourBrandsItem1Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Link",
+        "id": "ourBrandsItem1Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Image",
+        "id": "ourBrandsItem2Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Link",
+        "id": "ourBrandsItem2Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Image",
+        "id": "ourBrandsItem3Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Link",
+        "id": "ourBrandsItem3Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Image",
+        "id": "ourBrandsItem4Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Link",
+        "id": "ourBrandsItem4Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Image",
+        "id": "ourBrandsItem5Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Link",
+        "id": "ourBrandsItem5Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 6 Image",
+        "id": "ourBrandsItem6Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 6 Link",
+        "id": "ourBrandsItem6Link"
+      },
+      {
+        "type": "heading",
+        "content": "Home Brand Section"
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "homeBrandHeading"
+      },
+      {
+        "type": "text",
+        "label": "Section All Text",
+        "id": "homeBrandAllText"
+      },
+      {
+        "type": "text",
+        "label": "Section All Link",
+        "id": "homeBrandAllLink"
+      },
+      {
+        "type": "text",
+        "label": "Brand IDs List",
+        "id": "homeBrandIds"
+      },
+      {
+        "type": "heading",
+        "content": "Home 2 Banners Section"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Image",
+        "id": "home2BannersItem1Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Title",
+        "id": "home2BannersItem1Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Button",
+        "id": "home2BannersItem1Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Link",
+        "id": "home2BannersItem1Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Image",
+        "id": "home2BannersItem2Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Title",
+        "id": "home2BannersItem2Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Button",
+        "id": "home2BannersItem2Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Link",
+        "id": "home2BannersItem2Link"
+      },
+      {
+        "type": "heading",
+        "content": "Home Review Section"
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "homeReviewHeading"
+      },
+      {
+        "type": "text",
+        "label": "Section All Text",
+        "id": "homeReviewAllText"
+      },
+      {
+        "type": "text",
+        "label": "Section All Link",
+        "id": "homeReviewAllLink"
+      },
+      {
+        "type": "text",
+        "label": "Left Content Item 1 Number",
+        "id": "homeReviewLeftContent1_num"
+      },
+      {
+        "type": "text",
+        "label": "Left Content Item 1 Text",
+        "id": "homeReviewLeftContent1_text"
+      },
+      {
+        "type": "text",
+        "label": "Left Content Item 2 Number",
+        "id": "homeReviewLeftContent2_num"
+      },
+      {
+        "type": "text",
+        "label": "Left Content Item 2 Text",
+        "id": "homeReviewLeftContent2_text"
+      },
+      {
+        "type": "text",
+        "label": "Left Content Item 3 Number",
+        "id": "homeReviewLeftContent3_num"
+      },
+      {
+        "type": "text",
+        "label": "Left Content Item 3 Text",
+        "id": "homeReviewLeftContent3_text"
+      },
+      {
+        "type": "text",
+        "label": "Review 1 Name",
+        "id": "homeReviewItem1Name"
+      },
+      {
+        "type": "text",
+        "label": "Review 1 Company",
+        "id": "homeReviewItem1Company"
+      },
+      {
+        "type": "input",
+        "label": "Review 1 Review",
+        "id": "homeReviewItem1Review"
+      },
+      {
+        "type": "text",
+        "label": "Review 1 Image",
+        "id": "homeReviewItem1Img"
+      },
+      {
+        "type": "text",
+        "label": "Review 2 Name",
+        "id": "homeReviewItem2Name"
+      },
+      {
+        "type": "text",
+        "label": "Review 2 Company",
+        "id": "homeReviewItem2Company"
+      },
+      {
+        "type": "input",
+        "label": "Review 2 Review",
+        "id": "homeReviewItem2Review"
+      },
+      {
+        "type": "text",
+        "label": "Review 2 Image",
+        "id": "homeReviewItem2Img"
+      },
+      {
+        "type": "text",
+        "label": "Review 3 Name",
+        "id": "homeReviewItem3Name"
+      },
+      {
+        "type": "text",
+        "label": "Review 3 Company",
+        "id": "homeReviewItem3Company"
+      },
+      {
+        "type": "input",
+        "label": "Review 3 Review",
+        "id": "homeReviewItem3Review"
+      },
+      {
+        "type": "text",
+        "label": "Review 3 Image",
+        "id": "homeReviewItem3Img"
+      },
+      {
+        "type": "text",
+        "label": "Review 4 Name",
+        "id": "homeReviewItem4Name"
+      },
+      {
+        "type": "text",
+        "label": "Review 4 Company",
+        "id": "homeReviewItem4Company"
+      },
+      {
+        "type": "input",
+        "label": "Review 4 Review",
+        "id": "homeReviewItem4Review"
+      },
+      {
+        "type": "text",
+        "label": "Review 4 Image",
+        "id": "homeReviewItem4Img"
+      },
+      {
+        "type": "text",
+        "label": "Review 5 Name",
+        "id": "homeReviewItem5Name"
+      },
+      {
+        "type": "text",
+        "label": "Review 5 Company",
+        "id": "homeReviewItem5Company"
+      },
+      {
+        "type": "input",
+        "label": "Review 5 Review",
+        "id": "homeReviewItem5Review"
+      },
+      {
+        "type": "text",
+        "label": "Review 5 Image",
+        "id": "homeReviewItem5Img"
       }
     ]
   },

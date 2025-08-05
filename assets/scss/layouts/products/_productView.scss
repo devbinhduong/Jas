@@ -18,3 +18,9 @@
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .productView-image-wrapper {
+        width: calc(100% - 92px) !important;
+    }
+}

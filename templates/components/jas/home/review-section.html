@@ -1,7 +1,7 @@
 <div class="mt-6 md:mt-20" id="review-section">
     <!-- Header Section -->
     <div class="flex justify-between items-center mb-4 md:mb-8 md:mt-0 mt-6" data-section-load="animation">
-        <h1 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">Why Customers Trust Us</h1>
+        <h1 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">{{theme_settings.homeReviewHeading}}</h1>
         <div class="items-center gap-4 text-gray-500 custom-fadeInUp hidden md:flex" data-step-animate="2">
             <button prev-arrow class="flex items-center gap-1 text-[16px] font-tight leading-[120%] font-semibold">
                 <svg class="w-6 h-6 rotate-180">
@@ -16,7 +16,7 @@
                 </svg>
             </button>
         </div>
-        <div class="flex items-center justify-center md:hidden"><span class="text-sm font-sans font-semibold text-[#C51414]">See all</span>
+        <div class="flex items-center justify-center md:hidden"><a href="{{theme_settings.homeReviewAllLink}}" class="text-sm font-sans font-semibold text-[#C51414]">{{theme_settings.homeReviewAllText}}</a>
         <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414] text-[#C51414]">
             <use href="#svg-arrow-down"></use>
         </svg></div>
@@ -34,8 +34,8 @@
                         </svg>
                     </div>
                     <div class="flex flex-col gap-y-1 mt-2">
-                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">34</div>
-                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">Years of Business</div>
+                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">{{theme_settings.homeReviewLeftContent1_num}}</div>
+                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">{{theme_settings.homeReviewLeftContent1_text}}</div>
                     </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@
                         </svg>
                     </div>
                     <div class="flex flex-col gap-y-1 mt-2">
-                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">10,000</div>
-                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">Operates square foot Facility</div>
+                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">{{theme_settings.homeReviewLeftContent2_num}}</div>
+                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">{{theme_settings.homeReviewLeftContent2_text}}</div>
                     </div>
                 </div>
             </div>
@@ -66,8 +66,8 @@
                         </svg>
                     </div>
                     <div class="flex flex-col gap-y-1 mt-2">
-                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">24/7</div>
-                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">Customer support</div>
+                        <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">{{theme_settings.homeReviewLeftContent3_num}}</div>
+                        <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">{{theme_settings.homeReviewLeftContent3_text}}</div>
                     </div>
                 </div>
             </div>
@@ -106,19 +106,15 @@
                 ]
             }'> 
                 <!-- Review Card 1 -->
-                {{> components/jas/home/card-review count=5 name="Jacob Jones" company="Treebo" review="I recently had the pleasure of staying at [HotelName], and it was an unforgettable experience. From the moment I
-                arrived, the staff went above and beyond to ensure" img="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/review-1.png?t=1748228029"}}
+                {{> components/jas/home/card-review count=5 name=theme_settings.homeReviewItem1Name company=theme_settings.homeReviewItem1Company review=theme_settings.homeReviewItem1Review img=theme_settings.homeReviewItem1Img}}
                 <!-- Review Card 2 -->
-                {{> components/jas/home/card-review count=5 name="Annette Black" company="Treebo" review="I ordered Skar Audio speakers, and they arrived in just 3 days! The prices were unbeatable, and the website was easy to
-                use." img="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/review-2.png?t=1748228030"}}
+                {{> components/jas/home/card-review count=5 name=theme_settings.homeReviewItem2Name company=theme_settings.homeReviewItem2Company review=theme_settings.homeReviewItem2Review img=theme_settings.homeReviewItem2Img}}
                 <!-- Review Card 3 -->
-                {{> components/jas/home/card-review count=5 name="Albert Flores" company="Treebo" review="Their exclusive deals on brands like Sundown Audio are amazing, and their support team is always quick to help." img="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"}}
-                {{> components/jas/home/card-review count=5 name="Albert Flores" company="Treebo" review="Their exclusive deals on
-                brands like Sundown Audio are amazing, and their support team is always quick to help."
-                img="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/review-2.png?t=1748228030"}}
-                {{> components/jas/home/card-review count=5 name="Albert Flores" company="Treebo" review="Their exclusive deals on
-                brands like Sundown Audio are amazing, and their support team is always quick to help."
-                img="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"}}
+                {{> components/jas/home/card-review count=5 name=theme_settings.homeReviewItem3Name company=theme_settings.homeReviewItem3Company review=theme_settings.homeReviewItem3Review img=theme_settings.homeReviewItem3Img}}
+                <!-- Review Card 4 -->
+                {{> components/jas/home/card-review count=5 name=theme_settings.homeReviewItem4Name company=theme_settings.homeReviewItem4Company review=theme_settings.homeReviewItem4Review img=theme_settings.homeReviewItem4Img}}
+                <!-- Review Card 5 -->
+                {{> components/jas/home/card-review count=5 name=theme_settings.homeReviewItem5Name company=theme_settings.homeReviewItem5Company review=theme_settings.homeReviewItem5Review img=theme_settings.homeReviewItem5Img}}
             </div>
         </div>
     </div>

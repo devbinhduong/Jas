@@ -2,32 +2,31 @@
   <div class="grid grid-cols-12 gap-x-6 gap-y-6">
     <div class="sm:col-span-6 col-span-12 relative max-h-[164px] sm:max-h-[332px] rounded-[20px] overflow-hidden hover-zoom skeletor-loading">
         <div class="w-full h-full bg-gray-100 custom-fadeZoom" data-step-animate="3">
-            <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/section-banner1.jpg?t=1748222549"
+            <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{theme_settings.home2BannersItem1Img}}"
                 alt="{{theme_settings.brand_item1_link}}" class="w-full h-full object-cover lazyload">
         </div>
         <div class="absolute top-0 left-0 w-[52%] h-full md:pl-6 md:py-6 pl-4 py-4 text-left flex flex-col justify-between">
             <div class="group-text">
                 <h3 class="text-white text-[16px] md:text-[28px] font-eina02 leading-[110%]">
-                    Pay with the Sezzle
-                    Buy Now Pay Later App
+                    {{theme_settings.home2BannersItem1Title}}
                 </h3>
             </div>
-            <a href="{{theme_settings.home_cate_link}}" class="button button-style-2 mb-0 md:py-[10px] md:px-6 py-[10px] px-5"><span class="text-sm font-sans font-semibold">Shop Now</span></a>
+            <a href="{{theme_settings.home2BannersItem1Link}}" class="button button-style-2 mb-0 md:py-[10px] md:px-6 py-[10px] px-5"><span class="text-sm font-sans font-semibold">{{theme_settings.home2BannersItem1Btn}}</span></a>
         </div>
     </div>
     <div class="sm:col-span-6 col-span-12 relative max-h-[164px] sm:max-h-[332px] rounded-[20px] overflow-hidden hover-zoom skeletor-loading">
         <div class="w-full h-full bg-gray-100 custom-fadeZoom" data-step-animate="5">
-            <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/section-banner2.jpg?t=1748222549"
+            <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{theme_settings.home2BannersItem2Img}}"
                 alt="{{theme_settings.brand_item1_link}}" class="w-full h-full object-cover lazyload">
         </div>
         <div class="absolute top-0 left-0 w-[52%] h-full md:pl-6 md:py-6 pl-4 py-4 text-left flex flex-col justify-between">
             <div class="group-text">
                 <h3 class="text-white text-[16px] md:text-[28px] font-eina02 leading-[110%]">
-                Join Our Dealer network & benefit from exclusives brands
+                    {{theme_settings.home2BannersItem2Title}}
                 </h3>
             </div>
-            <a href="{{theme_settings.home_cate_link}}"
-                class="button button-style mb-0 md:py-[10px] md:px-6 py-[10px] px-5 w-fit"><span class="text-sm font-sans font-semibold max-w-[131px]">Become a Dealer</span></a>
+            <a href="{{theme_settings.home2BannersItem2Link}}"
+                class="button button-style mb-0 md:py-[10px] md:px-6 py-[10px] px-5 w-fit"><span class="text-sm font-sans font-semibold max-w-[131px]">{{theme_settings.home2BannersItem2Btn}}</span></a>
         </div>
     </div>
   </div>
