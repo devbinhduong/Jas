@@ -3,9 +3,9 @@
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
     {{#if forms.address.address_id}}
-        <h2 class="page-heading">{{lang 'forms.address.edit.heading'}}</h2>
+        <h2 class="page-heading font-eina02">{{lang 'forms.address.edit.heading'}}</h2>
     {{else}}
-        <h2 class="page-heading">{{lang 'forms.address.add.heading'}}</h2>
+        <h2 class="page-heading font-eina02">{{lang 'forms.address.add.heading'}}</h2>
     {{/if}}
 
     {{> components/account/navigation account_page='addresses'}}
@@ -30,8 +30,12 @@
                         </div>
                     </fieldset>
                     <div class="form-actions">
-                        <input type="submit" class="button button--primary" value="{{lang 'forms.address.submit_value'}}">
-                        <a href="{{urls.account.addresses}}" class="button">{{lang 'common.cancel'}}</a>
+                        <button type="submit" class="button button--primary">
+                            <span>{{lang 'forms.address.submit_value'}}</span>
+                        </button>
+                        <a href="{{urls.account.addresses}}" class="button button--primary">
+                            <span>{{lang 'common.cancel'}}</span>
+                        </a>
                         {{inject 'required' (lang 'common.required')}}
                         {{inject 'state_error' (lang 'errors.state_error')}}
                     </div>

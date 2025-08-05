@@ -1,0 +1,72 @@
+$textColor: #344054;
+$headingColor: #000000;
+
+.page-default {
+    margin: 0;
+
+    &::after,
+    &::before {
+        display: none;
+    }
+    .page-content {
+        float: unset;
+        .main-content {
+            h1,h2,h3,h4,h5,h6 {
+                color: $headingColor;
+                font-weight: bold;
+                font-family: "Inter", sans-serif;
+                margin-top: 8px;
+                margin-bottom: 12px;
+            }
+            h2 {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            p,
+            span {
+                display: inline-block;
+                color: $textColor;
+                font-size: 14px;
+                line-height: 1.72;
+                
+            }
+            p {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    @include smin-m {
+        .page-content {
+            .main-content {
+                h1,h2,h3,h4,h5,h6 {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                h1 {
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+        
+                h2 {
+                    font-size: 28px;
+                    line-height: 1.29;
+                }
+                p,
+                span {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+.page-type-createaccount {
+    .body {
+        margin-top: 0;
+    }
+}

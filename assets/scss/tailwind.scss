@@ -145,4 +145,9 @@
         .customTabs__item.is-active {
             @apply bg-[#000000] text-white;
         }
+        .page-active {
+            span {
+                @apply text-[#C51414];
+            }
+        }
 }
