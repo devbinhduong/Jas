@@ -18,8 +18,15 @@
         background: #FBE8E8;
 
         .tab-title {
+            font-size: 14px !important;
+            font-style: normal;
             font-weight: 500;
-            color: #1B0832;
+            line-height: 24px;
+
+            &--faqs {
+                font-size: 16px !important;
+                color: #1B0832 !important;
+            }
         }
     }
     .tab-title {
@@ -30,6 +37,15 @@
         font-weight: 500;
         line-height: 24px; 
         font-family: $fontFamily-sans;
+
+        &--faqs {
+            color: #4D5462 !important;
+
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
     }
 }
 

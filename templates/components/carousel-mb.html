@@ -1,4 +1,4 @@
-<section style="--timeCarousel: {{divide 3000 1000}}s;" data-section-load="slick-slider" class="heroCarousel heroCarousel--mobile"
+<section style="--timeCarousel: {{divide 3000 1000}}s;" data-section-load="slick-slider" class="heroCarousel{{#if showCarouselMB}} heroCarousel--mobile{{/if}}"
     {{#gt carousel.slides.length 1}}
         data-slick='{
         "fade": true,
@@ -18,7 +18,7 @@
             {{#if @index '==' 0}}
                     {{#if (merge this subheading=../theme_settings.homepage_show_carousel_0_subheading)}}{{/if}}
                     {{#if (merge this position=../theme_settings.homepage_show_carousel_0_position-content)}}{{/if}}
-                    {{#if (merge this imageMobile=../theme_settings.homepage_show_carousel_0_mobile-image)}}{{/if}}
+                    {{#if (merge this imageMobile=../theme_settings.homepageCarousel_0_mbImg)}}{{/if}}
                     {{#if (merge this customTextBtn=../theme_settings.homepage_show_carousel_0_customtextbtn)}}{{/if}}
                     {{#if (merge this customBtn=../theme_settings.homepage_show_carousel_0_custombtn)}}{{/if}}
                     {{#if (merge this hasBackground=../theme_settings.carousel-bgColor)}}{{/if}}
@@ -26,7 +26,7 @@
                 {{#if @index '==' 1}}
                     {{#if (merge this subheading=../theme_settings.homepage_show_carousel_1_subheading)}}{{/if}}
                     {{#if (merge this position=../theme_settings.homepage_show_carousel_1_position-content)}}{{/if}}
-                    {{#if (merge this imageMobile=../theme_settings.homepage_show_carousel_1_mobile-image)}}{{/if}}
+                    {{#if (merge this imageMobile=../theme_settings.homepageCarousel_1_mbImg)}}{{/if}}
                     {{#if (merge this customTextBtn=../theme_settings.homepage_show_carousel_1_customtextbtn)}}{{/if}}
                     {{#if (merge this customBtn=../theme_settings.homepage_show_carousel_1_custombtn)}}{{/if}}
                     {{#if (merge this hasBackground=../theme_settings.carousel-bgColor)}}{{/if}}
@@ -34,7 +34,7 @@
                 {{#if @index '==' 2}}
                     {{#if (merge this subheading=../theme_settings.homepage_show_carousel_2_subheading)}}{{/if}}
                     {{#if (merge this position=../theme_settings.homepage_show_carousel_2_position-content)}}{{/if}}
-                    {{#if (merge this imageMobile=../theme_settings.homepage_show_carousel_2_mobile-image)}}{{/if}}
+                    {{#if (merge this imageMobile=../theme_settings.homepageCarousel_2_mbImg)}}{{/if}}
                     {{#if (merge this customTextBtn=../theme_settings.homepage_show_carousel_2_customtextbtn)}}{{/if}}
                     {{#if (merge this customBtn=../theme_settings.homepage_show_carousel_2_custombtn)}}{{/if}}
                     {{#if (merge this hasBackground=../theme_settings.carousel-bgColor)}}{{/if}}
@@ -42,7 +42,7 @@
                 {{#if @index '==' 3}}
                     {{#if (merge this subheading=../theme_settings.homepage_show_carousel_3_subheading)}}{{/if}}
                     {{#if (merge this position=../theme_settings.homepage_show_carousel_3_position-content)}}{{/if}}
-                    {{#if (merge this imageMobile=../theme_settings.homepage_show_carousel_3_mobile-image)}}{{/if}}
+                    {{#if (merge this imageMobile=../theme_settings.homepageCarousel_3_mbImg)}}{{/if}}
                     {{#if (merge this customTextBtn=../theme_settings.homepage_show_carousel_3_customtextbtn)}}{{/if}}
                     {{#if (merge this customBtn=../theme_settings.homepage_show_carousel_3_custombtn)}}{{/if}}
                     {{#if (merge this hasBackground=../theme_settings.carousel-bgColor)}}{{/if}}
@@ -50,7 +50,7 @@
                 {{#if @index '==' 4}}
                     {{#if (merge this subheading=../theme_settings.homepage_show_carousel_4_subheading)}}{{/if}}
                     {{#if (merge this position=../theme_settings.homepage_show_carousel_4_position-content)}}{{/if}}
-                    {{#if (merge this imageMobile=../theme_settings.homepage_show_carousel_4_mobile-image)}}{{/if}}
+                    {{#if (merge this imageMobile=../theme_settings.homepageCarousel_4_mbImg)}}{{/if}}
                     {{#if (merge this customTextBtn=../theme_settings.homepage_show_carousel_4_customtextbtn)}}{{/if}}
                     {{#if (merge this customBtn=../theme_settings.homepage_show_carousel_4_custombtn)}}{{/if}}
                     {{#if (merge this hasBackground=../theme_settings.carousel-bgColor)}}{{/if}}
@@ -75,9 +75,9 @@
                     {{/if}}
 
                     {{#if imageMobile}}
-                        <img rel="preload" as="image" class="lazyload image-mobile" src="{{#if ../theme_settings.halo_homepage_layout_1}}{{cdn 'img/loading.svg'}}{{else}}{{cdn 'img/loading_2.svg'}}{{/if}}" data-src="https://cdn11.bigcommerce.com/s-113yqz9igd/images/stencil/original/image-manager/carousel-mb.jpg?t=1747820198" alt="{{stencil_image.alt}}" title="{{stencil_image.alt}}">
+                        <img rel="preload" as="image" class="lazyload image-mobile" src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-113yqz9igd/images/stencil/original/image-manager/{{imageMobile}}" alt="{{stencil_image.alt}}" title="{{stencil_image.alt}}">
                     {{else}}
-                        <img rel="preload" as="image" class="lazyload image-mobile" src="{{#if ../theme_settings.halo_homepage_layout_1}}{{cdn 'img/loading.svg'}}{{else}}{{cdn 'img/loading_2.svg'}}{{/if}}" data-src="{{getImageSrcset stencil_image 1x=(default fallback_size '960w')}}" alt="{{stencil_image.alt}}" title="{{stencil_image.alt}}">
+                        <img rel="preload" as="image" class="lazyload image-mobile" src="{{cdn 'img/loading.svg'}}" data-src="{{getImageSrcset stencil_image 1x=(default fallback_size '960w')}}" alt="{{stencil_image.alt}}" title="{{stencil_image.alt}}">
                     {{/if}}
                 </a>
             </div>
@@ -86,31 +86,31 @@
                     {{#if @index '==' 0}}
                         {{> components/carousel-content 
                             show_background=true 
-                            subHeading=../theme_settings.carouel_bold_text_1 
+                            subHeading=../theme_settings.carouelSubHeading_1 
                         }}
                     {{/if}}
                     {{#if @index '==' 1}}
                         {{> components/carousel-content
                             show_background=true 
-                            subHeading=../theme_settings.carouel_bold_text_2
+                            subHeading=../theme_settings.carouelSubHeading_2
                         }}
                     {{/if}}
                     {{#if @index '==' 2}}
                         {{> components/carousel-content 
                             show_background=true 
-                            subHeading=../theme_settings.carouel_bold_text_3
+                            subHeading=../theme_settings.carouelSubHeading_3
                         }}
                     {{/if}}
                     {{#if @index '==' 3}}
                         {{> components/carousel-content 
                             show_background=true 
-                            subHeading=../theme_settings.carouel_bold_text_4
+                            subHeading=../theme_settings.carouelSubHeading_4
                         }}
                     {{/if}}
                     {{#if @index '==' 4}}
                         {{> components/carousel-content 
                             show_background=true 
-                            subHeading=../theme_settings.carouel_bold_text_5
+                            subHeading=../theme_settings.carouelSubHeading_5
                         }}
                     {{/if}}
                 {{else}}

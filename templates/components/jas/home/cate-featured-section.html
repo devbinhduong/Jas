@@ -4,7 +4,7 @@
                 {{#if title}}
                     {{title}}
                 {{else}}
-                    {{theme_settings.home_cate_title}}
+                    {{theme_settings.homeCateTitle}}
                 {{/if}}
             </h2>
            <!-- create a custom prev and next button -->
@@ -23,8 +23,8 @@
                 </svg>
             </button>
         </div>
-            <a href="#" class="text-red-600 hover:text-red-700 font-medium flex items-center group md:hidden custom-fadeInUp" data-step-animate="2">
-                <span class="text-sm font-sans font-semibold block md:hidden">See all</span>
+            <a href="{{theme_settings.homeCateAllLink}}" class="text-red-600 hover:text-red-700 font-medium flex items-center group md:hidden custom-fadeInUp" data-step-animate="2">
+                <span class="text-sm font-sans font-semibold block md:hidden">{{theme_settings.homeCateAllText}}</span>
                 <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414]">
                     <use href="#svg-arrow-down"></use>
                 </svg>
@@ -32,7 +32,7 @@
         </div>
 
         <div data-section-load="ajax" data-ajax-type="cateSlider"
-            data-cateid-list="{{theme_settings.home_cate_ids}}">
+            data-cateid-list="{{theme_settings.homeCateIds}}">
             <div class="slider gap-y-6 flex overflow-x-auto md:grid md:grid-cols-8 sm:grid-cols-6 grid-cols-4 gap-x-0 scrollbar-hide md:pr-0 pr-[65px]"
                 data-section-load="slider">
                 {{#for 1 8}}

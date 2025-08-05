@@ -125,16 +125,11 @@ export default class Page extends PageManager {
             headings.forEach((heading, index) => {
                 const faqsBlock = document.createElement('div');
                 faqsBlock.classList.add('faqs-block', 'mb-6', 'md:mb-10');
-                faqsBlock.id = `tabID-${heading.replace(/\s+/g, '-')}`;
+                faqsBlock.id = `tabID-${heading.replace(/\s+/g, '-').replace(/&/g, 'and')}`;
                 faqsBlock.innerHTML = `
                     ${heading !== "" ? `
                     <div class="faqs-block-title">
                         <h2 class="font-eina02"> ${heading}</h2>
-                    </div>
-                    ` : ''}
-                    ${descriptions[index] !== "" ? `
-                    <div class="faqs-block-description">
-                        <p class="body-font">${descriptions[index]}</p>
                     </div>
                     ` : ''}
                     ${blockContents[index].length > 0 ? `
@@ -160,7 +155,7 @@ export default class Page extends PageManager {
 
                 tabsList.innerHTML += `
                     <li class="tab ${index === 0 ? 'is-active' : ''}">
-                        <a class="tab-title" href="#tabID-${heading.replace(/\s+/g, '-')}">${heading}</a>
+                        <a class="tab-title tab-title--faqs" href="#tabID-${heading.replace(/\s+/g, '-').replace(/&/g, 'and')}">${heading}</a>
                     </li>`;
             });
             toggleContent();
