@@ -184,6 +184,12 @@ $col5Width: (148 / $cartContentWidth) * 100%;
     }
 }
 
+.cart-total-amount {
+    strong {
+        font-weight: 600 !important;
+    }
+}
+
 
 // Cart actions
 // -----------------------------------------------------------------------------
@@ -382,8 +388,7 @@ $col5Width: (148 / $cartContentWidth) * 100%;
     }
 }
 
-.previewCartItem-brand,
-.previewCartItem-name {
+.previewCartItem-brand {
     margin-bottom: spacing("eighth");
 }
 

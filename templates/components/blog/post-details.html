@@ -4,7 +4,7 @@
             {{post.title}}
         </h1>
 
-        <div class="flex sm:items-center gap-2 sm:gap-8 flex-col sm:flex-row">
+        <div class="flex sm:items-center gap-2 sm:gap-8 flex-col sm:flex-row mt-2 sm:mt-6 mb-3 sm:mb-12">
             <div class="flex items-center gap-2 text-[#000000] text-[12px] sm:text-[14px] body-font font-normal leading-[150%]">
                 <p>
                     Publish Date:
@@ -99,7 +99,7 @@
                 </div>
             </section>
         </div>
-        <div class="postDetails__right w-full md:w-1/4 lg:w-[303px] sticky top-[165px] right-0">
+        <div class="postDetails__right w-full md:w-1/4 lg:w-[303px] sticky top-[165px] right-0 hidden md:block">
             <section class="newsLetter p-4 sm:p-6 bg-[#5B0909] rounded-2xl flex flex-col justify-between items-center gap-4">
                 <div class="newsLetter__content w-full">
                     <h2 class="newsLetter__title text-white text-[20px] font-normal leading-[120%] tracking-[-0.2px] caption-top sm:text-[32px] md:tracking-[-0.32px] font-eina01 mb-4">Subscribe to Our Newsletter</h2>
@@ -136,6 +136,30 @@
                 {{/each}}
             </div>
         </div>
+    </section>
+
+    <section class="newsLetter p-4 sm:p-6 bg-[#5B0909] rounded-2xl flex flex-col justify-between items-center gap-4 md:hidden">
+        <div class="newsLetter__content w-full">
+            <h2 class="newsLetter__title text-white text-[20px] font-normal leading-[120%] tracking-[-0.2px] caption-top sm:text-[32px] md:tracking-[-0.32px] font-eina01 mb-4">Subscribe to Our Newsletter</h2>
+            <p class="newsLetter__description text-white body-font text-[16px] md:text-[20px] leading-[150%] tracking-[-0.16px] md:tracking-[-0.2px]">Receive our latest updates aboutour products and promotions.</p>
+        </div>
+
+        <form class="form w-full flex flex-col gap-4" action="/subscribe.php" method="post">
+            <fieldset class="form-fieldset">
+                <input type="hidden" name="action" value="subscribe">
+                <input type="hidden" name="nl_first_name" value="bc">
+                <input type="hidden" name="check" value="1">
+                <div class="form-field mb-0">
+                    <label class="form-label is-srOnly" for="nl_email">Email Address</label>
+                    <div class="form-prefixPostfix wrap">
+                        <input class="form-input rounded-[32px] border-none text-[#344054] placeholder:text-[#344054]" id="nl_emails" name="nl_email" type="email" value="" placeholder="Write your mail" aria-describedby="alertBox-message-text" aria-required="true" autocomplete="email" required="">
+                    </div>
+                    <button class="button button--primary w-full mb-0 mt-4" type="submit">
+                        <span class="">Subscribe</span>
+                    </button>
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <section class="page-about-us supports-section w-full pt-6 pb-6 md:pt-10 md:pb-10 md:gap-10 mb-0" data-section-load="animation">

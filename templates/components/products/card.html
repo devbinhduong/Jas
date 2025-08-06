@@ -179,12 +179,12 @@
                 {{/if}}
                 {{#if show_cart_action}}
                 {{#if has_options}}
-                <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button button-style custom-add-to-cart text-[14px] font-sans leading-[120%]"
+                <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button button-style text-[14px] font-sans leading-[120%]"
                     data-product-id="{{id}}"><span>{{lang 'products.choose_options'}}</span></a>
                 {{/if}}
                 {{#if pre_order}}
                 <a href="{{pre_order_add_to_cart_url}}" data-event-type="product-click"
-                    class="button button--small card-figcaption-button button-style custom-add-to-cart text-[14px] font-sans leading-[120%]">{{lang 'products.pre_order'}}</a>
+                    class="button button--small card-figcaption-button button-style text-[14px] font-sans leading-[120%]">{{lang 'products.pre_order'}}</a>
                 {{/if}}
                 {{#if add_to_cart_url }}
                 <a href="{{add_to_cart_url}}" data-wait-message="{{lang 'products.adding_to_cart'}}"  data-event-type="product-click" data-product-id="{{id}}" data-button-type="add-cart"

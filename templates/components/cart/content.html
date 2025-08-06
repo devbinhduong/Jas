@@ -112,7 +112,7 @@
                             --
                         {{/or}}
                         {{#or can_modify (if type '==' 'GiftCertificate')}}
-                            <button class="cart-remove icon w-[18px] h-[18px] sm:w-6 sm:h-6 text-[#2D3139] sm:text-[#64748B] hover:text-[#c51414] absolute top-4 right-4 sm:static"
+                            <button class="cart-remove icon w-[18px] h-[18px] sm:w-6 sm:h-6 text-[#2D3139] sm:text-[#64748B] hover:text-[#c51414] absolute top-4 right-4 sm:top-1/2 sm:translate-y-[-50%]"
                                     data-cart-itemid="{{id}}"
                                     data-confirm-delete="{{lang 'cart.confirm_delete'}}"
                                     aria-label="{{lang 'cart.remove_item' name=name}}"
@@ -127,7 +127,7 @@
 </div>
 
 <div class="mt-4 md:mt-6">
-    <a href="/" class="button button--transparent">
+    <a href="/" class="button button--transparent text-[14px] md:text-[16px]">
         <span>Continue Shopping</span>
     </a>
 </div>

@@ -6,6 +6,15 @@
 .price--non-sale,
 .price--discounted {
     text-decoration: line-through;
+    color: #667085;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .price-section--minor {

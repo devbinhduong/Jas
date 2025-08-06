@@ -116,7 +116,9 @@ export default class Page extends PageManager {
         }
 
         function initFaqs() {
-            const qaData = JSON.parse(document.getElementById('qa-data').textContent);
+            const qaDataElement = document.getElementById('qa-data');
+            if (!qaDataElement) return;
+            const qaData = JSON.parse(qaDataElement.textContent);
             if (!qaData) return;
             
             const headings = qaData.map(group => group[0].heading);
@@ -137,7 +139,7 @@ export default class Page extends PageManager {
                         ${blockContents[index].map(item => `
                             <div class="faqAccordion">
                                 <div class="faqAccordion__title">
-                                    <h3 class="body-font">${item.question}</h3>
+                                    <h3 class="body-font pr-4">${item.question}</h3>
                                 </div>
                                 <div class="faqAccordion__content">
                                     ${item.answer}

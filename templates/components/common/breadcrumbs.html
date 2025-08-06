@@ -2,18 +2,47 @@
     <ol class="breadcrumbs pt-4 pb-4 md:pt-6 md:pb-6">
         {{#unless theme_settings.hide_breadcrumbs }}
             {{#each breadcrumbs}}
-                <li class="breadcrumb {{#if @last}}is-active{{/if}} custom-fadeInUp" data-step-animate="{{@index}}">
-                    <a class="breadcrumb-label"
-                       href="{{url}}"
-                       {{#if @last}}aria-current="page"{{/if}}
-                    >
-                        {{#if name '==' 'Your Cart' }}
-                            <span>Shopping Cart</span>
-                        {{else}}
-                            <span>{{name}}</span>
-                        {{/if}}
-                    </a>
-                </li>
+                {{#if ../pageType '==' 'product'}}
+                    {{#unless @last}}
+                        <li class="breadcrumb custom-fadeInUp" data-step-animate="{{@index}}">
+                            <a class="breadcrumb-label"
+                            href="{{url}}"
+                            >
+                                <span>{{name}}</span>
+                            </a>
+                        </li>
+                    {{else}}
+                        <li class="breadcrumb breadcrumb--page-type custom-fadeInUp" data-step-animate="{{@index}}">
+                            <a class="breadcrumb-label"
+                            href="/categories.php"
+                            >
+                                <span>{{../pageType}}</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb is-active custom-fadeInUp" data-step-animate="{{@index}}">
+                            <a class="breadcrumb-label"
+                            href="{{url}}"
+                            aria-current="page"
+                            >
+                                <span>{{name}}</span>
+                            </a>
+                        </li>
+                    {{/unless}}
+                {{else}}
+                    <li class="breadcrumb {{#if @last}}is-active{{/if}} custom-fadeInUp" data-step-animate="{{@index}}">
+                        <a class="breadcrumb-label"
+                        href="{{url}}"
+                        {{#if @last}}aria-current="page"{{/if}}
+                        >
+                            {{#if name '==' 'Your Cart' }}
+                                <span>Shopping Cart</span>
+                            {{else}}
+                                <span>{{name}}</span>
+                            {{/if}}
+                        </a>
+                    </li>
+                {{/if}}
+                
             {{/each}}
         {{/unless}}
     </ol>

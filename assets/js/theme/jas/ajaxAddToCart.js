@@ -70,6 +70,9 @@ export default function (context) {
             $addToCartBtn.prop('disabled', false);
             // trigger dropdown menu
 
+            $body.addClass('test12121212121');
+            
+
             // Guard statement
             if (errorMessage) {
                 // Strip the HTML from the error message

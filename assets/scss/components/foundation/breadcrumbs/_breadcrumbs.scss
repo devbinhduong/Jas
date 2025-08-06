@@ -21,9 +21,18 @@ ol.breadcrumbs {
     float: none;
     margin-right: 0.25rem;
     font-size: $fontSize-root + 2;
+    font-weight: 500;
 
     @include smax-m {
         font-size: $crumb-font-size;
+    }
+
+    &.breadcrumb--page-type {
+        a {
+            color: #4D5462;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
     }
     
     &.is-active {

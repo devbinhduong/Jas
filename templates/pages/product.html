@@ -13,7 +13,7 @@ product:
 
 {{#partial "page"}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs pageType=page_type}}
 
     {{#each product.shipping_messages}}
         {{> components/common/alert/alert-info message}}
