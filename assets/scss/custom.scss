@@ -479,13 +479,29 @@ a.link-line{
         border: 1px solid transparent;
         border-radius: 12px;
         overflow: hidden;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 400px;
+        
         iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
             border-radius: 12px;
+            border: none;
+        }
+        
+        /* Đảm bảo aspect ratio trên mobile */
+        @include smax-m {
+            min-height: 300px;
+            aspect-ratio: 16/9;
         }
     }
-        @include smax-m {
-            min-height: fit-content;
-        }
+    @include smax-m {
+        min-height: fit-content;
+    }
 }
 
 .button--primary {
@@ -523,14 +539,21 @@ a.link-line{
     .slick-list, .slick-track {
         height: 100%;
     }
-    .slick-track {
-        .slick-slide:not(:last-child) {
-            margin-right: 24px;
-            @include smax-s {
-                margin-right: 12px;
-            }
+   .slick-list {
+    margin-right: -24px;
+        @include smax-s {
+            margin-right: -12px;
         }
     }
+
+    .slick-track {
+            .slick-slide:not(:last-child) {
+                margin-right: 24px;
+                @include smax-s {
+                    margin-right: 12px;
+                }
+            }
+        }
     img {
         width: 40px;
         height: 40px;
