@@ -45,8 +45,8 @@ export default class megaMenuFunction {
                                 }
                                 if(!subMegaMenu.find('.imageArea').length){
                                     const rightItemClass = param.style === 'style custom-2'
-                                        ? 'megamenu-right-item flex gap-4'
-                                        : 'megamenu-right-item flex w-full flex-col gap-4';
+                                        ? 'megamenu-right-item flex gap-6'
+                                        : 'megamenu-right-item flex w-full flex-col gap-6';
 
                                     subMegaMenu.find('.container').append(
                                         `<div class="imageArea"><div class="${rightItemClass}">${param.imagesRight}</div></div>`

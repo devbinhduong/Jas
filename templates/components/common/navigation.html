@@ -33,26 +33,26 @@
             <li class="navUser-item navUser-item--divider">|</li>
         {{/if}}
         <li class="navUser-item">
-            <a class="navUser-action flex items-center justify-center gap-1" href="/wishlist.php" aria-label="Search">
+            <a class="flex items-center justify-center gap-1 navUser-action" href="/wishlist.php" aria-label="Search">
                 <span class="icon icon-wishlist">
                     <svg class="stroke-black">
                         <use xlink:href="#svg-heart"></use>
                     </svg>
                 </span>
-                <span class="text-sm font-eina01 font-normal">
+                <span class="text-sm font-normal font-eina01-regular">
                     Wishlist
                 </span>
             </a>
         </li>
             <li class="navUser-item navUser-item--cart">
-                <a class="navUser-action flex items-center justify-center gap-1" data-cart-preview data-options="align:right"
+                <a class="flex items-center justify-center gap-1 navUser-action" data-cart-preview data-options="align:right"
                     href="{{urls.cart}}" aria-label="{{lang 'cart.nav_aria_label'}}">
                     <span class="icon">
                         <svg class="stroke-black">
                             <use xlink:href="#svg-cart"></use>
                         </svg>
                     </span>
-                    <span class="text-sm font-eina01 font-normal">{{lang 'common.cart'}}</span>
+                    <span class="text-sm font-normal font-eina01-regular">{{lang 'common.cart'}}</span>
                     <span class="countPill cart-quantity"></span>
                 </a>
             
@@ -64,12 +64,12 @@
                    href="{{urls.account.index}}"
                    aria-label="{{lang 'common.account'}}"
                 >
-                   <span class="text-sm font-eina01 font-normal">
+                   <span class="text-sm font-normal font-eina01-regular">
                     {{lang 'common.account'}}
                    </span>
                 </a>
             {{else}}
-                <a class="navUser-action flex items-center justify-center gap-1 text-sm"
+                <a class="flex items-center justify-center gap-1 text-sm navUser-action"
                    href="{{urls.auth.login}}"
                    aria-label="{{lang 'common.login'}}"
                    data-login-form-mobile
@@ -79,7 +79,7 @@
                             <use xlink:href="#svg-user"></use>
                         </svg>
                     </span>
-                    <span class="text-sm w-max font-eina01 font-normal">
+                    <span class="text-sm font-normal w-max font-eina01-regular">
                         {{lang 'common.login'}}
                     </span>
                 </a>

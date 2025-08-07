@@ -12,11 +12,11 @@
     </a>
     <div class="custom-sidebar-wrapper">
         <div class="w-full">
-            <form class="form mb-0 w-full flex items-center justify-center md:p-0 p-4" onsubmit="return false"
+            <form class="flex items-center justify-center w-full p-4 mb-0 form md:p-0" onsubmit="return false"
                 data-url="{{urls.search}}" data-quick-search-form>
                     <fieldset
-                        class="form-fieldset flex items-center justify-center w-full h-[48px] border border-gray-500 rounded-full py-[14px] pl-[18px] pr-2 bg-[#F2F4F7]">
-                        <div class="form-field w-full mb-0">
+                        class="form-fieldset flex items-center justify-center w-full h-[48px] border-gray-500 border-0 rounded-full py-[14px] pl-[18px] pr-2 bg-[#F2F4F7]">
+                        <div class="w-full mb-0 form-field">
                             <label class="is-srOnly" for="{{name}}">{{lang "search.quick_search.input_label"}}</label>
                             <input class="form-input unset-outline bg-[#F2F4F7] placeholder-[#98A2B3] font-sans" data-search-quick
                                 name="{{name}}" id="{{name}}" data-error-message="{{lang 'search.error.empty_field'}}"

@@ -1,12 +1,12 @@
 <div class="previewCart-header">
-    <div class="header-default flex items-center gap-2 justify-between w-full">
+    <div class="flex items-center justify-end w-full gap-2 header-default">
         <h2 class="title">{{lang 'cart.preview.title'}}</h2>
         <span class="text">
             <span class="countPill cart-quantity" data-cart-quantity="{{cart.quantity}}">{{cart.quantity}}</span>
             <span> {{#if cart.quantity '>=' 2}} items{{else}} item{{/if}}</span>
         </span>
     </div>
-    <div class="header-added-product flex items-center gap-2">
+    <div class="flex items-center gap-2 header-added-product">
         <span class="icon icon--check">
             <svg><use xlink:href="#icon-check"></use></svg>
         </span>
@@ -16,7 +16,7 @@
 <div class="previewCartWrapper">
     <div class="previewCart">
         {{#if cart.items.length}}
-        <ul class="previewCartList my-5">
+        <ul class="my-5 previewCartList">
             {{#each cart.items}}
             <li class="previewCartItem" data-cart-itemid="{{id}}" {{#if options}}data-cart-edit-productItem{{/if}}>
                 <div class="previewCartItem-image">
@@ -35,7 +35,7 @@
                 <div class="previewCartItem-content">
                     <div class="previewCartItem-content--group">
                         <div class="previewCartItem-center">
-                            <h6 class="previewCartItem-name mb-3">
+                            <h6 class="mb-3 previewCartItem-name">
                                 <a class="text-[16px] leading-[22px] font-sans font-medium" href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a>
                             </h6>
 
@@ -56,7 +56,7 @@
                                         
                                         <button class="button button--icon text-[#1E293B] hover:text-[#c51414]" data-cart-update="" data-cart-itemid="{{id}}" data-action="inc">
                                             <span class="is-srOnly">Increase Quantity of Kicker 51KSC2704 KS Series 2.75" 50W RMS Midrange Car Speakers</span>
-                                            <i class="icon w-5 h-5" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></i>
+                                            <i class="w-5 h-5 icon" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></i>
                                         </button>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
             </li>
             {{/each}}
         </ul>
-        <div class="previewCart-total flex justify-between mt-5 mb-5">
+        <div class="flex justify-between mt-5 mb-5 previewCart-total">
             <div class="cart-total-label text-[18px] font-sans font-normal">
                 <strong>{{lang 'cart.checkout.subtotal'}}:</strong>
             </div>

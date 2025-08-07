@@ -6,22 +6,22 @@
                 class="heroCarousel-subHeading">{{subHeading}}</span>
             {{/if}}
             {{#if heading}}
-            <h2 class="heroCarousel-title custom-animation font-eina02 text-white" data-step-animate="3">{{{heading}}}</h2>
+            <h2 class="text-white heroCarousel-title custom-animation font-eina02" data-step-animate="3">{{{heading}}}</h2>
             {{/if}}
             {{#if text}}
-            <p class="heroCarousel-description custom-animation mb-0 text-white" data-step-animate="4">{{{text}}}</p>
+            <p class="mb-0 text-white heroCarousel-description custom-animation" data-step-animate="4">{{{text}}}</p>
             {{/if}}
     </div>
     {{#or button_text}}
     <div class="custom-heroCarousel-wrapper-button">
         <a href="{{url}}"
             aria-label="{{#if this.alt_text.length '!=' 0}}{{this.alt_text}}{{else}}{{lang 'carousel.slide_number' slide_number=(add @index 1)}}{{/if}}, {{button_text}}"
-            class="heroCarousel-action flex gap-x-1 button button-style-2 custom-animation" data-step-animate="5"
+            class="flex heroCarousel-action button button-style-2 custom-animation" data-step-animate="5"
             role="button">
             <span class="text-left text">
                 {{{button_text}}}
             </span>
-            <span class="icon navPages-action-moreIcon w-6 h-6" aria-hidden="true">
+            <span class="w-6 h-6 icon navPages-action-moreIcon" aria-hidden="true">
                 <svg class="w-6 h-6">
                     <use href="#svg-arrow-down"></use>
                 </svg>

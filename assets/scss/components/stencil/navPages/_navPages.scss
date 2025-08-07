@@ -337,6 +337,8 @@
 // -----------------------------------------------------------------------------
 @include smax-m {
     .custom-menu-mobile {
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
             .navPages-container {
                 display: block;
                 height: 100%;
@@ -344,7 +346,19 @@
                 overflow-x: hidden;
                 padding: 0;
             }
-    
+            .navPages-list--user {
+                .navPages-item  {
+                    .navPages-action .navPages-action-moreIcon svg{
+                        width: 16px !important;
+                        height: 16px !important;
+                    }
+                    &.is-open {
+                        .navPages-action-moreIcon {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
             .navPages-list {
                 overflow: hidden;
                 position: relative;
@@ -353,7 +367,6 @@
             .navPages-item {
                 width: 100%;
                 margin: 0;
-                border-bottom: 1px solid #eeeef1;
                 
                 .navPages-action {
                     color: stencilColor('navPages-color');
@@ -396,7 +409,6 @@
                             width: 24px;
                             height: 24px;
                             transition: all 0.5s ease;
-                            transform: rotate(-90deg);
                         }
                     }
     
@@ -739,7 +751,7 @@
 
                 &:hover .navPages-action-moreIcon {
                     opacity: 0.5;
-                    transform: rotate(180deg);
+                    transform: rotate(270deg);
                 }
             }
         }
@@ -751,13 +763,13 @@
             .navPages-item {
                 width: 100%;
                 .navPages-action:not(.btn-login) {
-                    font-size: 14px;
+                    font-size: 16px;
                     letter-spacing: 0;
                     line-height: 1.5;
                     font-weight: 500;
                     padding: 8px 0;
                     text-align: left;
-
+                    font-family: 'Inter', sans-serif;
                     .navPages-action-moreIcon {
                         right: 15px;
                         width: 24px;
@@ -1245,7 +1257,9 @@
                 justify-content: flex-start;
                 flex-wrap: wrap;
                 max-width: 100%;
-
+                @media (min-width: 768px) {
+                    row-gap: 24px;
+                }
                 >li {
                     flex: 0 0 25%;
                 }

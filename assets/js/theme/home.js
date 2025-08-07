@@ -10,7 +10,7 @@ export default class Home extends PageManager {
     }
     loadPopupVideo() {
         const button = $('[data-reveal="popup-video"]').closest('button');
-        let content = `<video class="popup-video w-full h-full" src="https://videos.pexels.com/video-files/3573394/3573394-uhd_2560_1440_30fps.mp4" controls></video>`
+        let content = `<iframe class="popup-video aspect-[16/9] md:w-auto w-[300px]" src="https://www.youtube.com/embed/6RtXqtnDjyk?si=CVwM9B5Dn7DxZVqi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
         button.on('click', () => {
             this.modal.open();
             setTimeout(() => {

@@ -28,7 +28,7 @@
     {{/or}}"
     data-section-load="animation"
 >
-    <figure class="card-figure relative">
+    <figure class="relative card-figure">
         {{#each productsnew}}
             {{#if id '==' ../id}}
                 {{> components/products/product-badge
@@ -118,7 +118,7 @@
                 <figcaption class="card-figcaption">
                     <div class="card-figcaption-top">
                         <a href="/wishlist.php?action=add&product_id={{id}}"
-                            class="wishlist button{{#if theme_settings.show_product_wishlist_mobile}} show-mobile{{/if}}"
+                            class="wishlist button{{#if theme_settings.show_product_wishlist_mobile}} show-mobile{{/if}} rounded-full"
                             aria-label="Wishlist">
                             <span class="icon-wrapper"><svg class="icon">
                                     <use xlink:href="#icon-wishlist" />
@@ -144,7 +144,7 @@
             <a aria-label="{{> components/products/product-info}}"
                href="{{url}}"
                data-event-type="product-click"
-               class="text-sm font-sans font-semibold"
+               class="font-sans text-sm font-semibold"
             >
                 {{name}}
             </a>
@@ -172,7 +172,7 @@
         <figcaption class="card-figcaption">
             <div class="card-figcaption-body">
                 {{#if show_compare}}
-                <label class="button button--small card-figcaption-button p-0 text-left mb-4" for="compare-{{id}}">
+                <label class="p-0 mb-4 text-left button button--small card-figcaption-button" for="compare-{{id}}">
                     {{lang 'products.compare'}} <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}"
                         data-compare-id="{{id}}">
                 </label>

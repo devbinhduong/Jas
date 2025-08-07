@@ -16,3 +16,12 @@
     font-display: swap;
     font-weight: 600;
 }
+
+@font-face {
+    font-family: 'Eina 01 - Regular';
+    src: url('../fonts/Eina01-Regular.woff2') format('woff2'),
+        url('../fonts/Eina01-Regular.woff') format('woff'),
+        url('../fonts/Eina01-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}

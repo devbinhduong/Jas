@@ -9,7 +9,7 @@
 .socialLinks {
     @include clearfix;
     @include u-listReset; // 2
-    line-height: lineHeight("largest");
+    line-height: 18px;
 
     .icon { // 1
         @include square($socialLinks-iconSize);
