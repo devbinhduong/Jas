@@ -49,7 +49,7 @@
         <div class="add-to-cart-buttons{{#if product.pre_order}} pre-order-buttons{{/if}}">
             <div class="form-action grid grid-cols-2 gap-3 md:gap-4 w-full">
                 <div class="atc-button-wrapper">
-                    <button class="button button--primary w-full mb-0" id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}">
+                    <button class="button button--primary w-full mb-0 font-normal" id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}">
                         <span>{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}</span>
                     </button>
                     <span class="product-status-message aria-description--hidden">{{lang 'products.adding_to_cart'}} {{lang 'category.add_cart_announcement'}}</span>

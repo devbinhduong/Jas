@@ -64,20 +64,18 @@
     align-items: flex-end;
 
     .title {
-        font-family: $fontFamily-sans;
-        font-size: $fontSize-root - 2px;
-        font-weight: $fontWeight-normal;
-        line-height: 22px;
-        margin: 0;
+        color: #2D3139;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
         text-transform: uppercase;
     }
 
     .text {
-        font-size: $fontSize-root - 2px;
-        font-weight: $fontWeight-normal;
-        font-style: italic;
-        line-height: 25px;
-        color: $color-textBase;
+        color: #2D3139;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
     }
 
     .cart-quantity {
@@ -89,17 +87,16 @@
         bottom: unset;
         width: auto;
         height: auto;
-        font-size: $fontSize-root - 2px;
-        font-weight: $fontWeight-normal;
-        font-style: italic;
-        color: $color-textBase;
-        line-height: 25px;
+        color: #2D3139;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
         display: inline-block;
         vertical-align: top;
     }
 
     @media (min-width: 1025px) {
-        padding: 10px 25px;
+        padding: 16px;
     }
 }
 
@@ -113,6 +110,8 @@
     margin: 0;
     height: 100%;
     padding: 20px 16px 16px;
+    border-top: 1px solid #DCE4E9;
+
     .previewCartList {
         list-style: none;
         padding: 0;
@@ -122,6 +121,7 @@
         overflow: auto;
         overflow-x: hidden;
         max-height: calc(100vh - 400px);
+        box-shadow: none;
         flex-direction: column;
         gap: 16px;
         &::-webkit-scrollbar {
@@ -146,7 +146,6 @@
         margin: 0;
         letter-spacing: 0;
         border: 1px solid #EAECF0;
-        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
         display: flex;
         padding: 16px 12px;
         justify-content: space-between;
@@ -216,22 +215,6 @@
         }
     }
 
-    .previewCartItem-name {
-        overflow-wrap: break-word;
-        margin: 0;
-        position: relative;
-        top: -8px;
-
-        >a {
-            font-family: $fontFamily-sans;
-            font-size: $fontSize-root - 2px;
-            font-weight: $fontWeight-bold;
-            margin: 0 0 11px 0;
-            line-height: 24px;
-            text-transform: capitalize;
-        }
-    }
-
     .previewCartItem-options {
         display: inline-block;
         vertical-align: top;
@@ -274,14 +257,12 @@
     }
 
     .previewCartItem-price {
-        font-size: $fontSize-root;
-        font-weight: $fontWeight-normal;
-        line-height: 20px;
-        color: $color-textBase;
-        text-transform: uppercase;
-        display: block;
-        width: 100%;
-        text-align: center;
+        color: #4D5462;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 3px;
+
         p {
             font-size: $fontSize-root;
             font-weight: $fontWeight-normal;
@@ -293,59 +274,15 @@
     }
 
     .previewCartItem-qty {
-        display: inline-block;
-        vertical-align: top;
-        margin: 9px 0 0 0;
-        padding: 0;
-        position: relative;
             .form-label {
-                display: inline-block;
-                vertical-align: middle;
-                color: $color-textBase;
-                font-size: $fontSize-root - 2px;
-                font-weight: $fontWeight-normal;
-                font-style: italic;
+                color: #4D5462;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%; /* 16px */
+                margin-bottom: 0;
             }
-            .form-increment {
-                            display: flex;
-                            padding: 6px 12px;
-                            background-color: #F4F7FA;
-                            border: 1px solid #CBD5E1;
-                            border-radius: 999px;
-                            input[type="number"]::-webkit-inner-spin-button,
-                            input[type="number"]::-webkit-outer-spin-button {
-                                -webkit-appearance: none;
-                                margin: 0;
-                            }
-            
-                            input[type="number"] {
-                                -moz-appearance: textfield;
-                                /* Dành cho Firefox */
-                            }
-            
-                            .form-input--incrementTotal {
-                                min-height: 20px;
-                                height: 20px;
-                                width: 30px;
-                                border-radius: unset;
-                                margin: auto;
-                                background: #F4F7FA;
-                                font-family: Inter;
-                                    font-size: 14px;
-                                    font-style: normal;
-                                    font-weight: 500;
-                                    line-height: 20px;
-                            }
-                        }
-            
-                        .input-number-decrement,
-                        .input-number-increment {
-                            display: inline-block;
-                            cursor: pointer;
-                            &:hover, &:active, &:focus {
-                                opacity: 0.8;
-                            }
-                        }
     }
 
 
@@ -395,6 +332,22 @@
         }
     }
 
+    .form-increment {
+        height: 32px !important;
+        gap: 2px !important;
+
+        .form-input {
+            height: 32px !important;
+            font-size: 14px !important;
+            width: 30px;
+        }
+
+        .button {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
     .previewCartAction {
         border: 0;
         display: block;
@@ -417,7 +370,7 @@
         }
 
         .previewCartAction-viewCart {
-            margin: 15px 0 0 0;
+            margin: 12px 0 0 0;
             &:hover {
                 span {
                     color: white;

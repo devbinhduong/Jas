@@ -1,6 +1,6 @@
 {{#partial "page"}}
 
-<main class="page">
+<main class="page m-0">
     <div class="container container-page">
         <span class="page-sub-heading">FAQ</span>
 
@@ -8,7 +8,7 @@
         <h1 class="page-heading font-eina02">{{ page.title }}</h1>
         {{/unless}}
 
-        <div class="page-content">
+        <div class="">
             <div class="question-answer-list">
                 <script type="application/json" id="qa-data">
                     [
@@ -153,35 +153,38 @@
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
 
-            <section class="page-about-us supports-section" data-section-load="animation">
-                <div class="overflow-hidden mt-6 md:mt-20">
+    
+    <div class="container max-w-container-footer">
+        <section class="page-about-us supports-section" data-section-load="animation">
+            <div class="overflow-hidden mt-6 md:mt-20">
+                <div
+                    class="relative w-full h-full min-h-[424px] rounded-3xl my-4 overflow-hidden bg-cover bg-center bg-no-repeat bg-image md:bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')] bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')]">
                     <div
-                        class="relative w-full h-full min-h-[424px] rounded-3xl my-4 overflow-hidden bg-cover bg-center bg-no-repeat bg-image md:bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')] bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')]">
-                        <div
-                            class="flex items-center h-full px-4 md:px-8 lg:px-6 w-full absolute top-[50%] translate-y-[-50%]">
-                            <div class="sm:max-w-[40rem] md:max-w-[83rem] max-w-full mx-auto w-full">
-                                <div class="md:max-w-[612px] max-w-full custom-fadeInUp" data-step-animate="3">
-                                    <div
-                                        class="bg-black rounded-3xl p-4 md:p-8 lg:p-8 max-w-full">
-                                        <div class="text-white text-[14px] md:text-[20px] font-medium"> Need help? We&#039;re available at </div>
-                                        <!-- Title -->
-                                        <h1 class="text-title-section mb-4 text-white font-eina01 text-[24px] md:text-[48px] md:mt-[0] leading-[1] mt-[12px]"> +1 (416) 745-1021 </h1>
-                                        <!-- Description -->
-                                        <p class="text-white text-mb-text-sm md:text-text-xl md:mt-[24px] mb-8 md:mb-10 mt-[16px]">
-                                            atcontactus@singhelectronics.ca </p>
-                                        <!-- Action Buttons -->
-                                        <div class="flex flex-col gap-4 md:gap-8">
-                                            <button
-                                                class="group px-4 py-2 md:py-[15px] md:px-5 button-style-2 w-fit h-[48.8px]">
-                                                <span class="relative z-10 text-[14px] md:text-[16px]">Contact us</span>
-                                            </button>
-                                            <div class="gap-2 flex items-center">
-                                                <svg class="w-[32px] h-[32px]">
-                                                    <use href="#svg-leaf"></use>
-                                                </svg>
-                                                <p class="text-white text-[14px] md:text-[16px] md:leading-[1.3] font-eina02 capitalize" role="text"> Free shipping across Canada* </p>
-                                            </div>
+                        class="flex items-center h-full px-4 md:px-8 lg:px-6 w-full absolute top-[50%] translate-y-[-50%]">
+                        <div class="sm:max-w-[40rem] md:max-w-[83rem] max-w-full mx-auto w-full">
+                            <div class="md:max-w-[612px] max-w-full custom-fadeInUp" data-step-animate="3">
+                                <div
+                                    class="bg-black rounded-3xl p-4 md:p-8 lg:p-8 max-w-full">
+                                    <div class="text-white text-[14px] md:text-[20px] font-medium"> Need help? We&#039;re available at </div>
+                                    <!-- Title -->
+                                    <h1 class="text-title-section mb-4 text-white font-eina01 text-[24px] md:text-[48px] md:mt-[0] leading-[1] mt-[12px]"> +1 (416) 745-1021 </h1>
+                                    <!-- Description -->
+                                    <p class="text-white text-mb-text-sm md:text-text-xl md:mt-[24px] mb-8 md:mb-10 mt-[16px]">
+                                        atcontactus@singhelectronics.ca </p>
+                                    <!-- Action Buttons -->
+                                    <div class="flex flex-col gap-4 md:gap-8">
+                                        <button
+                                            class="group px-4 py-2 md:py-[15px] md:px-5 button-style-2 w-fit h-[48.8px]">
+                                            <span class="relative z-10 text-[14px] md:text-[16px]">Contact us</span>
+                                        </button>
+                                        <div class="gap-2 flex items-center">
+                                            <svg class="w-[32px] h-[32px]">
+                                                <use href="#svg-leaf"></use>
+                                            </svg>
+                                            <p class="text-white text-[14px] md:text-[16px] md:leading-[1.3] font-eina02 capitalize" role="text"> Free shipping across Canada* </p>
                                         </div>
                                     </div>
                                 </div>
@@ -189,8 +192,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
 </main>
 

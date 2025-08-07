@@ -57,10 +57,14 @@
         h2 {
             color: #0F1112;
             font-size: 32px;
-            font-weight: 400;
+            font-weight: 700;
             line-height: 100%;
             letter-spacing: -0.64px;
             margin-bottom: 28px;
+
+            &:not(.post-title) {
+                font-family: 'Eina 02', sans-serif;
+            }
 
             @media (max-width: 768px) {
                 font-size: 16px;
@@ -140,7 +144,6 @@
         }
 
         .post-title {
-            font-weight: 600;
             line-height: 120%;
             margin-top: 32px;
 

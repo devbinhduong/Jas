@@ -47,12 +47,12 @@ blog:
                 <p class="newsLetter__description text-white body-font text-[16px] md:text-[20px] leading-[150%] tracking-[-0.16px] md:tracking-[-0.2px]">Receive our latest updates aboutour products and promotions.</p>
             </div>
 
-            <form class="form w-full sm:w-1/2 md:w-[401px] flex flex-col gap-4" action="/subscribe.php" method="post">
+            <form class="form w-full sm:w-1/2 md:w-[401px] flex flex-col gap-4 mb-0" action="/subscribe.php" method="post">
                 <fieldset class="form-fieldset">
                     <input type="hidden" name="action" value="subscribe">
                     <input type="hidden" name="nl_first_name" value="bc">
                     <input type="hidden" name="check" value="1">
-                    <div class="form-field">
+                    <div class="form-field mb-0">
                         <label class="form-label is-srOnly" for="nl_email">Email Address</label>
                         <div class="form-prefixPostfix wrap">
                             <input class="form-input rounded-[32px] border-none text-[#344054] placeholder:text-[#344054]" id="nl_emails" name="nl_email" type="email" value="" placeholder="Write your mail" aria-describedby="alertBox-message-text" aria-required="true" autocomplete="email" required="">
@@ -70,7 +70,7 @@ blog:
             <h2 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">Recent Articles</h2>
 
             <div class="blogTabs__tabs">
-                <ul class="customTabs flex gap-3 mt-4 mb-6 md:mt-9 md:mb-7" data-step-animate="2" data-tags-list="Speakers, Camera, Remote, Amplifiers, Audio, Parts, Compustar, Sundown Audio">
+                <ul class="customTabs flex gap-3 mt-4 mb-6 md:mt-9 md:mb-7 overflow-x-auto" data-step-animate="2" data-tags-list="Speakers, Camera, Remote, Amplifiers, Audio, Parts, Compustar, Sundown Audio">
                 </ul>
 
                 <div class="blogTabs__content blogList grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 is-loading">

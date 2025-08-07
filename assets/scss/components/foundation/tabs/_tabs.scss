@@ -24,8 +24,11 @@
             line-height: 24px;
 
             &--faqs {
-                font-size: 16px !important;
                 color: #1B0832 !important;
+
+                @media (min-width: 768px) {
+                    font-size: 16px !important;
+                }
             }
         }
     }

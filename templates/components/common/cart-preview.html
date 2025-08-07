@@ -1,9 +1,17 @@
 <div class="previewCart-header">
-    <h2 class="title">{{lang 'cart.preview.title'}}</h2>
-    <span class="text">
-        <span class="countPill cart-quantity" data-cart-quantity="{{cart.quantity}}">{{cart.quantity}}</span>
-        <span> {{#if cart.quantity '>=' 2}} items{{else}} item{{/if}}</span>
-    </span>
+    <div class="header-default flex items-center gap-2 justify-between w-full">
+        <h2 class="title">{{lang 'cart.preview.title'}}</h2>
+        <span class="text">
+            <span class="countPill cart-quantity" data-cart-quantity="{{cart.quantity}}">{{cart.quantity}}</span>
+            <span> {{#if cart.quantity '>=' 2}} items{{else}} item{{/if}}</span>
+        </span>
+    </div>
+    <div class="header-added-product flex items-center gap-2">
+        <span class="icon icon--check">
+            <svg><use xlink:href="#icon-check"></use></svg>
+        </span>
+        <span class="text">Item added to your cart</span>
+    </div>
 </div>
 <div class="previewCartWrapper">
     <div class="previewCart">
@@ -27,36 +35,29 @@
                 <div class="previewCartItem-content">
                     <div class="previewCartItem-content--group">
                         <div class="previewCartItem-center">
-                            <h6 class="previewCartItem-name">
-                                <a class="text-[16px] leading-[22px] font-sans" href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a>
+                            <h6 class="previewCartItem-name mb-3">
+                                <a class="text-[16px] leading-[22px] font-sans font-medium" href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a>
                             </h6>
-                            
-                            {{#if options}}
-                            <div class="previewCartItem-options">
-                                <span class="previewCartItem-variant">
-                                    {{#each options}}
-                                    <span>{{{ sanitize value}}}</span>
-                                    {{/each}}
-                                </span>
-                            </div>
-                            {{/if}}
+
                             <div class="previewCartItem-qty">
                                 <label class="form-label" for="qty-{{id}}">Qty</label>
-                                <div class="form-increment">
-                                    <span data-cart-itemid="{{id}}" data-cart-update data-action="dec" class="input-number-decrement"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                        <path d="M3.75 9H14.25" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></span>
-                                    <input class="form-input form-input--incrementTotal" id="qty-{{id}}" name="qty-{{id}}" type="number"
-                                        value="{{quantity}}" data-quantity-min="{{min_purchase_quantity}}"
+                                <div class="form-increment form-increment--transparent">
+                                     <button class="button button--icon text-[#1E293B] hover:text-[#c51414]" data-cart-update=""data-cart-itemid="{{id}}" data-cart-update data-action="dec">
+                                        <span class="is-srOnly">Decrease Quantity of Kicker 51KSC2704 KS Series 2.75" 50W RMS Midrange Car Speakers</span>
+                                        <i class="icon w-[18px] h-[18px]" aria-hidden="true"><svg><use href="#icon-minus"></use></svg></i>
+                                    </button>
+
+                                        <input class="form-input form-input--incrementTotal cart-item-qty-input" id="qty-{{id}}" name="qty-{{id}}" type="tel" value="{{quantity}}" data-quantity-min="{{min_purchase_quantity}}"
                                         data-quantity-max="{{max_purchase_quantity}}"
                                         data-quantity-min-error="{{lang 'products.quantity_min' quantity=min_purchase_quantity}}"
                                         data-quantity-max-error="{{lang 'products.quantity_max' quantity=max_purchase_quantity}}" min="1"
                                         pattern="[0-9]*" data-cart-itemid="{{id}}" data-action="manualQtyChange" aria-live="polite" {{#unless
                                         can_modify}} disabled{{/unless}}>
-                                        <span data-cart-itemid="{{id}}" data-cart-update data-action="inc" class="input-number-increment"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M9 3.75049V14.2505M3.75 9.00049H14.25" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg></span>
+                                        
+                                        <button class="button button--icon text-[#1E293B] hover:text-[#c51414]" data-cart-update="" data-cart-itemid="{{id}}" data-action="inc">
+                                            <span class="is-srOnly">Increase Quantity of Kicker 51KSC2704 KS Series 2.75" 50W RMS Midrange Car Speakers</span>
+                                            <i class="icon w-5 h-5" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></i>
+                                        </button>
                                 </div>
                             </div>
                         </div>
@@ -79,9 +80,6 @@
                         {{/if}}
                         {{/if}}
                         <span class="previewCartItem-price">
-                            {{#if quantity '>' 1}}
-                            {{quantity}} &times;
-                            {{/if}}
                             {{#or ../customer (unless ../settings.hide_price_from_guests) (if type '==' 'GiftCertificate')}}
                             <span{{#if price_discounted}} class="price--discounted" {{/if}}>{{price.formatted}}
                         </span>
@@ -99,7 +97,7 @@
             </li>
             {{/each}}
         </ul>
-        <div class="previewCart-total flex justify-between">
+        <div class="previewCart-total flex justify-between mt-5 mb-5">
             <div class="cart-total-label text-[18px] font-sans font-normal">
                 <strong>{{lang 'cart.checkout.subtotal'}}:</strong>
             </div>
@@ -116,7 +114,7 @@
             <div class="previewCartAction-checkout">
                 <a href="{{urls.checkout.single_address}}" class="button button-style"
                     data-primary-checkout-now-action data-enter-to-click role="button">
-                    <span>{{lang 'cart.preview.checkout_now'}}</span>
+                    <span>Proceed to Checkout</span>
                 </a>
             </div>
             {{/if}}
@@ -125,7 +123,7 @@
                 class="previewCartAction-viewCart{{#unless cart.show_primary_checkout_button}} previewCartAction-viewCart--sole{{/unless}}">
                 <a href="{{urls.cart}}" class="button button-style-2 border-[1px] border-[#C51414]" role="button"
                     data-enter-to-click>
-                    <span>{{lang 'cart.preview.view_cart'}}</span>
+                    <span>View Cart</span>
                 </a>
             </div>
 

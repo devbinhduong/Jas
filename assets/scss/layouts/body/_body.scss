@@ -22,6 +22,12 @@
             margin-bottom: 24px;
         }
     }
+
+    .page-type-product & {
+        @media (max-width: 768px) {
+            margin-bottom: 24px;
+        }
+    }
 }
 
 

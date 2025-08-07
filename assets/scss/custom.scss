@@ -446,7 +446,7 @@ a.link-line{
                 }
                 &.has-non-sale-price {
                     .price-section {
-                        [data-product-price-without-tax] {
+                        [data-product-non-sale-price-without-tax] {
                                 color: #667085;
                                 font-family: Inter;
                                 font-size: 14px;
@@ -1773,6 +1773,12 @@ body {
             }
         }
     }
+
+    &-content {
+        .faqs-block:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
 }
 
 .hide-after::after {
@@ -1781,4 +1787,25 @@ body {
 
 .hide-before::before {
     display: none;
+}
+
+.previewCart-header {
+    .header-added-product {
+        display: none;
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &.previewCart-header--added {
+        .header-default {
+            display: none;
+        }
+
+        .header-added-product {
+            display: block;
+        }
+    }
 }

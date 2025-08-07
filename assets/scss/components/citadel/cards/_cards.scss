@@ -124,6 +124,10 @@
 .card-img-container {
     @include lazy-loaded-padding("productgallery_size");
     max-width: 209px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
     &:after {
         padding-bottom: 100% !important;
         @include smax-s {

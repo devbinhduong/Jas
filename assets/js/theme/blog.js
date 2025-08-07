@@ -52,7 +52,7 @@ export default class Blog extends PageManager {
             }
 
             tab.innerHTML = `<a class="customTabs__link body-font text-[14px] font-medium capitalize" href="/blog/tag/${tagUrl}">
-                <span>${tag}</span>
+                <span class="whitespace-nowrap">${tag}</span>
             </a>`;
 
             tabsTitle.appendChild(tab);

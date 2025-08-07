@@ -23,4 +23,26 @@
     .productView-image-wrapper {
         width: calc(100% - 92px) !important;
     }
+
+    .productView-for {
+        .slick-prev {
+            top: -40px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .productView-thumbnail {
+        padding: 2px;
+    }
+
+    .productRelated-section {
+        .slick-dots {
+            bottom: -30px;
+            li button, li button::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
 }
