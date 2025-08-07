@@ -26,7 +26,7 @@ export default function (context) {
             authSidebarMobile();
             searchMobileClick();
             searchFormMobile();
-
+            handleWl();
         }
     }
 
@@ -75,7 +75,21 @@ export default function (context) {
         });
     }
     eventLoad();
+    function handleWl() {
+        $(document).on('click', '.card .wishlist', (e) => {
+            e.preventDefault();
+            var $this_wl = $(e.currentTarget);
+            var url_awl = $this_wl.attr('href');
 
+            if ($('body').hasClass('is-login')) {
+                $.post(url_awl).done(function () {
+                    window.location.href = url_awl;
+                });
+            } else {
+                window.location.href = '/login.php';
+            }
+        });
+    }
     /* Hide all Sidebar */
     function hideAllSidebar() {
         const body = document.body;

@@ -22,6 +22,10 @@
 <div class="navPage-subMenu" id="navPages-{{id}}" aria-hidden="true" tabindex="-1">
     <div class="container">
         <ul class="navPage-subMenu-list">
+            <li class="block navPage-subMenu-item-parent md:hidden">
+                <a class="text-[14px] navPage-subMenu-action navPages-action navPages-action-depth-max menu-level-2 main-menu-item navPage-subMenu-title" href="{{url}}">{{lang
+                    'category.view_all.name' category=name}}</a>
+            </li>
             {{#each children}}
             <li class="navPage-subMenu-item">
                 {{#if children}}

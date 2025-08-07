@@ -346,7 +346,19 @@
                 overflow-x: hidden;
                 padding: 0;
             }
-    
+            .navPages-list--user {
+                .navPages-item  {
+                    .navPages-action .navPages-action-moreIcon svg{
+                        width: 16px !important;
+                        height: 16px !important;
+                    }
+                    &.is-open {
+                        .navPages-action-moreIcon {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
             .navPages-list {
                 overflow: hidden;
                 position: relative;
