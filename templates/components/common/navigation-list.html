@@ -23,7 +23,7 @@
     <div class="container">
         <ul class="navPage-subMenu-list">
             <li class="block navPage-subMenu-item-parent md:hidden">
-                <a class="text-[14px] navPage-subMenu-action navPages-action navPages-action-depth-max menu-level-2 main-menu-item navPage-subMenu-title" href="{{url}}">{{lang
+                <a class="text-[14px] navPage-subMenu-action navPages-action navPages-action-depth-max" href="{{url}}">{{lang
                     'category.view_all.name' category=name}}</a>
             </li>
             {{#each children}}
@@ -43,6 +43,10 @@
                     </span>
                 </a>
                 <ul class="navPage-childList" id="navPages-{{id}}">
+                    <li class="block navPage-subMenu-item-parent md:hidden">
+                        <a class="text-[14px] navPage-subMenu-action navPages-action navPages-action-depth-max" href="{{url}}">{{lang
+                            'category.view_all.name' category=name}}</a>
+                    </li>
                     {{#each children}}
                     <li class="navPage-childList-item">
                         <a class="navPage-childList-action navPages-action menu-level-3{{#if is_active}} activePage{{/if}}" href="{{url}}"
