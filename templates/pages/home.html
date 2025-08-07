@@ -37,7 +37,11 @@ blog:
 <div class="main full">
     
     {{> components/jas/home/service-section}}
+    {{{region name="custom_region_below_service_section"}}}
+
     {{> components/jas/home/cate-featured-section}}
+    {{{region name="custom_region_below_cate_featured_section"}}}
+
     {{{region name="home_below_featured_products"}}}
     {{#if products.top_sellers}}
         {{> components/products/top products=products.new columns=theme_settings.homepage_top_products_column_count}}
@@ -45,12 +49,19 @@ blog:
    
     {{{region name="home_below_top_products"}}}
     {{> components/jas/home/third-banners-section}}
+    {{{region name="custom_region_below_third_banners_section"}}}
+
     {{> components/jas/home/our-brands-section}}
+    {{{region name="custom_region_below_our_brands_section"}}}
     {{> components/jas/home/cate-by-tab-section theme_settings=theme_settings}}
+    {{{region name="custom_region_below_cate_by_tab_section"}}}
     {{> components/jas/home/two-banners-section}}
+    {{{region name="custom_region_below_two_banners_section"}}}
     {{> components/jas/home/review-section}}
+    {{{region name="custom_region_below_review_section"}}}
     {{> components/jas/home/video-popup-section}}
     {{{region name="home_below_new_products"}}}
+    {{{region name="custom_region_below_new_products"}}}
 </div>
 {{/partial}}
 {{> layout/base}}

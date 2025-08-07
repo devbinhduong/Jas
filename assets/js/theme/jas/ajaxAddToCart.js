@@ -70,8 +70,11 @@ export default function (context) {
             $addToCartBtn.prop('disabled', false);
             // trigger dropdown menu
 
-            $body.addClass('test12121212121');
-            
+            $body.addClass('added-product');
+            setTimeout(() => {
+                $body.removeClass('added-product');
+            }, 5000);
+                
 
             // Guard statement
             if (errorMessage) {

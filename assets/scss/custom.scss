@@ -1775,14 +1775,16 @@ body {
             height: 24px;
         }
     }
+}
 
-    &.previewCart-header--added {
-        .header-default {
-            display: none;
-        }
-
+.added-product {
+    .previewCart-header {
         .header-added-product {
             display: block;
+        }
+
+        .header-default {
+            display: none;
         }
     }
 }

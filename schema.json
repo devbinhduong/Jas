@@ -1031,6 +1031,30 @@
       },
       {
         "type": "heading",
+        "content": "Home Category Section"
+      },
+      {
+        "type": "text",
+        "label": "Home Category Section Heading",
+        "id": "homeCateTitle"
+      },
+      {
+        "type": "text",
+        "label": "Home Category Section All Text",
+        "id": "homeCateAllText"
+      },
+      {
+        "type": "text",
+        "label": "Home Category Section All Link",
+        "id": "homeCateAllLink"
+      },
+      {
+        "type": "text",
+        "label": "Home Category Section IDs List",
+        "id": "homeCateIds"
+      },
+      {
+        "type": "heading",
         "content": "Home 3 Banners Section"
       },
       {
@@ -1418,6 +1442,145 @@
         "type": "text",
         "label": "Review 5 Image",
         "id": "homeReviewItem5Img"
+      }
+    ]
+  },
+  {
+    "name": "Category",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Category Five Banners Section"
+      },
+      {
+        "type": "text",
+        "label": "Section Title",
+        "id": "sectionFiveBannersTitle"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Image",
+        "id": "sectionFiveBannerItem1Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Title",
+        "id": "sectionFiveBannerItem1Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Description",
+        "id": "sectionFiveBannerItem1Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Button",
+        "id": "sectionFiveBannerItem1Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 Link",
+        "id": "sectionFiveBannerItem1Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Image",
+        "id": "sectionFiveBannerItem2Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Title",
+        "id": "sectionFiveBannerItem2Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Description",
+        "id": "sectionFiveBannerItem2Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Button",
+        "id": "sectionFiveBannerItem2Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 Link",
+        "id": "sectionFiveBannerItem2Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Image",
+        "id": "sectionFiveBannerItem3Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Title",
+        "id": "sectionFiveBannerItem3Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Description",
+        "id": "sectionFiveBannerItem3Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Button",
+        "id": "sectionFiveBannerItem3Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 Link",
+        "id": "sectionFiveBannerItem3Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Image",
+        "id": "sectionFiveBannerItem4Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Title",
+        "id": "sectionFiveBannerItem4Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Description",
+        "id": "sectionFiveBannerItem4Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Button",
+        "id": "sectionFiveBannerItem4Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 Link",
+        "id": "sectionFiveBannerItem4Link"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Image",
+        "id": "sectionFiveBannerItem5Img"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Title",
+        "id": "sectionFiveBannerItem5Title"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Description",
+        "id": "sectionFiveBannerItem5Desc"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Button",
+        "id": "sectionFiveBannerItem5Btn"
+      },
+      {
+        "type": "text",
+        "label": "Item 5 Link",
+        "id": "sectionFiveBannerItem5Link"
       }
     ]
   },

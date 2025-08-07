@@ -498,10 +498,12 @@
     }
 }
 
-.form-select,
-.form-input {
-    @media (min-width: 768px) {
-        // font-size: $fontSize-root + 2px !important;
-        // height: 48px !important;
+.productView-options {
+    .form-select,
+    .form-input {
+        @media (min-width: 768px) {
+            font-size: $fontSize-root + 2px !important;
+            height: 48px !important;
+        }
     }
 }
