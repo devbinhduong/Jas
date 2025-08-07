@@ -321,6 +321,9 @@
     <path d="M4.5 6.5L8 10L11.5 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
       stroke-linejoin="round" />
   </symbol>
+<symbol fill="none" viewBox="0 0 24 24" id="svg-arrow-down-light" xmlns="http://www.w3.org/2000/svg">
+<path d="m9 18 6-6-6-6" stroke="#4D5462" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
   <symbol fill="none" viewBox="0 0 19 19" id="icon-wishlist" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M9.359 4.076a4.421 4.421 0 0 1 6.055.168 4.376 4.376 0 0 1 0 6.207l-5.016 4.995a1.474 1.474 0 0 1-2.078 0L3.304 10.45a4.376 4.376 0 0 1 0-6.207 4.421 4.421 0 0 1 6.055-.168Zm.86 1.202-.34.34a.737.737 0 0 1-1.04 0l-.34-.34a2.947 2.947 0 0 0-4.156 0 2.917 2.917 0 0 0 0 4.138l5.016 4.995 5.016-4.995a2.917 2.917 0 0 0 0-4.138 2.947 2.947 0 0 0-4.155 0Z"

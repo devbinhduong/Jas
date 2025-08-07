@@ -1,22 +1,22 @@
 {{#if children}}
-<a class="navPages-action has-subMenu{{#if is_active}} activePage{{/if}} {{#if name '==' 'Sale'}}flex items-center{{/if}} capitalize {{#if children}}main-menu-item menu-level-1 navPage-subMenu-title{{/if}}"
+<a class="navPages-action has-subMenu{{#if is_active}} activePage{{/if}} {{#if name '==' 'Sale'}}flex items-center{{/if}} capitalize {{#if children}}main-menu-item menu-level-1 navPage-subMenu-title{{/if}} group"
    href="{{url}}"
    data-collapsible="navPages-{{id}}"
 >   
 {{#if name '==' 'Sale'}}
-   <div class="flex max-md:items-center max-md:gap-1 text-level1 items-center">
+   <div class="flex items-center max-md:items-center max-md:gap-1 text-level1">
     <span class="icon icon-sales">
         <svg>
             <use href="#svg-sales" />
         </svg>
     </span>
-    <span class="text-[#2D3139] md:text-black text-level1 text text-mb leading-[150%]">{{name}}</span>
+    <span class="text-black md:text-black text-level1 text text-mb leading-[150%]">{{name}}</span>
    </div>
 {{else}}
-    <span class="text-[#2D3139] md:text-black text-level1 text text-mb leading-[150%]">{{name}}</span>
+    <span class="text-black md:text-black text-level1 text text-mb leading-[150%]">{{name}}</span>
 {{/if}}
-    <i class="icon navPages-action-moreIcon" aria-hidden="true">
-        <svg><use href="#svg-arrow-down" /></svg>
+    <i class="rotate-90 icon navPages-action-moreIcon group-hover:rotate-180" aria-hidden="true">
+        <svg><use href="#svg-arrow-down-light" /></svg>
     </i>
 </a>
 <div class="navPage-subMenu" id="navPages-{{id}}" aria-hidden="true" tabindex="-1">
@@ -27,13 +27,13 @@
                 {{#if children}}
                 <a class="navPage-subMenu-action navPages-action text-mb flex items-center capitalize has-subMenu{{#if is_active}} activePage{{/if}} {{#if children}}menu-level-2 main-menu-item navPage-subMenu-title{{/if}}" href="{{url}}"
                     aria-label="{{name}}">
-                    <span class="font-sans text-[#2D3139] text-level2 font-medium md:font-bold text">{{name}}</span>
+                    <span class="font-sans font-medium text-black text-level2 md:font-semibold text">{{name}}</span>
                     <span class="collapsible-icon-wrapper" data-collapsible="navPages-{{id}}"
                         data-collapsible-disabled-breakpoint="medium" data-collapsible-disabled-state="open"
                         data-collapsible-enabled-state="closed">
-                        <i class="icon navPages-action-moreIcon navPages-action-moreIcon" aria-hidden="true">
+                        <i class="icon navPages-action-moreIcon" aria-hidden="true">
                             <svg>
-                                <use href="#svg-arrow-down" />
+                                <use href="#svg-arrow-down-light" />
                             </svg>
                         </i>
                     </span>

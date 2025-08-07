@@ -39,13 +39,13 @@ export default function (context) {
 			if (settings.mega_menu_styleCustom_img2 != '') {
 				mega_menu_styleCustom_img_2 = `
 					<a class="image hover-zoom basis-1/3" href="${settings.mega_menu_styleCustom_link2}" aria-label="${settings.mega_menu_styleCustom_img2}">
-						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/320w/image-manager/bannermega12.png?t=1747637412" alt="${settings.mega_menu_styleCustom_img2}">
+						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/bannermega12.png?t=1747637412" alt="${settings.mega_menu_styleCustom_img2}">
 					</a>
 					<a class="image hover-zoom basis-1/3" href="${settings.mega_menu_styleCustom_link2}" aria-label="${settings.mega_menu_styleCustom_img2}">
-						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/320w/image-manager/bannermega11.png?t=1747637416" alt="${settings.mega_menu_styleCustom_img2}">
+						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/bannermega11.png?t=1747637416" alt="${settings.mega_menu_styleCustom_img2}">
 					</a>
 					<a class="image hover-zoom basis-1/3" href="${settings.mega_menu_styleCustom_link2}" aria-label="${settings.mega_menu_styleCustom_img2}">
-						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/320w/image-manager/megamenu-3.jpg?t=1749105397" alt="${settings.mega_menu_styleCustom_img2}">
+						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/megamenu-3.jpg?t=1749105397" alt="${settings.mega_menu_styleCustom_img2}">
 					</a>
 				`
 			}
@@ -59,7 +59,7 @@ export default function (context) {
 						<img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/bannermega22.png?t=1747637427" alt="${settings.mega_menu_styleCustom_img3}">
 					</a></div>
 					<a class="image hover-zoom fullWidth" href="${settings.mega_menu_styleCustom_link3}" aria-label="${settings.mega_menu_styleCustom_img3}">
-						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/320w/image-manager/megamenu-3.jpg?t=1749105397" alt="${settings.mega_menu_styleCustom_img3}">
+						<img class="w-full" src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/megamenu-3.jpg?t=1749105397" alt="${settings.mega_menu_styleCustom_img3}">
 					</a>
 				`
 			}
