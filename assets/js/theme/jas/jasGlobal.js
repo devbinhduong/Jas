@@ -152,6 +152,7 @@ export default function (context) {
                                 const cateIdListArr = cateIDList.split(",");
                                 const cateSliderPromises = [];
                                 cateIdListArr.forEach((cateId) => {
+                                    console.log('%cMyProject%cline:154%ccateId', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', cateId)
                                     cateSliderPromises.push(handleCateSlider(cateId));
                                 });
                                 Promise.all(cateSliderPromises).then((data) => {

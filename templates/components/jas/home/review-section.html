@@ -1,8 +1,8 @@
 <div class="mt-6 md:mt-20" id="review-section">
     <!-- Header Section -->
-    <div class="flex justify-between items-center mb-4 md:mb-8 md:mt-0 mt-6" data-section-load="animation">
+    <div class="flex items-center justify-between mt-6 mb-4 md:mb-9 md:mt-0" data-section-load="animation">
         <h1 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">{{theme_settings.homeReviewHeading}}</h1>
-        <div class="items-center gap-4 text-gray-500 custom-fadeInUp hidden md:flex" data-step-animate="2">
+        <div class="items-center hidden gap-4 text-gray-500 custom-fadeInUp md:flex" data-step-animate="2">
             <button prev-arrow class="flex items-center gap-1 text-[16px] font-tight leading-[120%] font-semibold">
                 <svg class="w-6 h-6 rotate-180">
                     <use href="#icon-arrow-right"></use>
@@ -22,18 +22,18 @@
         </svg></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8" data-section-load="animation">
-        <div class="space-y-0 md:space-y-6 whitespace-nowrap overflow-x-auto md:block flex gap-x-2 md:items-start items-baseline col-span-12 md:col-span-3 custom-fadeZoom" data-step-animate="2">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-12" data-section-load="animation">
+        <div class="flex items-baseline col-span-12 space-y-0 overflow-x-auto md:space-y-6 whitespace-nowrap md:block gap-x-2 md:items-start md:col-span-3 custom-fadeZoom" data-step-animate="2">
             <!-- Years of Business -->
             <div class="bg-[#F2F4F7] rounded-2xl md:py-5 md:px-5 py-2 px-4 shadow-sm border border-gray-100 max-md:basis-1/3 self-stretch">
-                <div class="flex items-start md:items-center gap-3 mb-3 flex-col md:flex-row">
+                <div class="flex flex-col items-start gap-3 mb-3 md:items-center md:flex-row">
                     <div
-                        class="w-10 h-10 bg-coral bg-opacity-10 rounded-full flex items-center justify-start md:justify-center">
+                        class="flex items-center justify-start w-10 h-10 rounded-full bg-coral bg-opacity-10 md:justify-center">
                         <svg class="w-6 h-6 text-red-500">
                             <use href="#svg-review-icon1"></use>
                         </svg>
                     </div>
-                    <div class="flex flex-col gap-y-1 mt-2">
+                    <div class="flex flex-col mt-2 gap-y-1">
                         <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">{{theme_settings.homeReviewLeftContent1_num}}</div>
                         <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">{{theme_settings.homeReviewLeftContent1_text}}</div>
                     </div>
@@ -42,14 +42,14 @@
 
             <!-- Square Foot Facility -->
             <div class="bg-[#F2F4F7] rounded-2xl md:py-5 md:px-5 py-2 px-4 shadow-sm border border-gray-100 max-md:basis-1/3 self-stretch">
-                <div class="flex items-start md:items-center gap-3 mb-3 flex-col md:flex-row">
+                <div class="flex flex-col items-start gap-3 mb-3 md:items-center md:flex-row">
                     <div
-                        class="w-10 h-10 bg-coral bg-opacity-10 rounded-full flex items-center tw md:justify-center">
+                        class="flex items-center w-10 h-10 rounded-full bg-coral bg-opacity-10 tw md:justify-center">
                         <svg class="w-6 h-6 text-red-500">
                             <use href="#svg-review-icon2"></use>
                         </svg>
                     </div>
-                    <div class="flex flex-col gap-y-1 mt-2">
+                    <div class="flex flex-col mt-2 gap-y-1">
                         <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">{{theme_settings.homeReviewLeftContent2_num}}</div>
                         <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">{{theme_settings.homeReviewLeftContent2_text}}</div>
                     </div>
@@ -58,14 +58,14 @@
 
             <!-- 24/7 Customer Support -->
             <div class="bg-[#F2F4F7] rounded-2xl md:py-5 md:px-5 py-2 px-4 shadow-sm border border-gray-100 max-md:basis-1/3 self-stretch">
-                <div class="flex items-start md:items-center gap-3 mb-3 flex-col md:flex-row">
+                <div class="flex flex-col items-start gap-3 mb-3 md:items-center md:flex-row">
                     <div
-                        class="w-10 h-10 bg-coral bg-opacity-10 rounded-full flex items-center tw md:justify-center">
+                        class="flex items-center w-10 h-10 rounded-full bg-coral bg-opacity-10 tw md:justify-center">
                         <svg class="w-6 h-6 text-red-500">
                             <use href="#svg-review-icon1"></use>
                         </svg>
                     </div>
-                    <div class="flex flex-col gap-y-1 mt-2">
+                    <div class="flex flex-col mt-2 gap-y-1">
                         <div class="text-[14px] font-eina02 md:text-[18px] font-bold text-gray-900">{{theme_settings.homeReviewLeftContent3_num}}</div>
                         <div class="text-[12px] font-sans md:text-[14px] min-w-[152px] whitespace-normal font-medium">{{theme_settings.homeReviewLeftContent3_text}}</div>
                     </div>
@@ -80,7 +80,7 @@
                 "mobileFirst": true,
                 "arrows": true,
                 "dots": true,
-                "slidesToShow": 1,
+                "slidesToShow": 1.2,
                 "slidesToScroll": 1,
                 "prevArrow":"#review-section button[prev-arrow]",
                 "nextArrow":"#review-section button[next-arrow]",

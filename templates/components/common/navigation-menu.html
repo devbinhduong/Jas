@@ -1,14 +1,14 @@
 <nav class="container navPages max-md:pb-8 max-md:pt-4">
     <div class="navPages-list-wrapper">
         <ul
-        class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}{{#if theme_settings.customMegamenu}} navPages-list-megamenu navPages-list-custom{{/if}}">
-            <div class="title-menu hidden max-md:block text-center">
+        class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}{{#if theme_settings.customMegamenu}} navPages-list-megamenu navPages-list-custom{{/if}} md:h-[24px]">
+            <div class="hidden text-center title-menu max-md:block">
                 <span class="align-middle font-sans font-medium text-h5 text-[#2D3139]">
                     Categories
                 </span>
             </div>
         {{#each categories}}
-            <li class="navPages-item py-1">
+            <li class="py-1 navPages-item">
                 {{#if ../theme_settings.navigation_design '===' 'simple'}}
                 {{> components/common/navigation-list}}
                 {{/if}}
@@ -171,7 +171,7 @@
         </li>
         {{else}}
         <li class="navPages-item">
-            <a class="navPages-action btn-login mb-2" href="{{urls.auth.login}}" aria-label="{{lang 'common.login'}}">
+            <a class="mb-2 navPages-action btn-login" href="{{urls.auth.login}}" aria-label="{{lang 'common.login'}}">
                 {{lang 'common.login'}}
             </a>
         </li>

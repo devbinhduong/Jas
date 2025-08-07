@@ -1,9 +1,9 @@
-<div class="mt-6 md:mt-20 w-full">
+<div class="w-full mt-6 md:mt-20">
     <!-- Header Section -->
-    <div class="flex justify-between items-center mb-8" data-section-load="animation">
+    <div class="flex items-center justify-between mb-8" data-section-load="animation">
         <h2 class="text-title-section custom-fadeInUp font-eina02 max-w-[244px] md:max-w-full " data-step-animate="1">{{theme_settings.ourBrandsTitle}}</h2>
-        <a href="{{theme_settings.ourBrandsAllLink}}" class="text-red-600 hover:text-red-700 font-medium flex items-center group custom-fadeInUp" data-step-animate="2">
-        <span class="text-sm font-sans font-semibold">{{theme_settings.ourBrandsAllText}}</span>
+        <a href="{{theme_settings.ourBrandsAllLink}}" class="flex items-center font-medium text-red-600 hover:text-red-700 group custom-fadeInUp" data-step-animate="2">
+        <span class="font-sans text-sm font-semibold max-sm:whitespace-nowrap">{{theme_settings.ourBrandsAllText}}</span>
         <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414]">
             <use href="#svg-arrow-down"></use>
         </svg>
@@ -11,49 +11,49 @@
     </div>
 
     <!-- Marquee Container -->
-    <div class="relative flex w-full flex-col items-center justify-center overflow-hidden" data-section-load="animation">
+    <div class="relative flex flex-col items-center justify-center w-full overflow-hidden" data-section-load="animation">
         <!-- Single Row Marquee -->
-        <div class="brands-marquee flex animate-marquee hover:animate-pause gap-6" style="--duration: 30s;">
+        <div class="flex gap-6 brands-marquee animate-marquee hover:animate-pause" style="--duration: 30s;">
             {{#for 1 3}}
-            <div class="flex shrink-0 gap-6 animate-marquee-move">
+            <div class="flex gap-6 shrink-0 animate-marquee-move">
                 {{#for 1 2}}
                 <div
-                    class="bg-[#F2F4F7] rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
+                    class="bg-[#F2F4F7] rounded-[6px] p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
                     <a href="{{../../theme_settings.ourBrandsItem1Link}}" class="custom-fadeZoom" data-step-animate="2"> 
                         <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{../../theme_settings.ourBrandsItem1Img}}"
                             alt="DS18" class="max-w-full md:h-[72px] md:w-[175px] w-[85px] h-[35px] object-contain lazyload">
                     </a>
                 </div>
                 <div
-                    class="bg-[#F2F4F7] rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
+                    class="bg-[#F2F4F7] rounded-[6px] p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
                     <a href="{{../../theme_settings.ourBrandsItem2Link}}" class="custom-fadeZoom" data-step-animate="2"> 
                         <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{../../theme_settings.ourBrandsItem2Img}}"
                             alt="DS18" class="max-w-full md:h-[72px] md:w-[175px] w-[85px] h-[35px] object-contain lazyload">
                     </a>
                 </div>
                 <div
-                    class="bg-[#F2F4F7] rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
+                    class="bg-[#F2F4F7] rounded-[6px] p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
                     <a href="{{../../theme_settings.ourBrandsItem3Link}}" class="custom-fadeZoom" data-step-animate="2"> 
                         <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{../../theme_settings.ourBrandsItem3Img}}"
                             alt="DS18" class="max-w-full md:h-[72px] md:w-[175px] w-[85px] h-[35px] object-contain lazyload">
                     </a>
                 </div>
                 <div
-                    class="bg-[#F2F4F7] rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
+                    class="bg-[#F2F4F7] rounded-[6px] p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
                     <a href="{{../../theme_settings.ourBrandsItem4Link}}" class="custom-fadeZoom" data-step-animate="2"> 
                         <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{../../theme_settings.ourBrandsItem4Img}}"
                             alt="DS18" class="max-w-full md:h-[72px] md:w-[175px] w-[85px] h-[35px] object-contain lazyload">
                     </a>
                 </div>
                 <div
-                    class="bg-[#F2F4F7] rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
+                    class="bg-[#F2F4F7] rounded-[6px] p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
                     <a href="{{../../theme_settings.ourBrandsItem5Link}}" class="custom-fadeZoom" data-step-animate="2"> 
                         <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{../../theme_settings.ourBrandsItem5Img}}"
                             alt="DS18" class="max-w-full md:h-[72px] md:w-[175px] w-[85px] h-[35px] object-contain lazyload">
                     </a>
                 </div>
                 <div
-                    class="bg-[#F2F4F7] rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
+                    class="bg-[#F2F4F7] rounded-[6px] p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 w-[84px] h-[64px] sm:w-[194px] sm:h-[84px] hover-zoom skeletor-loading">
                     <a href="{{../../theme_settings.ourBrandsItem6Link}}" class="custom-fadeZoom" data-step-animate="2"> 
                         <img src="{{cdn 'img/loading.svg'}}" data-src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/{{../../theme_settings.ourBrandsItem6Img}}"
                             alt="DS18" class="max-w-full md:h-[72px] md:w-[175px] w-[85px] h-[35px] object-contain lazyload">
@@ -64,7 +64,7 @@
             {{/for}}
         </div>
         <!-- Gradient Overlays -->
-        <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
-        <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
+        <div class="absolute inset-y-0 left-0 w-1/4 pointer-events-none bg-gradient-to-r from-white"></div>
+        <div class="absolute inset-y-0 right-0 w-1/4 pointer-events-none bg-gradient-to-l from-white"></div>
     </div>
 </div>

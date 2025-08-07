@@ -40,7 +40,7 @@
         }
         
         .text-title-section {
-            @apply text-[#231F1E] text-[18px] md:text-[32px] capitalize font-bold;
+            @apply text-[#231F1E] text-[18px] md:text-[32px] capitalize font-bold md:leading-[32px] leading-[24px];
         }
         .text-medium {
             @apply text-[14px] font-medium md:text-[18px] font-sans leading-[150%] text-[#0F0F0F];

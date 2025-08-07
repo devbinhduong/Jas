@@ -13,7 +13,7 @@
 
 <footer class="footer bg-[#050000] py-4 md:py-10" role="contentinfo">
     <div class="flex flex-col justify-between container-footer md:flex-row shrink-0" data-section-load="animation">
-        <div class="footer__left max-w-full md:max-w-[243px] flex flex-col flex-gap-8 shrink-0 justify-start">
+        <div class="footer__left max-w-full md:max-w-[243px] flex flex-col flex-gap-8 shrink-0 justify-start max-md:mb-8">
             {{#if theme_settings.footer_info_logo}}
             <article class="footer-info-col footer-info-col--small custom-fadeInUp" data-step-animate="1"
                 data-section-type="storeInfo">
@@ -56,14 +56,14 @@
                 {{/if}}
             </article>
             {{/if}}
-            <div class="relative flex flex-col items-start self-stretch justify-start gap-5 my-8 shrink-0 custom-fadeInUp" data-step-animate="2">
+            <div class="relative flex flex-col items-start self-stretch justify-start gap-5 my-0 md:my-8 max-md:mt-8 shrink-0 custom-fadeInUp" data-step-animate="2">
                 <div
                     class="relative flex flex-col items-start self-stretch justify-start gap-spacing-xs shrink-0">
                     <div class="mb-1 font-sans text-white uppercase md:text-xs text-mb-text-sm"
                         >
                         Store location:
                     </div>
-                    <div class="text-[#98A2B3] text-text-sm font-sans"
+                    <div class="text-[#98A2B3] text-text-sm font-sans font-medium"
                         >
                         7003 Steeles Avenue West Toronto, M9W 0A2, Canada
                     </div>
@@ -73,7 +73,7 @@
                         >
                         Contact info:
                     </div>
-                    <div class="text-[#98A2B3] text-text-sm font-sans"
+                    <div class="text-[#98A2B3] text-text-sm font-sans font-medium"
                         >
                         contactus@singhelectronics.ca
                         <br />
@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="footer__right flex flex-row gap-6 items-start justify-start shrink-0 w-full xs:w-auto lg:w-[970px]">
-            <section class="flex flex-col flex-wrap gap-4 m-0 footer-info md:flex-row md:gap-0">
+            <section class="flex flex-col flex-wrap gap-0 m-0 md:gap-4 footer-info md:flex-row md:gap-0">
                 {{#for 1 2}}
                     {{assignVar "newindex" $index}}
                     <article class="flex flex-col gap-4 items-start justify-start w-[100%] md:w-[150px] lg:w-[200px] footer-info-col custom-fadeInUp" data-step-animate="2" data-section-type="footer-webPages">
@@ -200,9 +200,9 @@
                             </a>
                         </li>
                         <li class="text-white">
-                            <a href="/brands" class="font-semibold text-white link-line custom-animation animate-loaded animated"
+                            <a href="/brands" class="text-white link-line custom-animation animate-loaded animated"
                                 data-section-load="animation" data-step-animate="1">
-                                <span class="font-sans text-white text-text-sm">View All Brand</span>
+                                <span class="font-sans font-medium text-white text-text-sm">View All Brand</span>
                             </a>
                         </li>
                     </ul>

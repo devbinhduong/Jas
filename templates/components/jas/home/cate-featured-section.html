@@ -1,5 +1,5 @@
     <div class="w-full image-banner-slider {{#if is_category}}mt-0{{else}}mt-6 md:mt-20{{/if}}" data-section-load="animation">
-        <div class="flex justify-between items-center mb-4">
+        <div class="flex items-center justify-between mb-4 md:mb-8">
             <h2 class="text-title-section custom-fadeInUp font-eina02" data-step-animate="1">
                 {{#if title}}
                     {{title}}
@@ -8,7 +8,7 @@
                 {{/if}}
             </h2>
            <!-- create a custom prev and next button -->
-        <div class="items-center gap-4 text-gray-500 custom-fadeInUp hidden md:flex" data-step-animate="2">
+        <div class="items-center hidden gap-4 text-gray-500 custom-fadeInUp md:flex" data-step-animate="2">
             <button prev-arrow class="flex items-center gap-1 text-[16px] font-tight leading-[120%] font-semibold custom-slick-prev">
                 <svg class="w-6 h-6 rotate-180">
                     <use href="#icon-arrow-right"></use>
@@ -23,8 +23,8 @@
                 </svg>
             </button>
         </div>
-            <a href="{{theme_settings.homeCateAllLink}}" class="text-red-600 hover:text-red-700 font-medium flex items-center group md:hidden custom-fadeInUp" data-step-animate="2">
-                <span class="text-sm font-sans font-semibold block md:hidden">{{theme_settings.homeCateAllText}}</span>
+            <a href="{{theme_settings.homeCateAllLink}}" class="flex items-center font-medium text-red-600 hover:text-red-700 group md:hidden custom-fadeInUp" data-step-animate="2">
+                <span class="block font-sans text-sm font-semibold md:hidden">{{theme_settings.homeCateAllText}}</span>
                 <svg class="w-[24px] h-[24px] rotate-270 stroke-[#C51414]">
                     <use href="#svg-arrow-down"></use>
                 </svg>
@@ -39,12 +39,12 @@
                     <div class="flex flex-col px-2 flex-shrink-0 md:h-auto sm:w-[168px] sm:h-[189px] w-[90px] h-[118px] md:w-auto">
                         <div class="bg-[#EAECF0] rounded-full overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 aspect-square p-6 flex flex-col items-center justify-center" tabindex="-1">
                             <div class="relative group skeletor-loading">
-                                <a href="/sales/car-decks/" class="aspect-square rounded flex items-center justify-center group-hover:scale-105 transition-transform duration-300 w-full h-full custom-fadeZoom" data-step-animate="1" tabindex="-1">
+                                <a href="/sales/car-decks/" class="flex items-center justify-center w-full h-full transition-transform duration-300 rounded aspect-square group-hover:scale-105 custom-fadeZoom" data-step-animate="1" tabindex="-1">
                                 </a>
                             </div>
                             </div>
-                            <div class="text-center mt-4 skeletor-loading hidden md:block" tabindex="-1">
-                                <a href="/sales/car-decks/" class="text-center block text-gray-800 hover:text-blue-600 transition-colors duration-300 " tabindex="-1">
+                            <div class="hidden mt-4 text-center skeletor-loading md:block" tabindex="-1">
+                                <a href="/sales/car-decks/" class="block text-center text-gray-800 transition-colors duration-300 hover:text-blue-600 " tabindex="-1">
                                     <span class="block font-bold">Car Decks</span>
                                 </a>
                             </div>
