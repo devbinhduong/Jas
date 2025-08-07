@@ -2,7 +2,7 @@
 
 <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
-<main class="page mx-0">
+<main class="mx-0 page">
     {{#unless theme_settings.hide_page_heading }}
     {{/unless}}
 
@@ -15,9 +15,9 @@
         <div class="min-h-[454px] sm:min-h-[450px] md:min-h-[567px]">
             <div class="relative flex items-center sm:h-[502px] md:h-[430px] h-[336px] w-full">
                 <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/banner-design-02.jpg"
-                    alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+                    alt="Background" class="absolute inset-0 z-0 object-cover w-full h-full" />
                 <div
-                    class="container flex items-center justify-start relative z-10 md:flex-row flex-col">
+                    class="container relative z-10 flex flex-col items-center justify-start md:flex-row">
                     <div class="header-banner__content translate-y-[63px] md:translate-y-[-10px] flex-1 flex flex-col justify-center">
                         <span class="heading text-[12px] md:text-[16px] font-bold uppercase text-white opacity-85 mb-2 md:mb-3 custom-fadeInUp md:mt-0 mt-[16px] md:leading-[1.35] leading-[1.67]" data-step-animate="2">About Us</span>
                         <h2
@@ -32,7 +32,7 @@
                     <div class="translate-y-[84px] md:translate-y-[70px] sm:translate-y-[115px]">
                         <span class="custom-fadeInUp" data-step-animate="3">
                             <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-carousel-image.png?t=1749003581"
-                                class="rounded-2xl w-[343px] sm:w-[90vw] md:w-[640px] h-[282px] sm:h-[400px] md:h-[477px] object-cover shadow-2xl"
+                                class="rounded-2xl w-[343px] xs:w-full md:w-[640px] h-[282px] sm:h-[400px] md:h-[477px] object-cover shadow-2xl"
                                 alt="About Us Center" />
                         </span>
                     </div>
@@ -43,7 +43,7 @@
 
     <div class="container">
         <section class="page-about-us video-banner" data-section-load="animation">
-            <div class="video-banner-wrapper flex flex-col md:flex-row gap-y-6">
+            <div class="flex flex-col video-banner-wrapper md:flex-row gap-y-6">
                 <div class="video-banner-iframe-wrapper basis-none md:basis-[50%] w-full h-[224px] sm:h-[350px] md:h-[311px] custom-fadeInUp" data-step-animate="2">
                     <iframe src="https://www.youtube.com/embed/wDchsz8nmbo?si=OFGdBCuNGQQNq8oI" title="YouTube video player"
                         frameborder="0"
@@ -51,9 +51,9 @@
                         allowfullscreen class="w-full h-full rounded-lg"></iframe>
                 </div>
                 <div class="video-banner-content basis-full md:basis-[50%] pl-0 md:pl-[80px] content-center custom-fadeInUp" data-step-animate="4">
-                    <div class="flex flex-col gap-2 md:gap-8 items-start justify-start flex-1 relative">
+                    <div class="relative flex flex-col items-start justify-start flex-1 gap-2 md:gap-8">
                         <div
-                            class="flex flex-col gap-3 md:gap-4 items-start justify-start self-stretch shrink-0 relative">
+                            class="relative flex flex-col items-start self-stretch justify-start gap-3 md:gap-4 shrink-0">
                             <div
                                 class="text-base-black text-left font-eina02 text-[18px] md:text-[32px] leading-none font-normal w-full md:w-[534px]">
                                     Our Company </div>
@@ -69,8 +69,8 @@
                 </div>
             </div>
         </section>
-        <section class="page-about-us info-section mt-12 md:mt-10" data-section-load="animation">
-            <div class="info-section-wrapper grid grid-cols-12 gap-x-4 md:gap-x-6">
+        <section class="mt-12 page-about-us info-section md:mt-10" data-section-load="animation">
+            <div class="grid grid-cols-12 info-section-wrapper gap-x-4 md:gap-x-6">
                 <div
                     class="info-section-content col-span-12 md:col-span-3 bg-gray-100 rounded-2xl p-4 md:p-6 flex flex-col items-start justify-between shrink-0 h-full min-h-[275px] gap-[32px] md:gap-0 md:min-h-[592px] w-full relative overflow-hidden">
                     <div class="info-section-content top flex flex-col gap-[20px] md:gap-0 custom-fadeInUp" data-step-animate="2">
@@ -86,28 +86,28 @@
                     <div class="info-section-content bottom flex flex-col gap-y-[18px] md:gap-y-6 custom-fadeInUp" data-step-animate="4">
                         <div class="heading text-gray-800 text-left text-[20px] md:text-[24px] leading-[1.2] md:leading-[100%] font-bold font-eina02">
                             Canada's fastest growing consumer electronics retailer </div>
-                        <button class="button button-style w-fit mb-0">
+                        <button class="mb-0 button button-style w-fit">
                             <span>Shop Now</span>
                         </button>
                     </div>
                 </div>
-                <div class="info-section-banner md:col-span-9 col-span-12 h-full mt-3 md:mt-0">
+                <div class="h-full col-span-12 mt-3 info-section-banner md:col-span-9 md:mt-0">
                     <div class="mx-auto">
                         <div class="flex flex-col sm:flex-row gap-[18px] mb-4 md:gap-6 md:mb-[21px]">
                             <div class="w-full sm:w-1/2 hover-zoom custom-fadeInUp" data-step-animate="2">
                                 <div
                                     class="bg-[#5B0909] rounded-2xl p-4 md:p-6 flex flex-col gap-[24.11px] items-start justify-start flex-1 relative">
                                     <div
-                                        class="flex flex-row gap-4 md:gap-6 items-start justify-start self-stretch shrink-0 relative">
+                                        class="relative flex flex-row items-start self-stretch justify-start gap-4 md:gap-6 shrink-0">
                                         <img class="rounded-lg shrink-0 w-1/2 md:w-[221px]  relative overflow-hidden"
                                             style="object-fit: cover"
                                             src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-inside.png?t=1749012676" />
                                         <div
-                                            class="flex flex-col items-start justify-between self-stretch flex-1 relative">
+                                            class="relative flex flex-col items-start self-stretch justify-between flex-1">
                                             <div class="text-white text-[12px] md:text-[16px] text-left text-base leading-[22.1px] font-medium relative self-stretch"
                                                 > Since </div>
                                             <div
-                                                class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative">
+                                                class="relative flex flex-col items-start self-stretch justify-start gap-6 shrink-0">
                                                 <div
                                                     class="text-white text-left text-[20px] md:text-[48px] leading-none font-normal relative self-stretch font-eina02">
                                                     1989 </div>
@@ -122,16 +122,16 @@
                                 <div
                                     class="bg-black rounded-2xl p-4 md:p-6 flex flex-col gap-[24.11px] items-start justify-start flex-1 relative">
                                     <div
-                                        class="flex flex-row gap-4 md:gap-6 items-start justify-start self-stretch shrink-0 relative">
+                                        class="relative flex flex-row items-start self-stretch justify-start gap-4 md:gap-6 shrink-0">
                                         <img class="rounded-lg shrink-0 w-1/2 md:w-[221px] sm:h-[150px] h-[116px] md:h-[245px] relative overflow-hidden"
                                             style="object-fit: cover"
                                             src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-inside.png?t=1749012676" />
                                         <div
-                                            class="flex flex-col items-start justify-between self-stretch flex-1 relative">
+                                            class="relative flex flex-col items-start self-stretch justify-between flex-1">
                                             <div class="text-white text-[12px] md:text-[16px] text-left text-base leading-[22.1px] font-medium relative self-stretch"
                                                 style="letter-spacing: -0.01em"> In the heart of Toronto </div>
                                             <div
-                                                class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative">
+                                                class="relative flex flex-col items-start self-stretch justify-start gap-6 shrink-0">
                                                 <div
                                                     class="text-white text-left text-[20px] md:text-[48px] leading-none font-normal relative self-stretch font-eina02">
                                                     10,000 </div>
@@ -140,22 +140,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div></div>
                         </div>
                         <div class="h-[200px] md:h-full hover-zoom content-stretch custom-fadeInUp" data-step-animate="6">
                             <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/frame-1948759174.png?t=1749012858"
-                                class="w-full h-full object-cover rounded-lg shadow" alt="Banner 3" />
+                                class="object-cover w-full h-full rounded-lg shadow" alt="Banner 3" />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="timeline-section" class="page-about-us timeline-section mt-9 md:mt-20" data-section-load="animation">
-            <div class="timeline-wrapper flex flex-col gap-6">
+            <div class="flex flex-col gap-6 timeline-wrapper">
             <div class="flex flex-col md:flex-row gap-x-[20px] md:gap-x-[81px] gap-y-[46px] md:gap-y-10 justify-between">
                 <!-- Left side - Vision content -->
-                <div class="space-y-4 basis-full md:basis-1/2 flex flex-col justify-start">
+                <div class="flex flex-col justify-start space-y-4 basis-full md:basis-1/2">
                     <div class="flex flex-col gap-[9px] md:gap-4 custom-fadeInUp" data-step-animate="2">
                         <h2 class="font-bold text-gray-900 text-[20px] md:text-[32px] font-eina02">
                             Our Vision & Success
@@ -167,8 +166,8 @@
                     </div>
                     <div
                         class="w-full h-[375px] max-w-[521px] ml-auto mr-auto sm:h-auto md:h-[496px] content-center custom-fadeZoom" data-step-animate="4">
-                        <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-timline-img.png?t=1749003583" alt="Vision & Success" class="w-full h-full object-contain hidden md:block">
-                        <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-timline-img-mb-opt.png" alt="Vision & Success" class="w-full h-full object-contain block md:hidden">
+                        <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-timline-img.png?t=1749003583" alt="Vision & Success" class="hidden object-contain w-full h-full md:block">
+                        <img src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-timline-img-mb-opt.png" alt="Vision & Success" class="block object-contain w-full h-full md:hidden">
                     </div>
                 </div>
             
@@ -264,7 +263,7 @@
             </div>
             </div>
         </section>
-        <section class="page-about-us banners-section mt-12 md:mt-20" data-section-load="animation">
+        <section class="mt-12 page-about-us banners-section md:mt-20" data-section-load="animation">
             <div
                 class="flex md:flex-row flex-col gap-4 md:gap-6 items-center justify-start shrink-0 h-auto md:h-[332px] relative w-full">
                 <div
@@ -272,10 +271,10 @@
                     <div
                         class="p-0 md:pt-[36.7px] md:pr-9 md:pb-[36.7px] md:pl-[36.7px] flex flex-col gap-[16px] md:gap-[36.7px] items-start justify-start self-stretch flex-1 relative">
                         <div
-                            class="flex flex-col items-start justify-start md:justify-between self-stretch flex-1 relative h-full w-full md:p-0 p-4">
+                            class="relative flex flex-col items-start self-stretch justify-start flex-1 w-full h-full p-4 md:justify-between md:p-0">
                             <div
                                 class="rounded-lg shrink-0 xs:w-full w-full md:w-[630px] xs:h-full h-[167px] md:h-[332px] absolute left-0 top-0 md:left-[-36.7px] md:top-[-36.92px] overflow-hidden custom-fadeZoom" data-step-animate="2">
-                                <img class="rounded-lg w-full h-full absolute left-0 top-0"
+                                <img class="absolute top-0 left-0 w-full h-full rounded-lg"
                                     style="object-fit: cover"
                                     src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-two-banner1.png?t=1749003585" />
                                 <div
@@ -285,10 +284,10 @@
                             <div class="text-white text-left text-base leading-[135%] font-medium uppercase relative self-stretch md:pb-0 pb-8 text-[12px] md:text-[16px]"
                                 style="letter-spacing: 0.08em; opacity: 0.9"> Community Involvement </div>
                             <div
-                                class="flex flex-col gap-2 md:gap-4 items-start justify-start self-stretch shrink-0 relative custom-fadeInUp" data-step-animate="3">
+                                class="relative flex flex-col items-start self-stretch justify-start gap-2 md:gap-4 shrink-0 custom-fadeInUp" data-step-animate="3">
                                 <div class="text-white text-left text-xl leading-[110%] font-normal relative self-stretch text-[16px] md:text-[20px]"
                                     style="letter-spacing: -0.01em"> Our mission </div>
-                                <div class="text-gray-50 text-left text-sm font-sans relative self-stretch pt-0"
+                                <div class="relative self-stretch pt-0 font-sans text-sm text-left text-gray-50"
                                     style="letter-spacing: -0.01em"> Our mission is to connect the youth with technology
                                     that will inspire, motivate, and empower their education </div>
                             </div>
@@ -300,10 +299,10 @@
                     <div
                         class="p-0 md:pt-[36.7px] md:pr-9 md:pb-[36.7px] md:pl-[36.7px] flex flex-col gap-[16px] md:gap-[36.7px] items-start justify-start self-stretch flex-1 relative">
                         <div
-                            class="flex flex-col items-start justify-start md:justify-between self-stretch flex-1 relative h-full w-full md:p-0 p-4">
+                            class="relative flex flex-col items-start self-stretch justify-start flex-1 w-full h-full p-4 md:justify-between md:p-0">
                             <div
                                 class="rounded-lg shrink-0 xs:w-full w-full md:w-[630px] xs:h-full h-[167px] md:h-[332px] absolute left-0 top-0 md:left-[-36.7px] md:top-[-36.92px] overflow-hidden custom-fadeZoom" data-step-animate="4">
-                                <img class="rounded-lg w-full h-full absolute left-0 top-0" style="object-fit: cover"
+                                <img class="absolute top-0 left-0 w-full h-full rounded-lg" style="object-fit: cover"
                                     src="https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-two-banner2.png?t=1749003588" />
                                 <div
                                     class="bg-black opacity-40 rounded-2xl w-full h-full md:w-[630px] md:h-[332px] absolute left-0 top-0">
@@ -312,10 +311,10 @@
                             <div class="text-white text-left text-base leading-[135%] font-medium uppercase relative self-stretch md:pb-0 pb-8 text-[12px] md:text-[16px]"
                                 style="letter-spacing: 0.08em; opacity: 0.9"> Community Involvement </div>
                             <div
-                                class="flex flex-col gap-2 md:gap-4 items-start justify-start self-stretch shrink-0 relative custom-fadeInUp" data-step-animate="5">
+                                class="relative flex flex-col items-start self-stretch justify-start gap-2 md:gap-4 shrink-0 custom-fadeInUp" data-step-animate="5">
                                 <div class="text-white text-left text-xl leading-[110%] font-normal relative self-stretch text-[16px] md:text-[20px]"
                                     style="letter-spacing: -0.01em"> Our School program</div>
-                                <div class="text-gray-50 text-left text-sm font-sans relative self-stretch pt-0"
+                                <div class="relative self-stretch pt-0 font-sans text-sm text-left text-gray-50"
                                     style="letter-spacing: -0.01em"> Our mission is to connect the youth with technology that will inspire, motivate, and empower their education </div>
                             </div>
                         </div>
@@ -325,7 +324,7 @@
         </section>
         {{> components/jas/home/review-section}}
         <section class="page-about-us supports-section" data-section-load="animation">
-            <div class="overflow-hidden mt-6 md:mt-20">
+            <div class="mt-6 overflow-hidden md:mt-20">
                 <div
                     class="relative w-full h-full min-h-[424px] rounded-3xl my-4 overflow-hidden bg-cover bg-center bg-no-repeat bg-image md:bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')] bg-[url('https://cdn11.bigcommerce.com/s-gsjfadk9v2/images/stencil/original/image-manager/about-us-banner-contact.png?t=1749003590')]">
                     <div
@@ -333,7 +332,7 @@
                         <div class="sm:max-w-[40rem] md:max-w-[83rem] max-w-full mx-auto w-full">
                             <div class="md:max-w-[612px] max-w-full custom-fadeInUp" data-step-animate="3">
                                 <div
-                                    class="bg-black rounded-3xl p-4 md:p-8 lg:p-8 max-w-full">
+                                    class="max-w-full p-4 bg-black rounded-3xl md:p-8 lg:p-8">
                                     <div class="text-white text-[14px] md:text-[20px] font-medium"> Need help? We&#039;re available at </div>
                                     <!-- Title -->
                                     <h1 class="text-title-section mb-4 text-white font-eina01 text-[24px] md:text-[48px] md:mt-[0] leading-[1] mt-[12px]"> +1 (416) 745-1021 </h1>
@@ -346,7 +345,7 @@
                                             class="group px-4 py-2 md:py-[15px] md:px-5 button-style-2 w-fit h-[48.8px]">
                                             <span class="relative z-10 text-[14px] md:text-[16px]">Contact us</span>
                                         </button>
-                                        <div class="gap-2 flex items-center">
+                                        <div class="flex items-center gap-2">
                                             <svg class="w-[32px] h-[32px]">
                                                 <use href="#svg-leaf"></use>
                                             </svg>

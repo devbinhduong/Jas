@@ -12,18 +12,18 @@
 
     .custom-sidebar-close {
         position: absolute;
-        top: 0;
+        top: 5px;
         width: 44px;
         height: 44px;
         display: flex;
         justify-content: center;
         align-items: center;
         line-height: 1;
-        background-color: $buttonStyle-primary-backgroundColor;
-        
+        background-color: transparent;
+        z-index: 9999;
         svg {
             transition: all 0.3s ease;
-            fill: $buttonStyle-primary-color;
+            fill: black;
             width: 24px;
             height: 24px;
         }
@@ -61,7 +61,7 @@
         right: -101%;
 
         .custom-sidebar-close {
-            left: -44px;
+            left: 0;
             right: auto;
         }
     }
@@ -73,8 +73,8 @@
         left: 0;
         z-index: 103;
         .custom-sidebar-close {
-            background-color: white;
-            right: 16px;
+            background-color: transparent;
+            right: 10px;
             top: 8px;
             svg {
                 fill: #141B34;

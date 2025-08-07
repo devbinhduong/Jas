@@ -9,7 +9,7 @@
         {{> components/common/alert/alert-success forms.login.success}}
     {{/if}}
     <div class="login-row">
-        <form class="login-form form m-0" action="{{urls.auth.check_login}}" method="post">
+        <form class="m-0 login-form form" action="{{urls.auth.check_login}}" method="post">
             {{inject 'useValidEmail' (lang 'forms.validate.common.email_address')}}
             {{inject 'enterPass' (lang 'forms.validate.common.password')}}
             <div class="form-field">
@@ -20,27 +20,27 @@
                 <label class="form-label" for="login_pass">{{lang 'login.field_password'}}</label>
                 <input class="form-input" id="login_pass" type="password" name="login_pass" autocomplete="off">
             </div>
-            <div class="form-actions flex items-center justify-between hide-after hide-before">
+            <div class="flex items-center justify-between form-actions hide-after hide-before">
                 <input type="submit" class="button button--primary" value="{{lang 'login.submit_value' }}">
                 <a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
             </div>
         </form>
         {{#if settings.account_creation_enabled}}
-            <div class="new-customer">
+            <div class="new-customer max-md:mt-4 rounded-[6px]">
                 <div class="panel">
                     <div class="panel-header">
                         <h2 class="panel-title">{{lang 'login.new_customer.heading' }}</h2>
                     </div>
                     <div class="panel-body">
                         <p class="new-customer-intro">{{lang 'login.new_customer.intro' }}</p>
-                        <ul class="new-customer-fact-list disc ml-4">
+                        <ul class="ml-4 new-customer-fact-list disc">
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact1' }}</li>
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact2' }}</li>
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact3' }}</li>
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact4' }}</li>
                             <li class="new-customer-fact">{{lang 'login.new_customer.fact5' }}</li>
                         </ul>
-                        <a href="{{urls.auth.create_account}}"><button class="button button--primary mt-6">
+                        <a href="{{urls.auth.create_account}}"><button class="mt-6 button button--primary">
                             <span>{{lang 'login.new_customer.create_account' }}</span>
                         </button></a>
                     </div>

@@ -1817,3 +1817,13 @@ body {
     .productCarousel {
         margin-bottom: 0 !important;
     }
+    @media (max-width: 1024) {
+        .custom-sidebar-wrapper .form-input {
+            border-width: 0 !important;
+        }
+    }
+    .page-type-category {
+        .breadcrumbs {
+            margin: 8px 0 !important;
+        }
+    }
