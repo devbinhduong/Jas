@@ -686,9 +686,7 @@
                     overflow: visible;
                     border-bottom-left-radius: 16px;
                     border-bottom-right-radius: 16px;
-                    @include smax-l {
-                        left: 0;
-                    }
+                    
                     &:before {
                         content: "";
                         position: absolute;

@@ -10,6 +10,11 @@
     <a href="#" class="custom-sidebar-close" aria-label="Close Search Sidebar">
         <svg class="icon" aria-hidden="true"><use xlink:href="#icon-close"></use></svg>
     </a>
+    <div class="hidden mt-4 text-center title-menu max-md:block">
+        <span class="align-middle font-sans font-medium text-h5 text-[#1B0832]">
+            Search
+        </span>
+    </div>
     <div class="custom-sidebar-wrapper">
         <div class="w-full">
             <form class="flex items-center justify-center w-full p-4 mb-0 form md:p-0" onsubmit="return false"
@@ -18,7 +23,7 @@
                         class="form-fieldset flex items-center justify-center w-full h-[48px] border-gray-500 border-0 rounded-full py-[14px] pl-[18px] pr-2 bg-[#F2F4F7]">
                         <div class="w-full mb-0 form-field">
                             <label class="is-srOnly" for="{{name}}">{{lang "search.quick_search.input_label"}}</label>
-                            <input class="form-input unset-outline bg-[#F2F4F7] placeholder-[#98A2B3] font-sans" data-search-quick
+                            <input class="form-input border-none unset-outline bg-[#F2F4F7] placeholder-[#98A2B3] font-sans" data-search-quick
                                 name="{{name}}" id="{{name}}" data-error-message="{{lang 'search.error.empty_field'}}"
                                 placeholder="{{lang 'search.quick_search.input_placeholder'}}" autocomplete="off">
                         </div>

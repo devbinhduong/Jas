@@ -29,8 +29,6 @@
         }
 
         &:hover {
-            background-color: $buttonStyle-primary-backgroundColorHover;
-
             svg {
                 transform: rotate(180deg) scale(1.2);
             }
@@ -50,16 +48,18 @@
 
     &.custom-sidebar-left {
         left: -101%;
-
+        border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
         .custom-sidebar-close {
-            right: -44px;
+            right: 0;
             left: auto;
         }
     }
 
     &.custom-sidebar-right {
         right: -101%;
-
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
         .custom-sidebar-close {
             left: 0;
             right: auto;
