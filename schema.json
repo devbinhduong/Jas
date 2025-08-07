@@ -838,6 +838,231 @@
         "content": "Footer"
       },
       {
+        "type": "heading",
+        "content": "Column 1 (Custom Links)"
+      },
+      {
+        "type": "text",
+        "label": "Heading",
+        "id": "footer_col1_heading",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Text 1",
+        "id": "footer_col1_text1"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 1",
+        "id": "footer_col1_link1"
+      },
+      {
+        "type": "text",
+        "label": "Text 2",
+        "id": "footer_col1_text2"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 2",
+        "id": "footer_col1_link2"
+      },
+      {
+        "type": "text",
+        "label": "Text 3",
+        "id": "footer_col1_text3"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 3",
+        "id": "footer_col1_link3"
+      },
+      {
+        "type": "text",
+        "label": "Text 4",
+        "id": "footer_col1_text4"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 4",
+        "id": "footer_col1_link4"
+      },
+      {
+        "type": "text",
+        "label": "Text 5",
+        "id": "footer_col1_text5"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 5",
+        "id": "footer_col1_link5"
+      },
+      {
+        "type": "text",
+        "label": "Text 6",
+        "id": "footer_col1_text6"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 6",
+        "id": "footer_col1_link6"
+      },
+      {
+        "type": "text",
+        "label": "Text 7",
+        "id": "footer_col1_text7"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 7",
+        "id": "footer_col1_link7"
+      },
+      {
+        "type": "text",
+        "label": "Text 8",
+        "id": "footer_col1_text8"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 8",
+        "id": "footer_col1_link8"
+      },
+      {
+        "type": "text",
+        "label": "Text 9",
+        "id": "footer_col1_text9"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 9",
+        "id": "footer_col1_link9"
+      },
+      {
+        "type": "text",
+        "label": "Text 10",
+        "id": "footer_col1_text10"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 10",
+        "id": "footer_col1_link10"
+      },
+      {
+        "type": "heading",
+        "content": "Column 2 (Custom Links)"
+      },
+      {
+        "type": "text",
+        "label": "Heading",
+        "id": "footer_col2_heading",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Text 1",
+        "id": "footer_col2_text1"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 1",
+        "id": "footer_col2_link1"
+      },
+      {
+        "type": "text",
+        "label": "Text 2",
+        "id": "footer_col2_text2"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 2",
+        "id": "footer_col2_link2"
+      },
+      {
+        "type": "text",
+        "label": "Text 3",
+        "id": "footer_col2_text3"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 3",
+        "id": "footer_col2_link3"
+      },
+      {
+        "type": "text",
+        "label": "Text 4",
+        "id": "footer_col2_text4"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 4",
+        "id": "footer_col2_link4"
+      },
+      {
+        "type": "text",
+        "label": "Text 5",
+        "id": "footer_col2_text5"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 5",
+        "id": "footer_col2_link5"
+      },
+      {
+        "type": "text",
+        "label": "Text 6",
+        "id": "footer_col2_text6"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 6",
+        "id": "footer_col2_link6"
+      },
+      {
+        "type": "text",
+        "label": "Text 7",
+        "id": "footer_col2_text7"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 7",
+        "id": "footer_col2_link7"
+      },
+      {
+        "type": "text",
+        "label": "Text 8",
+        "id": "footer_col2_text8"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 8",
+        "id": "footer_col2_link8"
+      },
+      {
+        "type": "text",
+        "label": "Text 9",
+        "id": "footer_col2_text9"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 9",
+        "id": "footer_col2_link9"
+      },
+      {
+        "type": "text",
+        "label": "Text 10",
+        "id": "footer_col2_text10"
+      },
+      {
+        "type": "text",
+        "label": "Link Text 10",
+        "id": "footer_col2_link10"
+      },
+      {
+        "type": "text",
+        "label": "Limit List Brand (Col 3)",
+        "id": "brand_show_footer_limit"
+      },
+      {
         "type": "color",
         "label": "FooterBackground",
         "id": "footer-backgroundColor"

@@ -157,48 +157,14 @@
                     </div>
                     <ul class="footer-info-list{{#if (getVar 'newindex') '==' 1}} is-active{{/if}}"
                         id="footer-infor-col-3">
-                        <li class="text-white">
-                            <a href="/brands/metra" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">Metra</span>
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <a href="/brands/ds18" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">DS18</span>
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <a href="/brands/rockford-fosgate" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">Rockford Fosgate</span>
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <a href="/brands/jl-audio" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">JL Audio</span>
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <a href="/brands/kicker" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">Kicker</span>
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <a href="/brands/memphis-audio" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">Memphis Audio</span>
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <a href="/brands/skar-audio" class="text-white link-line custom-animation animate-loaded animated"
-                                data-section-load="animation" data-step-animate="1">
-                                <span class="text-[#98A2B3] text-text-sm font-sans">Skar Audio</span>
-                            </a>
-                        </li>
+                        {{#each (limit shop_by_brand theme_settings.brand_show_footer_limit)}}
+                            <li class="text-white">
+                                <a href="{{url}}" class="text-white link-line custom-animation animate-loaded animated"
+                                    data-section-load="animation" data-step-animate="1">
+                                    <span class="text-[#98A2B3] text-text-sm font-sans">{{name}}</span>
+                                </a>
+                            </li>
+                        {{/each}}
                         <li class="text-white">
                             <a href="/brands" class="text-white link-line custom-animation animate-loaded animated"
                                 data-section-load="animation" data-step-animate="1">
