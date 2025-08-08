@@ -845,36 +845,6 @@
         "id": "footer_col1_link7"
       },
       {
-        "type": "text",
-        "label": "Text 8",
-        "id": "footer_col1_text8"
-      },
-      {
-        "type": "text",
-        "label": "Link Text 8",
-        "id": "footer_col1_link8"
-      },
-      {
-        "type": "text",
-        "label": "Text 9",
-        "id": "footer_col1_text9"
-      },
-      {
-        "type": "text",
-        "label": "Link Text 9",
-        "id": "footer_col1_link9"
-      },
-      {
-        "type": "text",
-        "label": "Text 10",
-        "id": "footer_col1_text10"
-      },
-      {
-        "type": "text",
-        "label": "Link Text 10",
-        "id": "footer_col1_link10"
-      },
-      {
         "type": "heading",
         "content": "Column 2 (Custom Links)"
       },
@@ -953,36 +923,6 @@
         "type": "text",
         "label": "Link Text 7",
         "id": "footer_col2_link7"
-      },
-      {
-        "type": "text",
-        "label": "Text 8",
-        "id": "footer_col2_text8"
-      },
-      {
-        "type": "text",
-        "label": "Link Text 8",
-        "id": "footer_col2_link8"
-      },
-      {
-        "type": "text",
-        "label": "Text 9",
-        "id": "footer_col2_text9"
-      },
-      {
-        "type": "text",
-        "label": "Link Text 9",
-        "id": "footer_col2_link9"
-      },
-      {
-        "type": "text",
-        "label": "Text 10",
-        "id": "footer_col2_text10"
-      },
-      {
-        "type": "text",
-        "label": "Link Text 10",
-        "id": "footer_col2_link10"
       },
       {
         "type": "text",
